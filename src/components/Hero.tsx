@@ -4,7 +4,7 @@ import WaveDivider from "./ui/WaveDivider";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cream pt-[90px] pb-[var(--section-pad)]">
+    <section className="relative overflow-hidden bg-cream pt-[70px] pb-[var(--section-pad)]">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:gap-12 md:px-12">
         <div>
           <p className="text-sm font-bold uppercase tracking-wider text-ink/60">
