@@ -7,51 +7,57 @@ const OFFERINGS: { icon: DoodleName; title: string; desc: string }[] = [
   {
     icon: "church",
     title: "Church Festivals",
-    desc: "Where it all started. Big batches of drinks for hundreds of guests.",
+    desc: "Where this started. Big batches, long lines, and twenty years of learning how to keep both moving.",
   },
   {
     icon: "school",
     title: "School Events",
-    desc: "Fun, kid-friendly flavors for celebrations and fundraisers.",
+    desc: "Flavors kids ask for by name, for carnivals, fundraisers, and end-of-year parties.",
   },
   {
     icon: "wedding",
     title: "Weddings",
-    desc: "A custom drink bar that matches your day, start to finish.",
+    desc: "A drink bar built around your colors, your flavors, and your timeline.",
   },
   {
     icon: "corporate",
     title: "Corporate Events",
-    desc: "Fast service and crowd-pleasing menus for the whole office.",
+    desc: "A menu the whole office agrees on, served fast enough to fit a lunch break.",
   },
   {
     icon: "party",
     title: "Private Parties",
-    desc: "Birthdays, reunions, and backyard get-togethers, handled.",
+    desc: "Birthdays, graduations, reunions, and the backyard get-together that grew to forty people.",
   },
   {
     icon: "custom",
     title: "Custom Menus",
-    desc: "Tell me the vibe and I'll build a menu just for your event.",
+    desc: "Tell me the mood you're going for and I'll build the menu to match.",
   },
 ];
 
 export default function OfferingGrid() {
   return (
-    <section id="offerings" className="relative bg-taro">
+    <section id="offerings" className="relative bg-field">
 
       <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
-        <h2 className="mx-auto max-w-2xl text-center text-[32px] text-warmwhite md:text-[52px]">
-          Not Just Drinks. Fresh-Brewed Catering Built for Your Event.
+        <h2 className="mx-auto max-w-2xl text-center text-[32px] text-cream md:text-[52px]">
+          Every Event Gets Its Own Menu
         </h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-lg font-medium text-cream/85">
+          Six hundred guests at a parish festival or twenty in a backyard,
+          the drinks get made the same way.
+        </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {OFFERINGS.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border-[3px] border-coffee bg-warmwhite p-6 shadow-[6px_6px_0_0_#2B1B12]"
+              className="rounded-xl border-[3px] border-ink bg-cream p-6 shadow-[6px_6px_0_0_#A8501A]"
             >
-              <IconDoodle name={item.icon} color="#8C6FAE" className="h-10 w-10" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-ink bg-pop">
+                <IconDoodle name={item.icon} color="#2E1C12" className="h-7 w-7" />
+              </div>
               <h3 className="mt-4 text-2xl text-ink">{item.title}</h3>
               <p className="mt-2 text-sm font-medium text-ink/70">{item.desc}</p>
             </div>
@@ -61,21 +67,20 @@ export default function OfferingGrid() {
         <div className="mt-12 flex items-center justify-center gap-2">
           <Mascot
             pose="point"
-            cupColor="#FFFBF3"
-            teaColor="#E2793A"
+            cupColor="#F5EFE3"
+            teaColor="#F2B441"
             className="hidden h-28 w-auto -rotate-6 sm:block"
           />
           <PushButton
             label="Get a Custom Quote"
             href="/book"
-            surface="#FFFBF3"
-            textColor="#2B1B12"
-            pop="#4A2E22"
+            surface="#F5EFE3"
+            textColor="#2E1C12"
           />
         </div>
       </div>
 
-      <WaveDivider fill="#FFFBF3" position="bottom" />
+      <WaveDivider fill="#F5EFE3" position="bottom" />
     </section>
   );
 }

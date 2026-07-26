@@ -7,13 +7,20 @@ import type { ShopDrink } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const CATEGORY_COLOR: Record<string, string> = {
-  "Milk Tea": "#4A2E22",
-  "Fruit Tea": "#E2793A",
-  Specialty: "#8C6FAE",
+  "Milk Tea": "#A8501A",
+  "Fruit Tea": "#F2B441",
+  Specialty: "#6B5A9E",
+};
+
+const CATEGORY_TEXT: Record<string, string> = {
+  "Milk Tea": "#F5EFE3",
+  "Fruit Tea": "#2E1C12",
+  Specialty: "#F5EFE3",
 };
 
 export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
-  const tone = CATEGORY_COLOR[drink.category] ?? "#4A2E22";
+  const tone = CATEGORY_COLOR[drink.category] ?? "#A8501A";
+  const toneText = CATEGORY_TEXT[drink.category] ?? "#F5EFE3";
   const { addItem } = useShopCart();
   const [justAdded, setJustAdded] = useState(false);
 
@@ -34,7 +41,7 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
   return (
     <Link
       href={`/shop/${drink.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-xl border-[3px] border-coffee bg-warmwhite shadow-[6px_6px_0_0_#2B1B12] transition-transform duration-200 hover:-translate-y-1"
+      className="group relative flex flex-col overflow-hidden rounded-xl border-[3px] border-ink bg-cream shadow-[6px_6px_0_0_#6B5A9E] transition-transform duration-200 hover:-translate-y-1"
     >
       <div
         className="relative flex aspect-square items-center justify-center overflow-hidden"
@@ -57,8 +64,8 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         )}
 
         <span
-          className="absolute left-3 top-3 rounded-full border-2 border-coffee px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-warmwhite"
-          style={{ backgroundColor: tone }}
+          className="absolute left-3 top-3 rounded-full border-2 border-ink px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider"
+          style={{ backgroundColor: tone, color: toneText }}
         >
           {drink.category}
         </span>
@@ -66,8 +73,8 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         <button
           onClick={handleQuickAdd}
           aria-label={`Quick add ${drink.name} to my picks`}
-          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-coffee text-lg font-bold shadow-[3px_3px_0_0_#2B1B12] transition-all duration-150 hover:scale-110 active:scale-95 ${
-            justAdded ? "bg-thai text-warmwhite" : "bg-warmwhite text-ink"
+          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#6B5A9E] transition-all duration-150 hover:scale-110 active:scale-95 ${
+            justAdded ? "bg-accent text-cream" : "bg-cream text-ink"
           }`}
         >
           {justAdded ? "✓" : "+"}

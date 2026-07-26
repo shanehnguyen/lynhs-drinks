@@ -1,6 +1,7 @@
 import PushButton from "./ui/PushButton";
 import PhotoFrame from "./ui/PhotoFrame";
 import WaveDivider from "./ui/WaveDivider";
+import SectionDoodles from "./ui/SectionDoodles";
 
 type FeatureSplitProps = {
   id?: string;
@@ -22,10 +23,17 @@ type FeatureSplitProps = {
   dividerBottom?: string;
 };
 
+const SECTION_ACCENTS: Record<string, { headline: string; shadow: string }> = {
+  "#F5EFE3": { headline: "#6B5A9E", shadow: "#6B5A9E" },
+  "#6B5A9E": { headline: "#F5EFE3", shadow: "#A8501A" },
+  "#A8501A": { headline: "#F5EFE3", shadow: "#2E1C12" },
+  "#2E1C12": { headline: "#F5EFE3", shadow: "#F2B441" },
+};
+
 export default function FeatureSplit({
   id,
   bg,
-  textColor = "#2B1B12",
+  textColor = "#2E1C12",
   reverse = false,
   eyebrow,
   heading,
@@ -41,13 +49,25 @@ export default function FeatureSplit({
   dividerTop,
   dividerBottom,
 }: FeatureSplitProps) {
+  const accents = SECTION_ACCENTS[bg.toUpperCase()] ?? SECTION_ACCENTS["#F5EFE3"];
+
+  const isCream = bg.toUpperCase() === "#F5EFE3";
+
   return (
     <section id={id} className="relative" style={{ backgroundColor: bg }}>
+      {isCream && (
+        <SectionDoodles
+          items={[
+            { shape: "dot", color: "#F2B441", top: "8%", right: "6%", size: 12 },
+            { shape: "star", color: "#A8501A", top: "88%", left: "5%", size: 16, rotate: -6 },
+          ]}
+        />
+      )}
       {dividerTop && <WaveDivider fill={dividerTop} position="top" />}
 
       <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
         <div
-          className={`grid grid-cols-1 items-center gap-12 md:grid-cols-2 ${
+          className={`grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 ${
             reverse ? "md:[&>*:first-child]:order-2" : ""
           }`}
         >
@@ -61,7 +81,10 @@ export default function FeatureSplit({
               cutoutMaxHeight={photoCutoutMaxHeight}
             />
             {quote && (
-              <div className="absolute -bottom-6 -right-4 hidden max-w-[220px] rotate-[3deg] rounded-lg border-[3px] border-coffee bg-warmwhite px-5 py-3 shadow-[6px_6px_0_0_#2B1B12] sm:block">
+              <div
+                className="absolute -bottom-6 -right-4 hidden max-w-[220px] rotate-[3deg] rounded-lg border-[3px] border-ink bg-cream px-5 py-3 sm:block"
+                style={{ boxShadow: `6px 6px 0 0 ${accents.shadow}` }}
+              >
                 <p className="text-xs font-bold text-ink">
                   &ldquo;{quote.text}&rdquo;
                 </p>
@@ -81,15 +104,18 @@ export default function FeatureSplit({
                 {eyebrow}
               </p>
             )}
-            <h2 className="text-[30px] leading-tight md:text-[44px]" style={{ color: textColor }}>
+            <h2 className="text-[30px] leading-tight md:text-[44px]" style={{ color: accents.headline }}>
               {heading}
             </h2>
-            <p
-              className="mt-4 text-lg font-medium"
-              style={{ color: textColor, opacity: 0.8 }}
-            >
-              {body}
-            </p>
+            {body.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className={`text-lg font-medium ${i === 0 ? "mt-4" : "mt-3"}`}
+                style={{ color: textColor, opacity: 0.8 }}
+              >
+                {paragraph}
+              </p>
+            ))}
 
             {bullets && (
               <ul className="mt-6 space-y-3">
@@ -111,13 +137,7 @@ export default function FeatureSplit({
 
             {cta && (
               <div className="mt-8">
-                <PushButton
-                  label={cta.label}
-                  href={cta.href}
-                  surface={textColor === "#FFFBF3" ? "#FFFBF3" : "#4A2E22"}
-                  textColor={textColor === "#FFFBF3" ? "#2B1B12" : "#FFFBF3"}
-                  pop="#FF6FA0"
-                />
+                <PushButton label={cta.label} href={cta.href} surface="#A8501A" textColor="#F5EFE3" />
               </div>
             )}
           </div>

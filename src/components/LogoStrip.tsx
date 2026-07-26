@@ -25,33 +25,34 @@ export default function LogoStrip({
   heading,
   items,
   bg,
-  textColor = "#FFFBF3",
+  textColor = "#F5EFE3",
   dividerTo,
   marquee = false,
   mascotLeft,
   mascotRight,
 }: LogoStripProps) {
-  const badgeClass = "shrink-0 rounded-lg border-2 px-5 py-2 text-sm font-bold tracking-wider";
-  const badgeStyle = { borderColor: textColor, color: textColor, backgroundColor: "transparent" };
+  const badgeClass =
+    "shrink-0 rounded-lg border-2 border-ink bg-pop px-5 py-2 text-sm font-bold tracking-wider text-ink shadow-[3px_3px_0_0_#2E1C12]";
+  const separator = <span className="shrink-0 text-lg text-pop">✦</span>;
 
   return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: bg }}>
+    <section className="relative" style={{ backgroundColor: bg }}>
       {mascotLeft && (
         <Mascot
           pose={mascotLeft.pose}
           flip={mascotLeft.flip}
-          cupColor={mascotLeft.cupColor ?? "#FFFBF3"}
-          teaColor={mascotLeft.teaColor ?? "#E2793A"}
-          className="pointer-events-none absolute left-0 top-0 hidden h-28 w-auto -rotate-6 sm:block md:h-36"
+          cupColor={mascotLeft.cupColor ?? "#F5EFE3"}
+          teaColor={mascotLeft.teaColor ?? "#A8501A"}
+          className="pointer-events-none absolute -top-10 left-0 z-30 hidden h-28 w-auto -rotate-12 sm:block md:-top-14 md:h-36"
         />
       )}
       {mascotRight && (
         <Mascot
           pose={mascotRight.pose}
           flip={mascotRight.flip}
-          cupColor={mascotRight.cupColor ?? "#FFFBF3"}
-          teaColor={mascotRight.teaColor ?? "#E2793A"}
-          className="pointer-events-none absolute right-0 top-0 hidden h-28 w-auto rotate-6 sm:block md:h-36"
+          cupColor={mascotRight.cupColor ?? "#F5EFE3"}
+          teaColor={mascotRight.teaColor ?? "#A8501A"}
+          className="pointer-events-none absolute -top-10 right-0 z-30 hidden h-28 w-auto rotate-12 sm:block md:-top-14 md:h-36"
         />
       )}
 
@@ -65,19 +66,21 @@ export default function LogoStrip({
 
         {marquee ? (
           <div className="mt-6 overflow-hidden">
-            <div className="marquee-track flex w-max items-center gap-3">
+            <div className="marquee-track flex w-max items-center gap-4">
               {[...items, ...items].map((item, i) => (
-                <span key={i} className={badgeClass} style={badgeStyle}>
-                  {item}
+                <span key={i} className="flex items-center gap-4">
+                  <span className={badgeClass}>{item}</span>
+                  {separator}
                 </span>
               ))}
             </div>
           </div>
         ) : (
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            {items.map((item) => (
-              <span key={item} className={badgeClass} style={badgeStyle}>
-                {item}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            {items.map((item, i) => (
+              <span key={item} className="flex items-center gap-4">
+                <span className={badgeClass}>{item}</span>
+                {i < items.length - 1 && separator}
               </span>
             ))}
           </div>

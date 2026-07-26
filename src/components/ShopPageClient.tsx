@@ -30,15 +30,15 @@ export default function ShopPageClient() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-coffee pt-[70px] pb-[var(--section-pad)] text-warmwhite">
+        <section className="relative overflow-hidden bg-ink pt-[70px] pb-[var(--section-pad)] text-cream">
           <div className="mx-auto max-w-[1400px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-warmwhite/60">
+            <p className="font-display text-sm uppercase tracking-widest text-cream/60">
               Build My Menu
             </p>
             <h1 className="mt-3 text-[36px] leading-tight md:text-[64px]">
               Build Your Menu, Drink by Drink.
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-warmwhite/80">
+            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-cream/80">
               Every milk tea, fruit tea, and specialty drink I serve. Tap the
               + to add a drink to your picks, or open one to customize
               sweetness and ice. Toppings are added separately below. No
@@ -46,10 +46,10 @@ export default function ShopPageClient() {
             </p>
           </div>
 
-          <WaveDivider fill="#FFFBF3" position="bottom" />
+          <WaveDivider fill="#F5EFE3" position="bottom" />
         </section>
 
-        <section className="relative bg-warmwhite">
+        <section className="relative bg-cream">
           <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
             <div className="flex flex-wrap items-center justify-center gap-2">
               {CATEGORIES.map((cat) => (
@@ -58,8 +58,8 @@ export default function ShopPageClient() {
                   onClick={() => setActive(cat)}
                   className={`rounded-full border-2 px-5 py-2 text-sm font-bold tracking-wider transition-colors ${
                     active === cat
-                      ? "border-coffee bg-coffee text-warmwhite"
-                      : "border-coffee/20 bg-transparent text-ink/60 hover:border-coffee/50 hover:text-ink"
+                      ? "border-ink bg-ink text-cream"
+                      : "border-ink/20 bg-transparent text-ink/60 border-ink/50 hover:text-ink"
                   }`}
                 >
                   {cat}
@@ -75,18 +75,18 @@ export default function ShopPageClient() {
           </div>
         </section>
 
-        <section id="toppings" className="relative bg-taro">
-          <WaveDivider fill="#FFFBF3" position="top" />
+        <section id="toppings" className="relative bg-field">
+          <WaveDivider fill="#F5EFE3" position="top" />
 
           <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
             <div className="mx-auto max-w-xl text-center">
-              <p className="font-display text-sm uppercase tracking-widest text-warmwhite/70">
+              <p className="font-display text-sm uppercase tracking-widest text-cream/70">
                 Make It Yours
               </p>
-              <h2 className="mt-3 text-[30px] text-warmwhite md:text-[44px]">
+              <h2 className="mt-3 text-[30px] text-cream md:text-[44px]">
                 Toppings
               </h2>
-              <p className="mt-3 text-lg font-medium text-warmwhite/85">
+              <p className="mt-3 text-lg font-medium text-cream/85">
                 Toppings aren&apos;t bundled with any drink — tap the + to add
                 one straight to your picks, mix and match with whatever you
                 like.
@@ -97,7 +97,7 @@ export default function ShopPageClient() {
               {TOPPINGS.map((t) => (
                 <div
                   key={t.slug}
-                  className="relative flex flex-col items-center rounded-xl border-[3px] border-coffee bg-warmwhite p-5 text-center shadow-[5px_5px_0_0_#2B1B12]"
+                  className="relative flex flex-col items-center rounded-xl border-[3px] border-ink bg-cream p-5 text-center shadow-[5px_5px_0_0_#A8501A]"
                 >
                   <div className="relative flex h-24 w-24 items-center justify-center">
                     {t.img ? (
@@ -118,8 +118,8 @@ export default function ShopPageClient() {
                   <button
                     onClick={() => handleQuickAddTopping(t.slug, t.name)}
                     aria-label={`Quick add ${t.name} to my picks`}
-                    className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-coffee text-lg font-bold shadow-[3px_3px_0_0_#2B1B12] transition-all duration-150 hover:scale-110 active:scale-95 ${
-                      addedTopping === t.slug ? "bg-thai text-warmwhite" : "bg-warmwhite text-ink"
+                    className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#A8501A] transition-all duration-150 hover:scale-110 active:scale-95 ${
+                      addedTopping === t.slug ? "bg-accent text-cream" : "bg-cream text-ink"
                     }`}
                   >
                     {addedTopping === t.slug ? "✓" : "+"}
@@ -129,15 +129,15 @@ export default function ShopPageClient() {
             </div>
           </div>
 
-          <WaveDivider fill="#4A2E22" position="bottom" />
+          <WaveDivider fill="#2E1C12" position="bottom" />
         </section>
 
-        <section className="relative bg-coffee">
+        <section className="relative bg-ink">
           <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] text-center md:px-12">
-            <h2 className="text-[28px] text-warmwhite md:text-[40px]">
+            <h2 className="text-[28px] text-cream md:text-[40px]">
               Found Your Favorites?
             </h2>
-            <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-warmwhite/80">
+            <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-cream/80">
               Add drinks to your picks as you browse, then send the full list
               straight to Lynh&apos;s for a custom event quote.
             </p>
@@ -145,9 +145,8 @@ export default function ShopPageClient() {
               <PushButton
                 label="Book Your Event"
                 href="/book"
-                surface="#FFFBF3"
-                textColor="#2B1B12"
-                pop="#E2793A"
+                surface="#F5EFE3"
+                textColor="#2E1C12"
               />
             </div>
           </div>

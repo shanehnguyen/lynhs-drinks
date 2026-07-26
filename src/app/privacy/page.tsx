@@ -16,23 +16,23 @@ export default function PrivacyPage() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-coffee pt-[70px] pb-16 text-warmwhite">
+        <section className="relative overflow-hidden bg-ink pt-[70px] pb-16 text-cream">
           <div className="mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-warmwhite/60">
+            <p className="font-display text-sm uppercase tracking-widest text-cream/60">
               Legal
             </p>
             <h1 className="mt-3 text-[32px] leading-tight md:text-[48px]">
               Privacy Policy
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-base font-medium text-warmwhite/80">
+            <p className="mx-auto mt-4 max-w-xl text-base font-medium text-cream/80">
               Last updated July 2026
             </p>
           </div>
 
-          <WaveDivider fill="#FFFBF3" position="bottom" />
+          <WaveDivider fill="#F5EFE3" position="bottom" />
         </section>
 
-        <section className="relative bg-warmwhite">
+        <section className="relative bg-cream">
           <div className="mx-auto max-w-[700px] px-6 py-[var(--section-pad)] text-ink/80 md:px-12">
             <div className="space-y-8 text-base leading-relaxed">
               <div>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
                     href="https://web3forms.com/privacy"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold underline hover:text-thai"
+                    className="font-bold underline hover:text-accent"
                   >
                     Web3Forms
                   </a>
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
                     href="https://policies.google.com/privacy"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold underline hover:text-thai"
+                    className="font-bold underline hover:text-accent"
                   >
                     Google&apos;s Privacy Policy
                   </a>
@@ -132,11 +132,11 @@ export default function PrivacyPage() {
                 <p className="mt-3">
                   Questions about this policy or your information? Reach us
                   at{" "}
-                  <a href={`mailto:${BUSINESS_EMAIL}`} className="font-bold underline hover:text-thai">
+                  <a href={`mailto:${BUSINESS_EMAIL}`} className="font-bold underline hover:text-accent">
                     {BUSINESS_EMAIL}
                   </a>{" "}
                   or{" "}
-                  <a href="tel:+14082064855" className="font-bold underline hover:text-thai">
+                  <a href="tel:+14082064855" className="font-bold underline hover:text-accent">
                     {BUSINESS_PHONE_DISPLAY}
                   </a>
                   .

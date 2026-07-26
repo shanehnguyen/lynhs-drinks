@@ -6,8 +6,6 @@ type PushButtonProps = {
   type?: "button" | "submit";
   surface?: string;
   textColor?: string;
-  pop?: string;
-  border?: string;
   className?: string;
   disabled?: boolean;
   fullWidth?: boolean;
@@ -18,10 +16,8 @@ export default function PushButton({
   label,
   href,
   type,
-  surface = "#FFFBF3",
-  textColor = "#2B1B12",
-  pop = "#FF6FA0",
-  border = "#2B1B12",
+  surface = "#A8501A",
+  textColor = "#F5EFE3",
   className = "",
   disabled = false,
   fullWidth = false,
@@ -30,11 +26,11 @@ export default function PushButton({
   const inner = (
     <>
       <span
-        className={`push-btn__surface ${fullWidth ? "w-full justify-center" : ""}`}
+        className={`push-btn__surface uppercase tracking-wider ${fullWidth ? "w-full justify-center" : ""}`}
         style={{
           backgroundColor: surface,
           color: textColor,
-          boxShadow: `inset 0 0 0 2px ${border}`,
+          boxShadow: "inset 0 0 0 3px #2E1C12",
         }}
       >
         {label}
@@ -42,7 +38,7 @@ export default function PushButton({
       <span
         aria-hidden
         className="push-btn__pop"
-        style={{ backgroundColor: pop }}
+        style={{ backgroundColor: "#2E1C12" }}
       />
     </>
   );

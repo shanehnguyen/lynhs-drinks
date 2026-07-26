@@ -45,7 +45,7 @@ export default function BookingForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-2xl border-[3px] border-coffee bg-warmwhite p-10 text-center shadow-[8px_8px_0_0_#2B1B12]">
+      <div className="rounded-2xl border-[3px] border-ink bg-cream p-10 text-center shadow-[8px_8px_0_0_#6B5A9E]">
         <h2 className="text-2xl text-ink">Thanks — got it!</h2>
         <p className="mt-3 text-sm font-medium text-ink/70">
           I usually reply within 1 to 2 business days with pricing and
@@ -58,7 +58,7 @@ export default function BookingForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid grid-cols-1 gap-5 rounded-2xl border-[3px] border-coffee bg-warmwhite p-6 shadow-[8px_8px_0_0_#2B1B12] sm:grid-cols-2 md:p-10"
+      className="grid grid-cols-1 gap-5 rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[8px_8px_0_0_#6B5A9E] sm:grid-cols-2 md:p-10"
     >
       <Field label="Full Name" name="name" required />
       <Field label="Email" name="email" type="email" required />
@@ -70,7 +70,7 @@ export default function BookingForm() {
         <select
           name="eventType"
           required
-          className="mt-2 w-full rounded-xl border-2 border-coffee/30 bg-warmwhite px-4 py-2.5 font-medium text-ink focus:border-coffee focus:outline-none"
+          className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink focus:border-ink focus:outline-none"
         >
           {EVENT_TYPES.map((t) => (
             <option key={t} value={t}>
@@ -91,7 +91,7 @@ export default function BookingForm() {
           rows={picks ? 8 : 4}
           defaultValue={defaultDetails}
           placeholder="Location, flavors you're excited about, anything else we should know..."
-          className="mt-2 w-full rounded-xl border-2 border-coffee/30 bg-warmwhite px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-coffee focus:outline-none"
+          className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
         />
       </div>
 
@@ -100,9 +100,8 @@ export default function BookingForm() {
           label={status === "sending" ? "Sending…" : "Send Inquiry"}
           type="submit"
           disabled={status === "sending"}
-          surface="#4A2E22"
-          textColor="#FFFBF3"
-          pop="#E2793A"
+          surface="#A8501A"
+          textColor="#F5EFE3"
         />
         <p className="mt-3 text-xs font-medium text-ink/50">
           {status === "error"
@@ -134,7 +133,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="mt-2 w-full rounded-xl border-2 border-coffee/30 bg-warmwhite px-4 py-2.5 font-medium text-ink focus:border-coffee focus:outline-none"
+        className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink focus:border-ink focus:outline-none"
       />
     </div>
   );

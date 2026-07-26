@@ -19,39 +19,43 @@ export default function Home() {
         <Hero />
 
         <LogoStrip
-          heading="Trusted for 20+ years at:"
+          heading="Twenty years of parish festivals, and they keep asking me back:"
           items={[
             "St. Maria Goretti Parish Festival",
             "Our Lady of La Vang Parish Festival",
             "Saint Elizabeth Parish",
             "Saint John Vianney Annual Festival",
           ]}
-          bg="#E2793A"
-          dividerTo="#8C6FAE"
+          bg="#A8501A"
+          dividerTo="#6B5A9E"
           marquee
-          mascotLeft={{ pose: "shrug", cupColor: "#FFFBF3", teaColor: "#8C6FAE" }}
-          mascotRight={{ pose: "peek", cupColor: "#FFFBF3", teaColor: "#4A2E22" }}
+          mascotLeft={{ pose: "shrug", cupColor: "#F5EFE3", teaColor: "#6B5A9E" }}
+          mascotRight={{ pose: "peek", cupColor: "#F5EFE3", teaColor: "#2E1C12" }}
         />
 
         <OfferingGrid />
 
         <FeatureSplit
           id="about"
-          bg="#FFFBF3"
-          textColor="#2B1B12"
+          bg="#F5EFE3"
+          textColor="#2E1C12"
           eyebrow="Our Story"
-          heading="From Vietnam to San Jose: 20 Years of Sharing"
-          body="I came to the U.S. from Vietnam when I was 17, and my family and I started over with pretty much nothing. I was studying Social Work at San Jose State when I started making drinks on the side, using recipes I grew up with back home. I never planned on turning it into a business. I just loved making drinks for people and sharing a little piece of where I came from. Twenty years later, I'm still making the same recipes by hand at every event. — Lynh Ngo, Founder"
+          heading="How a Church Festival Turned Into a Business"
+          body={`I came to the U.S. from Vietnam at seventeen, and my family started over with close to nothing. A few years later I was studying Social Work at San Jose State and making drinks on the side, using the recipes I grew up with back home. I liked watching someone's face after the first sip. That was the whole reason I kept going.
+
+Twenty years later I'm still making those same recipes by hand at every event, and I still watch for the face.
+
+— Lynh Ngo, Founder`}
           cta={{ label: "See the Menu", href: "/shop" }}
           photoLabel="Lynh Ngo, founder"
           photoSrc="/photos/owner-portrait.png"
           photoAlt="Lynh Ngo, founder of Lynh's Drinks"
           photoCutout
-          dividerBottom="#4A2E22"
+          dividerBottom="#2E1C12"
         />
 
         <LogoStrip
-          heading="Also Serving These Cities:"
+          heading="Also pouring in:"
           items={[
             "San Jose",
             "Santa Clara",
@@ -60,31 +64,31 @@ export default function Home() {
             "Campbell",
             "Morgan Hill",
           ]}
-          bg="#4A2E22"
-          dividerTo="#FFFBF3"
-          mascotLeft={{ pose: "point", flip: true, cupColor: "#F4E8D8", teaColor: "#8C6FAE" }}
-          mascotRight={{ pose: "think", cupColor: "#F4E8D8", teaColor: "#E2793A" }}
+          bg="#2E1C12"
+          dividerTo="#F5EFE3"
+          mascotLeft={{ pose: "point", flip: true, cupColor: "#F5EFE3", teaColor: "#6B5A9E" }}
+          mascotRight={{ pose: "think", cupColor: "#F5EFE3", teaColor: "#A8501A" }}
         />
 
         <FeatureSplit
-          bg="#FFFBF3"
-          textColor="#2B1B12"
+          bg="#F5EFE3"
+          textColor="#2E1C12"
           reverse
-          heading="More Reasons Guests Keep Coming Back for Seconds"
-          body="It's not just the flavors. It's twenty years of experience getting every detail right."
+          heading="Why the Line Keeps Reforming"
+          body="Twenty years of events has taught me where things go sideways, so I plan around it before I load the bus."
           bullets={[
-            "Brewed fresh on-site, never from a powdered mix",
-            "Fully customizable toppings for every guest",
-            "30,000+ drinks served across 10+ large-scale events",
-            "One team, from setup to last cup poured",
+            "Tea steeped and brewed on site, with real leaves and real milk",
+            "Toppings for everyone, from the boba purist to the kid who wants extra jelly",
+            "30,000+ drinks poured across 10+ large-scale events",
+            "One crew from setup to the last cup, and I'm there for all of it",
           ]}
           photoLabel="Our mobile drink bar bus at a parish festival"
           photoSrc="/photos/bus-sign.png"
           photoAlt="Lynh's Drinks mobile bus setup at a parish festival"
           photoCutout
-          photoCutoutMaxHeight="520px"
+          photoCutoutMaxHeight="380px"
           quote={{ text: "They pulled up in the cutest drink bus — our guests were obsessed!", author: "Mai Le, School Event" }}
-          dividerBottom="#E2793A"
+          dividerBottom="#A8501A"
         />
 
         <TestimonialRow />
@@ -92,17 +96,17 @@ export default function Home() {
 
         <FeatureSplit
           id="team"
-          bg="#F4E8D8"
-          textColor="#2B1B12"
+          bg="#F5EFE3"
+          textColor="#2E1C12"
           eyebrow="Meet the Team"
           heading="Meet the Hands Behind Every Cup"
-          body="What started with me serving drinks at my church's festival has grown into a team that treats every event, big or small, like it's the only one that day."
+          body="This started with me pouring drinks at my own church festival. There's a crew now, and the rule hasn't changed. Whatever is on the calendar that day gets treated like it's the only event we have."
           cta={{ label: "More About Lynh's", href: "/#about" }}
           photoLabel="Lynh's Drinks team at a festival booth"
           photoSrc="/photos/lynh-team.jpg"
           photoAlt="Lynh's Drinks team at a festival booth"
           quote={{ text: "Very organized and responsive. My guests were impressed with the drink decor.", author: "Diep Nguyen, Church Festival" }}
-          dividerBottom="#8C6FAE"
+          dividerBottom="#6B5A9E"
         />
 
         <UpsellBlock />

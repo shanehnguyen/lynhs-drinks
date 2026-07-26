@@ -16,9 +16,15 @@ const SWEETNESS_LEVELS = ["100%", "75%", "50%", "25%", "0%"];
 const ICE_LEVELS = ["Regular Ice", "Less Ice", "No Ice"];
 
 const CATEGORY_COLOR: Record<string, string> = {
-  "Milk Tea": "#4A2E22",
-  "Fruit Tea": "#E2793A",
-  Specialty: "#8C6FAE",
+  "Milk Tea": "#A8501A",
+  "Fruit Tea": "#F2B441",
+  Specialty: "#6B5A9E",
+};
+
+const CATEGORY_TEXT: Record<string, string> = {
+  "Milk Tea": "#F5EFE3",
+  "Fruit Tea": "#2E1C12",
+  Specialty: "#F5EFE3",
 };
 
 export default function ProductDetailClient({ slug }: { slug: string }) {
@@ -39,7 +45,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
             We couldn&apos;t find that drink on the menu.
           </p>
           <div className="mt-8 flex justify-center">
-            <PushButton label="Back to Shop" href="/shop" surface="#4A2E22" textColor="#FFFBF3" pop="#E2793A" />
+            <PushButton label="Back to Shop" href="/shop" surface="#A8501A" textColor="#F5EFE3" />
           </div>
         </main>
         <Footer />
@@ -47,7 +53,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
     );
   }
 
-  const tone = CATEGORY_COLOR[drink.category] ?? "#4A2E22";
+  const tone = CATEGORY_COLOR[drink.category] ?? "#A8501A";
+  const toneText = CATEGORY_TEXT[drink.category] ?? "#F5EFE3";
   const related = getRelatedDrinks(drink);
 
   function handleAdd() {
@@ -62,7 +69,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       <Header />
 
       <main>
-        <section className="relative bg-warmwhite pt-[40px] pb-[var(--section-pad)]">
+        <section className="relative bg-cream pt-[40px] pb-[var(--section-pad)]">
           <div className="mx-auto max-w-[1400px] px-6 md:px-12">
             <nav className="text-xs font-bold uppercase tracking-wider text-ink/40">
               <Link href="/shop" className="hover:text-ink">
@@ -71,9 +78,9 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
               / <span className="text-ink/70">{drink.name}</span>
             </nav>
 
-            <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
               <div
-                className="relative flex aspect-square items-center justify-center rounded-xl border-[3px] border-coffee"
+                className="relative flex aspect-square items-center justify-center rounded-xl border-[3px] border-ink"
                 style={{ backgroundColor: `${tone}1a` }}
               >
                 {drink.img ? (
@@ -96,8 +103,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
               <div>
                 <span
-                  className="inline-block rounded-full border-2 border-coffee px-4 py-1 text-xs font-bold uppercase tracking-wider text-warmwhite"
-                  style={{ backgroundColor: tone }}
+                  className="inline-block rounded-full border-2 border-ink px-4 py-1 text-xs font-bold uppercase tracking-wider"
+                  style={{ backgroundColor: tone, color: toneText }}
                 >
                   {drink.category}
                 </span>
@@ -110,7 +117,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   {drink.tastesLike.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border-2 border-coffee/20 px-3 py-1 text-xs font-bold tracking-wider text-ink/60"
+                      className="rounded-full border-2 border-ink/20 px-3 py-1 text-xs font-bold tracking-wider text-ink/60"
                     >
                       {tag}
                     </span>
@@ -131,8 +138,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                           onClick={() => setSweetness(level)}
                           className={`rounded-full border-2 px-4 py-1.5 text-sm font-bold tracking-wider transition-colors ${
                             sweetness === level
-                              ? "border-coffee bg-coffee text-warmwhite"
-                              : "border-coffee/25 text-ink/60 hover:border-coffee/50"
+                              ? "border-ink bg-ink text-cream"
+                              : "border-ink/25 text-ink/60 border-ink/50"
                           }`}
                         >
                           {level}
@@ -152,8 +159,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                           onClick={() => setIce(level)}
                           className={`rounded-full border-2 px-4 py-1.5 text-sm font-bold tracking-wider transition-colors ${
                             ice === level
-                              ? "border-coffee bg-coffee text-warmwhite"
-                              : "border-coffee/25 text-ink/60 hover:border-coffee/50"
+                              ? "border-ink bg-ink text-cream"
+                              : "border-ink/25 text-ink/60 border-ink/50"
                           }`}
                         >
                           {level}
@@ -168,9 +175,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     label={justAdded ? "Added to My Picks ✓" : "Add to My Picks"}
                     type="button"
                     onClick={handleAdd}
-                    surface="#4A2E22"
-                    textColor="#FFFBF3"
-                    pop="#E2793A"
+                    surface="#A8501A"
+                    textColor="#F5EFE3"
                   />
                   <p className="mt-3 text-xs font-medium text-ink/50">
                     No prices, no checkout. This just adds the drink to your
@@ -179,7 +185,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   <p className="mt-2 text-xs font-medium text-ink/50">
                     Want boba, cream, or foam on top? Toppings are added
                     separately —{" "}
-                    <Link href="/shop#toppings" className="font-bold text-ink underline hover:text-thai">
+                    <Link href="/shop#toppings" className="font-bold text-ink underline hover:text-accent">
                       pick your toppings here
                     </Link>
                     .
@@ -188,7 +194,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
               </div>
             </div>
 
-            <div className="mt-16 grid grid-cols-2 gap-6 border-t-2 border-coffee/10 pt-10 sm:grid-cols-4">
+            <div className="mt-16 grid grid-cols-2 gap-6 border-t-2 border-ink/10 pt-10 sm:grid-cols-4">
               <InfoStat label="Category" value={drink.category} icon="church" />
               <InfoStat label="Caffeine" value={drink.caffeine} icon="custom" />
               <InfoStat label="Serving Style" value={drink.servingStyle} icon="party" />
@@ -198,11 +204,11 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         </section>
 
         {related.length > 0 && (
-          <section className="relative bg-taro">
-            <WaveDivider fill="#FFFBF3" position="top" />
+          <section className="relative bg-field">
+            <WaveDivider fill="#F5EFE3" position="top" />
 
             <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
-              <h2 className="text-center text-[28px] text-warmwhite md:text-[40px]">
+              <h2 className="text-center text-[28px] text-cream md:text-[40px]">
                 You Might Also Like
               </h2>
 
@@ -213,22 +219,22 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
               </div>
             </div>
 
-            <WaveDivider fill="#4A2E22" position="bottom" />
+            <WaveDivider fill="#2E1C12" position="bottom" />
           </section>
         )}
 
-        <section className="relative bg-coffee">
+        <section className="relative bg-ink">
           <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] text-center md:px-12">
-            <h2 className="text-[28px] text-warmwhite md:text-[40px]">
+            <h2 className="text-[28px] text-cream md:text-[40px]">
               Ready to Build Your Menu?
             </h2>
-            <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-warmwhite/80">
+            <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-cream/80">
               Keep browsing, add your favorites to your picks, then send the
               full list to Lynh&apos;s for a custom quote.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <PushButton label="Keep Shopping" href="/shop" surface="#FFFBF3" textColor="#2B1B12" pop="#8C6FAE" />
-              <PushButton label="Book Your Event" href="/book" surface="#FFFBF3" textColor="#2B1B12" pop="#E2793A" />
+              <PushButton label="Keep Shopping" href="/shop" surface="#F5EFE3" textColor="#2E1C12" />
+              <PushButton label="Book Your Event" href="/book" surface="#F2B441" textColor="#2E1C12" />
             </div>
           </div>
         </section>
@@ -242,7 +248,9 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 function InfoStat({ label, value, icon }: { label: string; value: string; icon: "church" | "custom" | "party" | "wedding" }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <IconDoodle name={icon} color="#8C6FAE" className="h-8 w-8" />
+      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-ink bg-pop">
+        <IconDoodle name={icon} color="#2E1C12" className="h-7 w-7" />
+      </div>
       <p className="mt-2 text-xs font-bold uppercase tracking-wider text-ink/45">{label}</p>
       <p className="mt-1 text-sm font-bold tracking-wider text-ink">{value}</p>
     </div>

@@ -50,8 +50,8 @@ export default function Header() {
     };
   }, []);
 
-  const textColorClass = navBg ? (isDark ? "text-warmwhite" : "text-ink") : "text-ink";
-  const hoverColorClass = isDark ? "hover:text-strawberry" : "hover:text-thai";
+  const textColorClass = navBg ? (isDark ? "text-cream" : "text-ink") : "text-ink";
+  const hoverColorClass = isDark ? "hover:text-pop" : "hover:text-accent";
 
   return (
     <header
@@ -68,8 +68,8 @@ export default function Header() {
           Lynh&apos;s Drinks
           <Mascot
             pose="wave"
-            cupColor="#FFFBF3"
-            teaColor="#E2793A"
+            cupColor="#F5EFE3"
+            teaColor="#A8501A"
             className="h-9 w-auto -rotate-3 sm:h-10"
           />
         </Link>
@@ -91,18 +91,16 @@ export default function Header() {
             className="hidden sm:flex"
             colorClassName={
               isDark
-                ? "border-warmwhite/50 text-warmwhite hover:bg-warmwhite hover:text-ink"
-                : "border-coffee text-ink hover:bg-coffee hover:text-warmwhite"
+                ? "border-cream/50 text-cream hover:bg-cream hover:text-ink"
+                : "border-ink text-ink hover:bg-ink hover:text-cream"
             }
           />
           <ShopCartDrawer />
           <PushButton
-            label="Get a Quote"
+            label="Get My Quote"
             href="/book"
-            surface="#4A2E22"
-            textColor="#FFFBF3"
-            pop="#FF6FA0"
-            border="#2B1B12"
+            surface="#A8501A"
+            textColor="#F5EFE3"
             className="hidden text-sm sm:inline-block"
           />
 
@@ -110,7 +108,7 @@ export default function Header() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-coffee bg-warmwhite text-ink lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-ink bg-cream text-ink lg:hidden"
           >
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               {menuOpen ? (
@@ -124,14 +122,14 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t-2 border-coffee/10 bg-cream px-6 py-6 lg:hidden">
+        <div className="border-t-2 border-ink/10 bg-cream px-6 py-6 lg:hidden">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-3 py-3 font-body text-base font-bold uppercase tracking-wider text-ink hover:bg-coffee/5"
+                className="rounded-lg px-3 py-3 font-body text-base font-bold uppercase tracking-wider text-ink bg-ink/5"
               >
                 {link.label}
               </Link>
@@ -140,13 +138,11 @@ export default function Header() {
 
           <div className="mt-4 flex items-center gap-3">
             <PushButton
-              label="Get a Quote"
+              label="Get My Quote"
               href="/book"
               onClick={() => setMenuOpen(false)}
-              surface="#4A2E22"
-              textColor="#FFFBF3"
-              pop="#FF6FA0"
-              border="#2B1B12"
+              surface="#A8501A"
+              textColor="#F5EFE3"
               className="text-sm"
             />
             <LanguageToggle />

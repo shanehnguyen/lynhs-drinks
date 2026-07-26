@@ -18,21 +18,21 @@ export default function BookPage() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-taro pt-[70px] pb-16 text-warmwhite md:pb-20">
+        <section className="relative overflow-hidden bg-field pt-[70px] pb-16 text-cream md:pb-20">
           <div className="mx-auto max-w-[1400px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-warmwhite/70">
+            <p className="font-display text-sm uppercase tracking-widest text-cream/70">
               Let&apos;s Get Your Date Booked
             </p>
             <h1 className="mt-3 text-[36px] leading-tight md:text-[60px]">
               Tell Us About Your Event
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-warmwhite/85">
+            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-cream/85">
               Fill out the form below and I&apos;ll follow up with pricing,
               flavor recommendations, and availability for your date.
             </p>
           </div>
 
-          <WaveDivider fill="#F4E8D8" position="bottom" />
+          <WaveDivider fill="#F5EFE3" position="bottom" />
         </section>
 
         <section className="relative bg-cream">
@@ -46,7 +46,7 @@ export default function BookPage() {
               ].map((detail) => (
                 <div
                   key={detail.label}
-                  className="rounded-lg border-[3px] border-coffee bg-warmwhite p-4 text-center shadow-[4px_4px_0_0_#2B1B12]"
+                  className="rounded-lg border-[3px] border-ink bg-cream p-4 text-center shadow-[4px_4px_0_0_#6B5A9E]"
                 >
                   <p className="text-lg font-bold tracking-wider text-ink md:text-xl">{detail.value}</p>
                   <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-ink/50">
@@ -61,7 +61,7 @@ export default function BookPage() {
             </p>
             <p className="mt-2 text-center text-xs font-medium text-ink/50">
               Prefer to call or text?{" "}
-              <a href={`tel:${BUSINESS_PHONE_TEL}`} className="font-bold text-ink underline hover:text-thai">
+              <a href={`tel:${BUSINESS_PHONE_TEL}`} className="font-bold text-ink underline hover:text-accent">
                 {BUSINESS_PHONE_DISPLAY}
               </a>
             </p>

@@ -20,7 +20,7 @@ type LanguageToggleProps = {
 
 export default function LanguageToggle({
   className = "",
-  colorClassName = "border-coffee text-ink hover:bg-coffee hover:text-warmwhite",
+  colorClassName = "border-ink text-ink hover:bg-ink hover:text-cream",
 }: LanguageToggleProps) {
   const [isVietnamese, setIsVietnamese] = useState(false);
 

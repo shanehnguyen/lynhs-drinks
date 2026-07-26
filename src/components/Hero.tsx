@@ -5,32 +5,33 @@ import WaveDivider from "./ui/WaveDivider";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream pt-[90px] pb-[var(--section-pad)]">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:px-12">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:gap-12 md:px-12">
         <div>
-          <h1 className="text-[40px] leading-[1.05] text-ink sm:text-[56px] md:text-[72px] lg:text-[84px]">
+          <p className="text-sm font-bold uppercase tracking-wider text-ink/60">
+            Milk tea, fruit tea, and Vietnamese coffee, brewed at your event
+          </p>
+          <h1 className="mt-3 text-[40px] leading-[1.05] text-field sm:text-[56px] md:text-[72px] lg:text-[84px]">
             Handcrafted Drinks Worth Remembering.
           </h1>
           <p className="mt-6 max-w-lg text-lg font-medium text-ink/80 md:text-xl">
-            I brew real milk tea, fruit tea, and Vietnamese coffee fresh for
-            church festivals, school events, private parties, and company
-            celebrations. Same recipes I&apos;ve been making for 20+ years.
-            Serving Santa Clara County + the Bay Area.
+            I brew real milk tea, fruit tea, and Vietnamese coffee on site,
+            by hand, from the recipes I grew up with in Vietnam. Church
+            festivals, school carnivals, weddings, backyard parties, office
+            celebrations. Serving Santa Clara County and the wider Bay Area.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <PushButton
               label="Build My Menu"
               href="/shop"
-              surface="#4A2E22"
-              textColor="#FFFBF3"
-              pop="#E2793A"
+              surface="#A8501A"
+              textColor="#F5EFE3"
             />
             <PushButton
               label="Get My Free Quote"
               href="/book"
-              surface="#FFFBF3"
-              textColor="#2B1B12"
-              pop="#8C6FAE"
+              surface="#F5EFE3"
+              textColor="#2E1C12"
             />
           </div>
 
@@ -38,18 +39,18 @@ export default function Hero() {
             <div>
               <p className="font-display text-3xl text-ink md:text-4xl">30,000+</p>
               <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-ink/60">
-                Drinks Served
+                Drinks Poured
               </p>
             </div>
-            <div className="h-10 w-px bg-coffee/15" />
+            <div className="h-10 w-px bg-ink/15" />
             <div>
-              <div className="flex items-center gap-1 text-2xl text-thai md:text-3xl">
+              <div className="flex items-center gap-1 text-2xl text-accent md:text-3xl">
                 {"★★★★★".split("").map((star, i) => (
                   <span key={i}>{star}</span>
                 ))}
               </div>
               <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-ink/60">
-                Rated By Guests
+                Guest Rated
               </p>
             </div>
           </div>
@@ -59,14 +60,14 @@ export default function Hero() {
           <PhotoFrame
             label="Drink photo"
             rotate={-2}
-            tone="#E2793A"
+            tone="#A8501A"
             src="/photos/lynh-booth.jpg"
             alt="Lynh serving drinks at her festival booth"
             priority
           />
 
-          <div className="absolute -bottom-6 -left-6 hidden rotate-[-4deg] rounded-lg border-[3px] border-coffee bg-warmwhite px-5 py-3 shadow-[6px_6px_0_0_#2B1B12] sm:block">
-            <div className="flex items-center gap-1 text-thai">
+          <div className="absolute -bottom-6 -left-6 hidden rotate-[-4deg] rounded-lg border-[3px] border-ink bg-cream px-5 py-3 shadow-[6px_6px_0_0_#6B5A9E] sm:block">
+            <div className="flex items-center gap-1 text-accent">
               {"★★★★★".split("").map((star, i) => (
                 <span key={i}>{star}</span>
               ))}
@@ -81,7 +82,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <WaveDivider fill="#E2793A" position="bottom" />
+      <WaveDivider fill="#A8501A" position="bottom" />
     </section>
   );
 }

@@ -21,12 +21,13 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  "Handcrafted milk tea, fruit tea, and Vietnamese coffee catering for weddings, church festivals, school events, and corporate parties across San Jose & Santa Clara County.";
+  "Fresh-brewed milk tea, fruit tea, and Vietnamese coffee catered for church festivals, weddings, school events, and parties across Santa Clara County. Twenty years, 30,000+ drinks.";
+const HOME_TITLE = `Bay Area Boba & Milk Tea Catering | ${SITE_NAME}, San Jose`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Handcrafted Milk Tea & Fruit Tea Catering`,
+    default: HOME_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,
@@ -43,14 +44,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Handcrafted Milk Tea & Fruit Tea Catering`,
+    title: HOME_TITLE,
     description: DESCRIPTION,
     url: SITE_URL,
     images: ["/photos/lynh-booth.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Handcrafted Milk Tea & Fruit Tea Catering`,
+    title: HOME_TITLE,
     description: DESCRIPTION,
     images: ["/photos/lynh-booth.jpg"],
   },

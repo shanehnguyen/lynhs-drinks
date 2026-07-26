@@ -47,22 +47,22 @@ export default function MarketingPopup() {
       <button
         aria-label="Close"
         onClick={dismiss}
-        className="absolute inset-0 bg-coffee/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-ink/50 backdrop-blur-sm"
       />
 
-      <div className="relative w-full max-w-md rounded-2xl border-[3px] border-coffee bg-warmwhite p-6 shadow-[10px_10px_0_0_#2B1B12] sm:p-8">
+      <div className="relative w-full max-w-md rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[10px_10px_0_0_#6B5A9E] sm:p-8">
         <button
           onClick={dismiss}
           aria-label="Close popup"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-coffee text-ink hover:bg-coffee hover:text-warmwhite"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-ink text-ink hover:bg-ink hover:text-cream"
         >
           ✕
         </button>
 
         <Mascot
           pose="cheer"
-          cupColor="#F4E8D8"
-          teaColor="#E2793A"
+          cupColor="#F5EFE3"
+          teaColor="#A8501A"
           className="mx-auto h-20 w-auto -rotate-3"
         />
 
@@ -90,19 +90,18 @@ export default function MarketingPopup() {
                 type="email"
                 required
                 placeholder="you@email.com"
-                className="w-full rounded-full border-2 border-coffee/30 bg-warmwhite px-4 py-2.5 text-sm font-medium text-ink placeholder:text-ink/40 focus:border-coffee focus:outline-none"
+                className="w-full rounded-full border-2 border-ink/30 bg-cream px-4 py-2.5 text-sm font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
               />
               <PushButton
                 label={status === "sending" ? "Sending…" : "Send My Discount Code"}
                 type="submit"
                 disabled={status === "sending"}
                 fullWidth
-                surface="#4A2E22"
-                textColor="#FFFBF3"
-                pop="#E2793A"
+                surface="#A8501A"
+                textColor="#F5EFE3"
               />
               {status === "error" && (
-                <p className="text-center text-xs font-bold text-strawberry">
+                <p className="text-center text-xs font-bold text-pop">
                   Something went wrong — please try again.
                 </p>
               )}

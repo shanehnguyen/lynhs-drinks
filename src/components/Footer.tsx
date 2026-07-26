@@ -53,12 +53,12 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative bg-coffee text-warmwhite">
+    <footer className="relative overflow-hidden bg-ink text-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-12">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 md:gap-12">
           {COLUMNS.map((col) => (
             <div key={col.heading}>
-              <h3 className="font-display text-lg text-warmwhite">
+              <h3 className="font-display text-lg text-cream">
                 {col.heading}
               </h3>
               <ul className="mt-4 space-y-3">
@@ -66,7 +66,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm font-medium text-warmwhite/70 hover:text-warmwhite"
+                      className="text-sm font-medium text-cream/70 hover:text-cream"
                     >
                       {link.label}
                     </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
                   <li>
                     <a
                       href={`tel:${BUSINESS_PHONE_TEL}`}
-                      className="text-sm font-bold text-warmwhite/70 hover:text-warmwhite"
+                      className="text-sm font-bold text-cream/70 hover:text-cream"
                     >
                       {BUSINESS_PHONE_DISPLAY}
                     </a>
@@ -87,7 +87,7 @@ export default function Footer() {
           ))}
 
           <div>
-            <h3 className="font-display text-lg text-warmwhite">
+            <h3 className="font-display text-lg text-cream">
               Let&apos;s Be Friends
             </h3>
             <ul className="mt-4 flex gap-3">
@@ -98,7 +98,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-warmwhite/40 text-xs font-bold text-warmwhite/70 hover:border-warmwhite hover:text-warmwhite"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-cream/40 text-xs font-bold text-cream/70 hover:border-cream hover:text-cream"
                   >
                     {s.label[0]}
                   </a>
@@ -107,21 +107,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="relative">
+          <div className="relative order-first sm:order-none">
             <Mascot
               pose="wave"
-              cupColor="#F4E8D8"
-              teaColor="#FF6FA0"
+              cupColor="#F5EFE3"
+              teaColor="#F2B441"
               className="pointer-events-none absolute -top-24 right-0 hidden h-24 w-auto rotate-6 sm:block"
             />
-            <h3 className="font-display text-lg text-warmwhite">
+            <h3 className="font-display text-lg text-cream">
               Stay Sweet
             </h3>
-            <p className="mt-4 text-sm font-medium text-warmwhite/70">
-              Get seasonal flavors &amp; booking openings in your inbox.
+            <p className="mt-4 text-sm font-medium text-cream/70">
+              Seasonal flavors and open dates, about once a month.
             </p>
             {status === "sent" ? (
-              <p className="mt-4 text-sm font-bold text-warmwhite">
+              <p className="mt-4 text-sm font-bold text-cream">
                 You&apos;re on the list! 🎉
               </p>
             ) : (
@@ -131,19 +131,18 @@ export default function Footer() {
                   type="email"
                   required
                   placeholder="you@email.com"
-                  className="rounded-full border-2 border-warmwhite/40 bg-transparent px-4 py-2 text-sm text-warmwhite placeholder:text-warmwhite/50 focus:border-warmwhite focus:outline-none"
+                  className="rounded-full border-2 border-cream/40 bg-transparent px-4 py-2 text-sm text-cream placeholder:text-cream/50 focus:border-cream focus:outline-none"
                 />
                 <PushButton
                   label={status === "sending" ? "Subscribing…" : "Subscribe"}
                   type="submit"
                   disabled={status === "sending"}
-                  surface="#FFFBF3"
-                  textColor="#2B1B12"
-                  pop="#E2793A"
+                  surface="#F2B441"
+                  textColor="#2E1C12"
                   className="self-start text-sm"
                 />
                 {status === "error" && (
-                  <p className="text-xs font-bold text-strawberry">
+                  <p className="text-xs font-bold text-pop">
                     Something went wrong — please try again.
                   </p>
                 )}
@@ -152,13 +151,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-16 select-none text-center font-display text-[13vw] leading-none text-warmwhite/10 sm:text-[10vw]">
+        <p
+          className="mt-16 -mb-4 select-none whitespace-nowrap text-center font-display leading-none text-pop sm:-mb-6"
+          style={{ fontSize: "clamp(28px, 9vw, 150px)" }}
+        >
           lynh&apos;s drinks
         </p>
 
-        <p className="mt-6 text-center text-xs font-medium text-warmwhite/50">
+        <p className="mt-6 text-center text-xs font-medium text-cream/50">
           © {new Date().getFullYear()}{" "}Lynh&apos;s Drinks. San Jose &amp; Santa Clara County, CA.{" "}
-          <Link href="/privacy" className="underline hover:text-warmwhite">Privacy Policy</Link>
+          <Link href="/privacy" className="underline text-cream hover:text-pop">Privacy Policy</Link>
         </p>
       </div>
     </footer>

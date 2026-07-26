@@ -59,7 +59,7 @@ const paths: Record<DoodleName, React.ReactNode> = {
 
 export default function IconDoodle({
   name,
-  color = "#2B1B12",
+  color = "#2E1C12",
   className = "",
 }: IconDoodleProps) {
   return (

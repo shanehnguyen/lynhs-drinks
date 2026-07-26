@@ -1,17 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --section-pad: clamp(48px, 8vw, 107px);
+  --section-pad: clamp(32px, 7vw, 96px);
 }
 
 @theme {
-  --color-cream: #f4e8d8;
-  --color-thai: #e2793a;
-  --color-taro: #8c6fae;
-  --color-coffee: #4a2e22;
-  --color-warmwhite: #fffbf3;
-  --color-strawberry: #ff6fa0;
-  --color-ink: #2b1b12;
+  --color-ink: #2e1c12;
+  --color-field: #6b5a9e;
+  --color-accent: #a8501a;
+  --color-cream: #f5efe3;
+  --color-pop: #f2b441;
 }
 
 @theme inline {

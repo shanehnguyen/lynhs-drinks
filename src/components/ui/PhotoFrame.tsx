@@ -16,7 +16,7 @@ export default function PhotoFrame({
   label,
   className = "",
   rotate = 0,
-  tone = "#E2793A",
+  tone = "#A8501A",
   src,
   alt,
   cutout = false,
@@ -26,18 +26,18 @@ export default function PhotoFrame({
   if (src && cutout) {
     return (
       <div className={`relative flex items-center justify-center ${className}`}>
-        <div
-          className="absolute h-[65%] w-[65%] rounded-full blur-[70px] opacity-25"
-          style={{ backgroundColor: tone }}
-        />
         <Image
           src={src}
           alt={alt ?? label}
           width={600}
           height={800}
           priority={priority}
-          className="relative h-auto w-auto object-contain drop-shadow-xl"
-          style={{ transform: `rotate(${rotate}deg)`, maxHeight: cutoutMaxHeight }}
+          className="relative h-auto w-auto object-contain"
+          style={{
+            transform: `rotate(${rotate}deg)`,
+            maxHeight: cutoutMaxHeight,
+            filter: `drop-shadow(2px 0 0 #2E1C12) drop-shadow(-2px 0 0 #2E1C12) drop-shadow(0 2px 0 #2E1C12) drop-shadow(0 -2px 0 #2E1C12) drop-shadow(7px 7px 0 ${tone})`,
+          }}
         />
       </div>
     );
@@ -46,8 +46,8 @@ export default function PhotoFrame({
   if (src) {
     return (
       <div
-        className={`relative aspect-[4/3] w-full overflow-hidden rounded-xl border-[3px] border-coffee ${className}`}
-        style={{ transform: `rotate(${rotate}deg)` }}
+        className={`relative aspect-[4/3] w-full overflow-hidden rounded-xl border-[3px] border-ink ${className}`}
+        style={{ transform: `rotate(${rotate}deg)`, boxShadow: `6px 6px 0 0 ${tone}` }}
       >
         <Image
           src={src}
@@ -63,8 +63,8 @@ export default function PhotoFrame({
 
   return (
     <div
-      className={`flex aspect-[4/3] w-full items-center justify-center rounded-xl border-[3px] border-dashed border-coffee/40 bg-warmwhite text-center ${className}`}
-      style={{ transform: `rotate(${rotate}deg)` }}
+      className={`flex aspect-[4/3] w-full items-center justify-center rounded-xl border-[3px] border-ink bg-cream text-center ${className}`}
+      style={{ transform: `rotate(${rotate}deg)`, boxShadow: `6px 6px 0 0 ${tone}` }}
     >
       <div className="flex flex-col items-center gap-2 px-6 text-ink/60">
         <svg

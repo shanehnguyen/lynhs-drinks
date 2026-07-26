@@ -3,10 +3,10 @@ import WaveDivider from "./ui/WaveDivider";
 
 export default function FeaturedTestimonial() {
   return (
-    <section className="relative bg-thai">
+    <section className="relative bg-accent">
       <div className="mx-auto max-w-[1400px] px-6 pb-[var(--section-pad)] md:px-12">
-        <div className="mx-auto max-w-[720px] rounded-2xl border-[3px] border-coffee bg-warmwhite p-8 text-center shadow-[8px_8px_0_0_#2B1B12] md:p-12">
-          <div className="flex justify-center gap-1 text-thai">
+        <div className="mx-auto max-w-[720px] rounded-2xl border-[3px] border-ink bg-cream p-8 text-center shadow-[8px_8px_0_0_#2E1C12] md:p-12">
+          <div className="flex justify-center gap-1 text-accent">
             {"★★★★★".split("").map((star, i) => (
               <span key={i}>{star}</span>
             ))}
@@ -28,22 +28,20 @@ export default function FeaturedTestimonial() {
             <PushButton
               label="Customize Your Menu"
               href="/shop"
-              surface="#4A2E22"
-              textColor="#FFFBF3"
-              pop="#8C6FAE"
+              surface="#A8501A"
+              textColor="#F5EFE3"
             />
             <PushButton
               label="Contact Us"
               href="/book"
-              surface="#FFFBF3"
-              textColor="#2B1B12"
-              pop="#E2793A"
+              surface="#F5EFE3"
+              textColor="#2E1C12"
             />
           </div>
         </div>
       </div>
 
-      <WaveDivider fill="#F4E8D8" position="bottom" />
+      <WaveDivider fill="#F5EFE3" position="bottom" />
     </section>
   );
 }
