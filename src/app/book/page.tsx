@@ -46,7 +46,7 @@ export default function BookPage() {
               ].map((detail) => (
                 <div
                   key={detail.label}
-                  className="rounded-lg border-[3px] border-ink bg-cream p-4 text-center shadow-[4px_4px_0_0_#6B5A9E]"
+                  className="rounded-lg border-[3px] border-ink bg-cream p-4 text-center shadow-[4px_4px_0_0_#FF008C]"
                 >
                   <p className="text-lg font-bold tracking-wider text-ink md:text-xl">{detail.value}</p>
                   <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-ink/50">

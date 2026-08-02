@@ -97,7 +97,7 @@ export default function ShopPageClient() {
               {TOPPINGS.map((t) => (
                 <div
                   key={t.slug}
-                  className="relative flex flex-col items-center rounded-xl border-[3px] border-ink bg-cream p-5 text-center shadow-[5px_5px_0_0_#A8501A]"
+                  className="relative flex flex-col items-center rounded-xl border-[3px] border-ink bg-cream p-5 text-center shadow-[5px_5px_0_0_#F4CC7B]"
                 >
                   <div className="relative flex h-24 w-24 items-center justify-center">
                     {t.img ? (
@@ -118,7 +118,7 @@ export default function ShopPageClient() {
                   <button
                     onClick={() => handleQuickAddTopping(t.slug, t.name)}
                     aria-label={`Quick add ${t.name} to my picks`}
-                    className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#A8501A] transition-all duration-150 hover:scale-110 active:scale-95 ${
+                    className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#F4CC7B] transition-all duration-150 hover:scale-110 active:scale-95 ${
                       addedTopping === t.slug ? "bg-accent text-cream" : "bg-cream text-ink"
                     }`}
                   >

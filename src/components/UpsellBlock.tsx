@@ -1,28 +1,31 @@
 import PushButton from "./ui/PushButton";
 import PhotoFrame from "./ui/PhotoFrame";
 import Mascot from "./ui/Mascot";
-import WaveDivider from "./ui/WaveDivider";
 
 export default function UpsellBlock() {
   return (
-    <section className="relative overflow-hidden bg-field">
+    <section className="relative overflow-hidden rounded-t-[64px] rounded-b-[64px] bg-field">
       <div className="mx-auto max-w-[1400px] px-6 py-[var(--section-pad)] md:px-12">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
-          <PhotoFrame
-            label="Toppings & boba"
-            rotate={-2}
-            tone="#2E1C12"
-            src="/photos/private-party.jpg"
-            alt="A drink bar set up with toppings and mix-ins"
-          />
+          <div className="animate-float-slow">
+            <PhotoFrame
+              label="Toppings & boba"
+              rotate={-2}
+              tone="#2E1C12"
+              src="/photos/private-party.jpg"
+              alt="A drink bar set up with toppings and mix-ins"
+            />
+          </div>
 
           <div className="relative">
-            <Mascot
-              pose="peek"
-              cupColor="#F5EFE3"
-              teaColor="#2E1C12"
-              className="pointer-events-none absolute -top-20 right-2 hidden h-28 w-auto rotate-6 sm:block"
-            />
+            <div className="pointer-events-none absolute -top-20 right-2 z-40 hidden animate-float sm:block">
+              <Mascot
+                pose="peek"
+                cupColor="#F5EFE3"
+                teaColor="#2E1C12"
+                className="h-28 w-auto rotate-6"
+              />
+            </div>
             <h2 className="text-[30px] leading-tight text-cream md:text-[44px]">
               Build Your Own Drink Bar
             </h2>
@@ -41,15 +44,13 @@ export default function UpsellBlock() {
               <PushButton
                 label="Ask About Pricing"
                 href="/book"
-                surface="#A8501A"
-                textColor="#F5EFE3"
+                surface="#F4CC7B"
+                textColor="#000000"
               />
             </div>
           </div>
         </div>
       </div>
-
-      <WaveDivider fill="#F5EFE3" position="bottom" />
     </section>
   );
 }

@@ -45,7 +45,7 @@ export default function BookingForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-2xl border-[3px] border-ink bg-cream p-10 text-center shadow-[8px_8px_0_0_#6B5A9E]">
+      <div className="rounded-2xl border-[3px] border-ink bg-cream p-10 text-center shadow-[8px_8px_0_0_#FF008C]">
         <h2 className="text-2xl text-ink">Thanks — got it!</h2>
         <p className="mt-3 text-sm font-medium text-ink/70">
           I usually reply within 1 to 2 business days with pricing and
@@ -58,7 +58,7 @@ export default function BookingForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid grid-cols-1 gap-5 rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[8px_8px_0_0_#6B5A9E] sm:grid-cols-2 md:p-10"
+      className="grid grid-cols-1 gap-5 rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[8px_8px_0_0_#FF008C] sm:grid-cols-2 md:p-10"
     >
       <Field label="Full Name" name="name" required />
       <Field label="Email" name="email" type="email" required />
@@ -100,8 +100,8 @@ export default function BookingForm() {
           label={status === "sending" ? "Sending…" : "Send Inquiry"}
           type="submit"
           disabled={status === "sending"}
-          surface="#A8501A"
-          textColor="#F5EFE3"
+          surface="#F4CC7B"
+          textColor="#000000"
         />
         <p className="mt-3 text-xs font-medium text-ink/50">
           {status === "error"

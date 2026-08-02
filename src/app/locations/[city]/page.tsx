@@ -107,7 +107,7 @@ export default async function LocationPage({
             </ul>
           </div>
 
-          <WaveDivider fill="#A8501A" position="bottom" />
+          <WaveDivider fill="#F4CC7B" position="bottom" />
         </section>
 
         <section className="relative bg-accent">
@@ -136,8 +136,8 @@ export default async function LocationPage({
               <PushButton
                 label="Get My Free Quote"
                 href="/book"
-                surface="#A8501A"
-                textColor="#F5EFE3"
+                surface="#F4CC7B"
+                textColor="#000000"
               />
             </div>
 

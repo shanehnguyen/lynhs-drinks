@@ -1,6 +1,6 @@
 type Doodle = {
   shape: "star" | "dot" | "squiggle";
-  color: "#F2B441" | "#A8501A";
+  color: "#F2B441" | "#F4CC7B";
   top: string;
   left?: string;
   right?: string;
@@ -36,12 +36,13 @@ export default function SectionDoodles({ items }: { items: Doodle[] }) {
           viewBox="0 0 24 24"
           width={d.size}
           height={d.size}
-          className="absolute hidden sm:block"
+          className="absolute hidden animate-pulse-soft sm:block"
           style={{
             top: d.top,
             left: d.left,
             right: d.right,
-            transform: d.rotate ? `rotate(${d.rotate}deg)` : undefined,
+            rotate: d.rotate ? `${d.rotate}deg` : undefined,
+            animationDelay: `${i * 0.4}s`,
           }}
         >
           {SHAPES[d.shape](d.color)}

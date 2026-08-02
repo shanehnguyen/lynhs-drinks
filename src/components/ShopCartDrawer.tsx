@@ -56,7 +56,7 @@ export default function ShopCartDrawer() {
             className="absolute inset-0 bg-ink/40"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute right-0 top-0 flex h-full w-full max-w-sm flex-col bg-cream p-6 shadow-[-6px_0_0_0_#6B5A9E]">
+          <div className="absolute right-0 top-0 flex h-full w-full max-w-sm flex-col bg-cream p-6 shadow-[-6px_0_0_0_#FF008C]">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl text-ink">My Picks</h2>
               <button
@@ -78,7 +78,7 @@ export default function ShopCartDrawer() {
                 {items.map((item) => (
                   <div
                     key={item.id}
-                    className="relative rounded-lg border-[3px] border-ink bg-cream p-4 shadow-[4px_4px_0_0_#6B5A9E]"
+                    className="relative rounded-lg border-[3px] border-ink bg-cream p-4 shadow-[4px_4px_0_0_#FF008C]"
                   >
                     <button
                       onClick={() => removeItem(item.id)}
@@ -102,8 +102,8 @@ export default function ShopCartDrawer() {
                   label="Book With These Picks"
                   href={bookHref}
                   onClick={() => setOpen(false)}
-                  surface="#A8501A"
-                  textColor="#F5EFE3"
+                  surface="#F4CC7B"
+                  textColor="#000000"
                   fullWidth
                 />
                 <button

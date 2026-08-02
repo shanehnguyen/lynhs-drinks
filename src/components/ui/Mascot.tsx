@@ -10,7 +10,7 @@ export default function Mascot({
   pose = "wave",
   className = "",
   cupColor = "#F5EFE3",
-  teaColor = "#A8501A",
+  teaColor = "#F4CC7B",
   flip = false,
 }: MascotProps) {
   return (

@@ -6,8 +6,8 @@
 
 @theme {
   --color-ink: #2e1c12;
-  --color-field: #6b5a9e;
-  --color-accent: #a8501a;
+  --color-field: #ff008c;
+  --color-accent: #f4cc7b;
   --color-cream: #f5efe3;
   --color-pop: #f2b441;
 }
@@ -18,7 +18,7 @@
 }
 
 body {
-  background: var(--color-cream);
+  background: #ffffff;
   color: var(--color-ink);
 }
 
@@ -112,6 +112,46 @@ main > section + section {
   .marquee-track:hover {
     animation-play-state: paused;
   }
+
+  /* Gentle drifting/twisting effect for hero photo, review card, swirls,
+     and the mascots -- five variants so nothing on screen moves in sync */
+  .animate-float {
+    animation: float 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+
+  .animate-float-slower {
+    animation: float 7.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    animation-delay: 0.6s;
+  }
+
+  .animate-float-fast {
+    animation: float 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-float-delay {
+    animation: float 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    animation-delay: 1.2s;
+  }
+
+  /* Quick, playful rotation twinkle for star ratings */
+  .animate-wiggle {
+    animation: wiggle 2.4s ease-in-out infinite;
+  }
+
+  /* Slow breathing scale for decorative dots/stars */
+  .animate-pulse-soft {
+    animation: pulse-soft 3.4s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft-delay {
+    animation: pulse-soft 3.4s ease-in-out infinite;
+    animation-delay: 1s;
+  }
 }
 
 @keyframes marquee {
@@ -120,5 +160,48 @@ main > section + section {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* One smooth, continuous rise-and-fall per cycle (not multiple waypoints
+   pulling in different directions) so it reads as floating, not moving
+   around. The bezier below front-loads and tail-loads the easing like a
+   ball under gravity -- fast through the middle, gentle at the top and
+   bottom -- so it never feels like it's stopping. */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(3px, -18px) rotate(3deg);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+/* Uses the standalone `scale` property (not `transform`) so it composes
+   cleanly with an element's own static `rotate` without either one
+   clobbering the other. */
+@keyframes pulse-soft {
+  0%,
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    scale: 1.15;
+    opacity: 0.75;
   }
 }

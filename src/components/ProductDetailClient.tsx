@@ -16,9 +16,9 @@ const SWEETNESS_LEVELS = ["100%", "75%", "50%", "25%", "0%"];
 const ICE_LEVELS = ["Regular Ice", "Less Ice", "No Ice"];
 
 const CATEGORY_COLOR: Record<string, string> = {
-  "Milk Tea": "#A8501A",
+  "Milk Tea": "#F4CC7B",
   "Fruit Tea": "#F2B441",
-  Specialty: "#6B5A9E",
+  Specialty: "#FF008C",
 };
 
 const CATEGORY_TEXT: Record<string, string> = {
@@ -45,7 +45,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
             We couldn&apos;t find that drink on the menu.
           </p>
           <div className="mt-8 flex justify-center">
-            <PushButton label="Back to Shop" href="/shop" surface="#A8501A" textColor="#F5EFE3" />
+            <PushButton label="Back to Shop" href="/shop" surface="#F4CC7B" textColor="#000000" />
           </div>
         </main>
         <Footer />
@@ -53,7 +53,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
     );
   }
 
-  const tone = CATEGORY_COLOR[drink.category] ?? "#A8501A";
+  const tone = CATEGORY_COLOR[drink.category] ?? "#F4CC7B";
   const toneText = CATEGORY_TEXT[drink.category] ?? "#F5EFE3";
   const related = getRelatedDrinks(drink);
 
@@ -175,8 +175,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     label={justAdded ? "Added to My Picks ✓" : "Add to My Picks"}
                     type="button"
                     onClick={handleAdd}
-                    surface="#A8501A"
-                    textColor="#F5EFE3"
+                    surface="#F4CC7B"
+                    textColor="#000000"
                   />
                   <p className="mt-3 text-xs font-medium text-ink/50">
                     No prices, no checkout. This just adds the drink to your

@@ -69,7 +69,7 @@ export default function Header() {
           <Mascot
             pose="wave"
             cupColor="#F5EFE3"
-            teaColor="#A8501A"
+            teaColor="#F4CC7B"
             className="h-9 w-auto -rotate-3 sm:h-10"
           />
         </Link>
@@ -99,8 +99,8 @@ export default function Header() {
           <PushButton
             label="Get My Quote"
             href="/book"
-            surface="#A8501A"
-            textColor="#F5EFE3"
+            surface="#F4CC7B"
+            textColor="#000000"
             className="hidden text-sm sm:inline-block"
           />
 
@@ -141,8 +141,8 @@ export default function Header() {
               label="Get My Quote"
               href="/book"
               onClick={() => setMenuOpen(false)}
-              surface="#A8501A"
-              textColor="#F5EFE3"
+              surface="#F4CC7B"
+              textColor="#000000"
               className="text-sm"
             />
             <LanguageToggle />

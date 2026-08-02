@@ -7,9 +7,9 @@ import type { ShopDrink } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const CATEGORY_COLOR: Record<string, string> = {
-  "Milk Tea": "#A8501A",
+  "Milk Tea": "#F4CC7B",
   "Fruit Tea": "#F2B441",
-  Specialty: "#6B5A9E",
+  Specialty: "#FF008C",
 };
 
 const CATEGORY_TEXT: Record<string, string> = {
@@ -19,7 +19,7 @@ const CATEGORY_TEXT: Record<string, string> = {
 };
 
 export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
-  const tone = CATEGORY_COLOR[drink.category] ?? "#A8501A";
+  const tone = CATEGORY_COLOR[drink.category] ?? "#F4CC7B";
   const toneText = CATEGORY_TEXT[drink.category] ?? "#F5EFE3";
   const { addItem } = useShopCart();
   const [justAdded, setJustAdded] = useState(false);
@@ -41,7 +41,7 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
   return (
     <Link
       href={`/shop/${drink.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-xl border-[3px] border-ink bg-cream shadow-[6px_6px_0_0_#6B5A9E] transition-transform duration-200 hover:-translate-y-1"
+      className="group relative flex flex-col overflow-hidden rounded-xl border-[3px] border-ink bg-cream shadow-[6px_6px_0_0_#FF008C] transition-transform duration-200 hover:-translate-y-1"
     >
       <div
         className="relative flex aspect-square items-center justify-center overflow-hidden"
@@ -73,7 +73,7 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         <button
           onClick={handleQuickAdd}
           aria-label={`Quick add ${drink.name} to my picks`}
-          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#6B5A9E] transition-all duration-150 hover:scale-110 active:scale-95 ${
+          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#FF008C] transition-all duration-150 hover:scale-110 active:scale-95 ${
             justAdded ? "bg-accent text-cream" : "bg-cream text-ink"
           }`}
         >

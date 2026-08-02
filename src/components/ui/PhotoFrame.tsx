@@ -16,7 +16,7 @@ export default function PhotoFrame({
   label,
   className = "",
   rotate = 0,
-  tone = "#A8501A",
+  tone = "#F4CC7B",
   src,
   alt,
   cutout = false,

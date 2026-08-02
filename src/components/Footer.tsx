@@ -3,7 +3,6 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import PushButton from "./ui/PushButton";
-import Mascot from "./ui/Mascot";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 import { BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_TEL } from "@/lib/site";
 
@@ -108,12 +107,6 @@ export default function Footer() {
           </div>
 
           <div className="relative order-first sm:order-none">
-            <Mascot
-              pose="wave"
-              cupColor="#F5EFE3"
-              teaColor="#F2B441"
-              className="pointer-events-none absolute -top-24 right-0 hidden h-24 w-auto rotate-6 sm:block"
-            />
             <h3 className="font-display text-lg text-cream">
               Stay Sweet
             </h3>

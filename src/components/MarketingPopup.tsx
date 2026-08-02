@@ -50,7 +50,7 @@ export default function MarketingPopup() {
         className="absolute inset-0 bg-ink/50 backdrop-blur-sm"
       />
 
-      <div className="relative w-full max-w-md rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[10px_10px_0_0_#6B5A9E] sm:p-8">
+      <div className="relative w-full max-w-md rounded-2xl border-[3px] border-ink bg-cream p-6 shadow-[10px_10px_0_0_#FF008C] sm:p-8">
         <button
           onClick={dismiss}
           aria-label="Close popup"
@@ -59,12 +59,14 @@ export default function MarketingPopup() {
           ✕
         </button>
 
-        <Mascot
-          pose="cheer"
-          cupColor="#F5EFE3"
-          teaColor="#A8501A"
-          className="mx-auto h-20 w-auto -rotate-3"
-        />
+        <div className="mx-auto w-fit animate-float">
+          <Mascot
+            pose="cheer"
+            cupColor="#F5EFE3"
+            teaColor="#F4CC7B"
+            className="h-20 w-auto -rotate-3"
+          />
+        </div>
 
         {status === "sent" ? (
           <div className="mt-4 text-center">
@@ -97,8 +99,8 @@ export default function MarketingPopup() {
                 type="submit"
                 disabled={status === "sending"}
                 fullWidth
-                surface="#A8501A"
-                textColor="#F5EFE3"
+                surface="#F4CC7B"
+                textColor="#000000"
               />
               {status === "error" && (
                 <p className="text-center text-xs font-bold text-pop">

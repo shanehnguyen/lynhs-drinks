@@ -43,7 +43,7 @@ export default function LocationsIndexPage() {
                 <Link
                   key={l.slug}
                   href={`/locations/${l.slug}`}
-                  className="group flex flex-col rounded-xl border-[3px] border-ink bg-cream p-6 shadow-[6px_6px_0_0_#6B5A9E] transition-transform duration-200 hover:-translate-y-1"
+                  className="group flex flex-col rounded-xl border-[3px] border-ink bg-cream p-6 shadow-[6px_6px_0_0_#FF008C] transition-transform duration-200 hover:-translate-y-1"
                 >
                   <h2 className="text-2xl text-ink">{l.city}</h2>
                   <p className="mt-1 text-xs font-bold uppercase tracking-wider text-ink/45">
