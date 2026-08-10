@@ -3,8 +3,10 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaveDivider from "@/components/ui/WaveDivider";
+import JsonLd from "@/components/JsonLd";
 import { LOCATIONS } from "@/data/locations";
 import { SITE_URL } from "@/lib/site";
+import { breadcrumbList } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Areas We Serve",
@@ -13,9 +15,28 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/locations` },
 };
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Cities served by Lynh's Drinks",
+  itemListElement: LOCATIONS.map((l, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${l.city}, CA`,
+    url: `${SITE_URL}/locations/${l.slug}`,
+  })),
+};
+
 export default function LocationsIndexPage() {
   return (
     <>
+      <JsonLd data={itemListJsonLd} />
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Areas We Serve", path: "/locations" },
+        ])}
+      />
       <Header />
 
       <main>

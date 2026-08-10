@@ -4,6 +4,7 @@ import OfferingGrid from "@/components/OfferingGrid";
 import FeatureSplit from "@/components/FeatureSplit";
 import TestimonialRow from "@/components/TestimonialRow";
 import UpsellBlock from "@/components/UpsellBlock";
+import FaqSection from "@/components/FaqSection";
 import ClosingCTA from "@/components/ClosingCTA";
 import Footer from "@/components/Footer";
 
@@ -86,6 +87,7 @@ Twenty years later I'm still making those same recipes by hand at every event, a
         />
 
         <UpsellBlock />
+        <FaqSection />
         <ClosingCTA />
       </main>
 

@@ -5,8 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PushButton from "@/components/ui/PushButton";
 import WaveDivider from "@/components/ui/WaveDivider";
+import JsonLd from "@/components/JsonLd";
 import { LOCATIONS, getLocationBySlug } from "@/data/locations";
 import { SITE_URL } from "@/lib/site";
+import { BUSINESS_ID, breadcrumbList } from "@/lib/schema";
 
 export function generateStaticParams() {
   return LOCATIONS.map((l) => ({ city: l.slug }));
@@ -32,6 +34,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${SITE_URL}/locations/${location.slug}`,
+      images: ["/photos/lynh-booth.jpg"],
     },
   };
 }
@@ -47,8 +50,28 @@ export default async function LocationPage({
 
   const others = LOCATIONS.filter((l) => l.slug !== location.slug);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/locations/${location.slug}#service`,
+    name: `Milk Tea & Fruit Tea Catering in ${location.city}, CA`,
+    serviceType: "Beverage catering",
+    url: `${SITE_URL}/locations/${location.slug}`,
+    description: location.intro,
+    provider: { "@id": BUSINESS_ID },
+    areaServed: { "@type": "City", name: `${location.city}, CA` },
+  };
+
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Areas We Serve", path: "/locations" },
+          { name: location.city, path: `/locations/${location.slug}` },
+        ])}
+      />
       <Header />
 
       <main>
@@ -105,6 +128,30 @@ export default async function LocationPage({
                 </li>
               ))}
             </ul>
+
+            <div className="mt-14">
+              <h2 className="text-[24px] text-ink md:text-[32px]">
+                Questions {location.city} Hosts Ask
+              </h2>
+              <div className="mt-6 space-y-4">
+                {location.faqs.map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="group rounded-lg border-[3px] border-ink bg-cream p-5 shadow-[4px_4px_0_0_#FF008C]"
+                  >
+                    <summary className="cursor-pointer list-none font-display text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
+                      <span className="mr-2 inline-block text-accent transition-transform group-open:rotate-90">
+                        ▸
+                      </span>
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 pl-6 text-sm font-medium leading-relaxed text-ink/75 md:text-base">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
 
           <WaveDivider fill="#F4CC7B" position="bottom" />

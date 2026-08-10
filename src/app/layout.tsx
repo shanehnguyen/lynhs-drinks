@@ -4,8 +4,9 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { ShopCartProvider } from "@/context/ShopCartContext";
 import MarketingPopup from "@/components/MarketingPopup";
-import { SITE_URL, SITE_NAME, BUSINESS_PHONE_TEL } from "@/lib/site";
-import { LOCATIONS } from "@/data/locations";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
+import { businessNode, websiteNode, BUSINESS_DESCRIPTION } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const alfaSlabOne = localFont({
@@ -20,8 +21,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const DESCRIPTION =
-  "Fresh-brewed milk tea, fruit tea, and Vietnamese coffee catered for church festivals, weddings, school events, and parties across Santa Clara County. Twenty years, 30,000+ drinks.";
+const DESCRIPTION = BUSINESS_DESCRIPTION;
 const HOME_TITLE = `Bay Area Boba & Milk Tea Catering | ${SITE_NAME}, San Jose`;
 
 export const metadata: Metadata = {
@@ -60,23 +60,7 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FoodEstablishment",
-  name: SITE_NAME,
-  url: SITE_URL,
-  image: `${SITE_URL}/photos/lynh-booth.jpg`,
-  description: DESCRIPTION,
-  telephone: BUSINESS_PHONE_TEL,
-  servesCuisine: ["Vietnamese", "Milk Tea", "Boba", "Fruit Tea"],
-  priceRange: "$$",
-  areaServed: LOCATIONS.map((l) => ({
-    "@type": "City",
-    name: `${l.city}, CA`,
-  })),
-  sameAs: [
-    "https://www.facebook.com/lynh.ngo.16",
-    "https://g.page/r/CUOOp2R3u86OEAI/review",
-    "https://share.google/lnfhDLI4oemIjCP6g",
-  ],
+  "@graph": [businessNode, websiteNode],
 };
 
 export default function RootLayout({
@@ -90,10 +74,7 @@ export default function RootLayout({
       className={`${alfaSlabOne.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink font-body">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
         <div id="google_translate_element" className="hidden" />
         <Script id="google-translate-init" strategy="lazyOnload">
           {`function googleTranslateElementInit() {
