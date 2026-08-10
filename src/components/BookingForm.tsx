@@ -62,10 +62,10 @@ export default function BookingForm() {
     >
       <Field label="Full Name" name="name" required />
       <Field label="Email" name="email" type="email" required />
-      <Field label="Phone" name="phone" type="tel" />
+      <Field label="Phone" name="phone" type="tel" required />
       <div>
         <label className="text-sm font-bold uppercase tracking-wider text-ink/70">
-          Event Type
+          Event Type <span className="text-[#FF008C]">*</span>
         </label>
         <select
           name="eventType"
@@ -128,6 +128,7 @@ function Field({
     <div>
       <label className="text-sm font-bold uppercase tracking-wider text-ink/70">
         {label}
+        {required && <span className="text-[#FF008C]"> *</span>}
       </label>
       <input
         name={name}
