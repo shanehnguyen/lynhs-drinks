@@ -11,6 +11,7 @@ const COLUMNS = [
     heading: "Catering",
     links: [
       { label: "Build My Menu", href: "/shop" },
+      { label: "Events We Cater", href: "/events" },
       { label: "Book an Event", href: "/book" },
       { label: "Toppings & Add-ons", href: "/shop#toppings" },
     ],

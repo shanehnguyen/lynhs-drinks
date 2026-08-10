@@ -1,5 +1,6 @@
 import { DRINKS, TOPPINGS } from "@/data/shop";
 import { LOCATIONS } from "@/data/locations";
+import { EVENT_TYPES } from "@/data/events";
 import {
   SITE_URL,
   SITE_NAME,
@@ -40,6 +41,8 @@ Key facts:
 - [Book Your Event](${SITE_URL}/book): quote request form, pricing basics, and contact info
 - [Areas We Serve](${SITE_URL}/locations): all service-area city pages
 ${LOCATIONS.map((l) => `- [${l.city} catering](${SITE_URL}/locations/${l.slug}): milk tea and fruit tea catering in ${l.city}, CA`).join("\n")}
+- [Events We Cater](${SITE_URL}/events): all event-type pages
+${EVENT_TYPES.map((e) => `- [${e.name}](${SITE_URL}/events/${e.slug}): ${e.metaDescription}`).join("\n")}
 
 ## Menu
 

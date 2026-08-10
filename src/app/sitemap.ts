@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { DRINKS } from "@/data/shop";
 import { LOCATIONS } from "@/data/locations";
+import { EVENT_TYPES } from "@/data/events";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/shop", "/book", "/locations"].map((path) => ({
+  const staticRoutes = ["", "/shop", "/book", "/locations", "/events"].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
@@ -32,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...legalRoutes, ...drinkRoutes, ...locationRoutes];
+  const eventRoutes = EVENT_TYPES.map((e) => ({
+    url: `${SITE_URL}/events/${e.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...legalRoutes, ...drinkRoutes, ...locationRoutes, ...eventRoutes];
 }

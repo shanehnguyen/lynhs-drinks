@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PushButton from "@/components/ui/PushButton";
 import WaveDivider from "@/components/ui/WaveDivider";
+import HeroBackground from "@/components/ui/HeroBackground";
 import JsonLd from "@/components/JsonLd";
 import { LOCATIONS, getLocationBySlug } from "@/data/locations";
 import { SITE_URL } from "@/lib/site";
@@ -75,32 +76,33 @@ export default async function LocationPage({
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-ink pt-[70px] pb-[var(--section-pad)] text-cream">
-          <div className="mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-cream/60">
+        <section className="relative overflow-hidden pt-[70px] pb-[var(--section-pad)]">
+          <HeroBackground />
+          <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center md:px-12">
+            <p className="font-display text-sm uppercase tracking-widest text-ink/60">
               Catering in {location.city}, CA
             </p>
-            <h1 className="mt-3 text-[32px] leading-tight md:text-[56px]">
+            <h1 className="mt-3 text-[32px] leading-tight text-ink md:text-[56px]">
               Milk Tea &amp; Fruit Tea Catering in {location.city}, CA
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-cream/80">
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-ink/80">
               {location.intro}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <PushButton
                 label="Build My Menu"
                 href="/shop"
-                surface="#F5EFE3"
-                textColor="#2E1C12"
+                surface="#F4CC7B"
+                textColor="#000000"
               />
               <PushButton
                 label="Get My Free Quote"
                 href="/book"
-                surface="#F2B441"
+                surface="#F5EFE3"
                 textColor="#2E1C12"
               />
             </div>
-            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-cream/50">
+            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-ink/60">
               {location.distance}
             </p>
           </div>

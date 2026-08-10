@@ -9,7 +9,7 @@ import LanguageToggle from "./ui/LanguageToggle";
 
 const NAV_LINKS = [
   { label: "Build My Menu", href: "/shop" },
-  { label: "Events", href: "/#offerings" },
+  { label: "Events", href: "/events" },
   { label: "About", href: "/#about" },
   { label: "Locations", href: "/locations" },
   { label: "Contact", href: "/book" },
