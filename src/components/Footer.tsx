@@ -155,6 +155,8 @@ export default function Footer() {
         <p className="mt-6 text-center text-xs font-medium text-cream/50">
           © {new Date().getFullYear()}{" "}Lynh&apos;s Drinks. San Jose &amp; Santa Clara County, CA.{" "}
           <Link href="/privacy" className="underline text-cream hover:text-pop">Privacy Policy</Link>
+          {" "}&middot; Site by{" "}
+          <a href="https://www.madefrontpage.com" target="_blank" rel="noopener" className="underline text-cream hover:text-pop">Front Page Commerce</a>
         </p>
       </div>
     </footer>
