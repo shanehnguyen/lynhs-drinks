@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import PushButton from "./ui/PushButton";
 import { submitToWeb3Forms } from "@/lib/web3forms";
+import { useShopCart, summarizePicks } from "@/context/ShopCartContext";
 
 const EVENT_TYPES = [
   "Wedding",
@@ -17,8 +18,19 @@ const EVENT_TYPES = [
 export default function BookingForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const searchParams = useSearchParams();
-  const picks = searchParams.get("picks");
-  const defaultDetails = picks ? `My drink picks:\n${picks}\n\n` : "";
+  const { items, hydrated, clear } = useShopCart();
+  // Picks come from the cart, so every link to /book carries them. The
+  // ?picks= param still works for links shared before this change.
+  const picks = items.length > 0 ? summarizePicks(items) : searchParams.get("picks");
+  const picksText = picks ? `My drink picks:\n${picks}\n\n` : "";
+  const [details, setDetails] = useState("");
+  const [edited, setEdited] = useState(false);
+
+  // Keep the picks in sync until the visitor types in the box themselves.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- the cart hydrates from localStorage after mount
+    if (hydrated && !edited) setDetails(picksText);
+  }, [hydrated, edited, picksText]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -38,6 +50,7 @@ export default function BookingForm() {
         message: form.get("details"),
       });
       setStatus("sent");
+      clear();
     } catch {
       setStatus("error");
     }
@@ -89,7 +102,11 @@ export default function BookingForm() {
         <textarea
           name="details"
           rows={picks ? 8 : 4}
-          defaultValue={defaultDetails}
+          value={details}
+          onChange={(e) => {
+            setDetails(e.target.value);
+            setEdited(true);
+          }}
           placeholder="Where is it? What flavors do you like? Anything else we should know?"
           className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
         />

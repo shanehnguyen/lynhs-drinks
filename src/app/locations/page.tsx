@@ -73,7 +73,7 @@ export default function LocationsIndexPage() {
                     {l.distance}
                   </p>
                   <p className="mt-3 text-sm font-medium text-ink/70">{l.intro}</p>
-                  <span className="mt-4 text-sm font-bold text-accent group-hover:underline">View {l.city} catering →</span>
+                  <span className="mt-4 text-sm font-bold text-black group-hover:underline">View {l.city} catering →</span>
                 </Link>
               ))}
             </div>

@@ -13,10 +13,23 @@ export type CartItem = {
 
 type ShopCartContextValue = {
   items: CartItem[];
+  hydrated: boolean;
   addItem: (item: Omit<CartItem, "id">) => void;
   removeItem: (id: string) => void;
   clear: () => void;
 };
+
+// Plain-text list of picks, used to prefill the booking form.
+export function summarizePicks(items: CartItem[]) {
+  return items
+    .map((item, i) => {
+      if (item.kind === "topping") {
+        return `${i + 1}. ${item.name} (topping)`;
+      }
+      return `${i + 1}. ${item.name}, ${item.sweetness} sweet, ${item.ice}`;
+    })
+    .join("\n");
+}
 
 const ShopCartContext = createContext<ShopCartContextValue | null>(null);
 const STORAGE_KEY = "lynhs-shop-cart";
@@ -54,7 +67,7 @@ export function ShopCartProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <ShopCartContext.Provider value={{ items, addItem, removeItem, clear }}>
+    <ShopCartContext.Provider value={{ items, hydrated, addItem, removeItem, clear }}>
       {children}
     </ShopCartContext.Provider>
   );

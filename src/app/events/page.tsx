@@ -77,7 +77,7 @@ export default function EventsIndexPage() {
                 >
                   <h2 className="text-2xl text-ink">{e.navLabel}</h2>
                   <p className="mt-3 text-sm font-medium text-ink/70">{e.intro}</p>
-                  <span className="mt-4 text-sm font-bold text-accent group-hover:underline">
+                  <span className="mt-4 text-sm font-bold text-black group-hover:underline">
                     {e.navLabel} catering →
                   </span>
                 </Link>

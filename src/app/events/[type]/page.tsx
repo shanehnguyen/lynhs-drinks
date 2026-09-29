@@ -152,7 +152,7 @@ export default async function EventTypePage({
                         />
                       </div>
                     )}
-                    <p className="p-3 text-center font-display text-sm font-bold text-ink group-hover:text-accent">
+                    <p className="p-3 text-center font-display text-sm font-bold text-ink group-hover:underline">
                       {drink.name}
                     </p>
                   </Link>
@@ -160,7 +160,7 @@ export default async function EventTypePage({
               </div>
               <p className="mt-4 text-sm font-medium text-ink/60">
                 Every menu is custom.{" "}
-                <Link href="/shop" className="font-bold text-accent underline">
+                <Link href="/shop" className="font-bold text-black underline">
                   See all drinks and toppings
                 </Link>{" "}
                 and build your own.
@@ -178,7 +178,7 @@ export default async function EventTypePage({
                     className="group rounded-lg border-[3px] border-ink bg-cream p-5 shadow-[4px_4px_0_0_#FF008C]"
                   >
                     <summary className="cursor-pointer list-none font-display text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
-                      <span className="mr-2 inline-block text-accent transition-transform group-open:rotate-90">
+                      <span className="mr-2 inline-block text-black transition-transform group-open:rotate-90">
                         ▸
                       </span>
                       {faq.q}

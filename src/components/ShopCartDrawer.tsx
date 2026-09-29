@@ -5,17 +5,6 @@ import { createPortal } from "react-dom";
 import { useShopCart } from "@/context/ShopCartContext";
 import PushButton from "./ui/PushButton";
 
-function buildSummary(items: ReturnType<typeof useShopCart>["items"]) {
-  return items
-    .map((item, i) => {
-      if (item.kind === "topping") {
-        return `${i + 1}. ${item.name} (topping)`;
-      }
-      return `${i + 1}. ${item.name}, ${item.sweetness} sweet, ${item.ice}`;
-    })
-    .join("\n");
-}
-
 export default function ShopCartDrawer() {
   const { items, removeItem, clear } = useShopCart();
   const [open, setOpen] = useState(false);
@@ -25,11 +14,6 @@ export default function ShopCartDrawer() {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- standard client-only mount flag so the portal only renders after hydration
     setMounted(true);
   }, []);
-
-  const bookHref =
-    items.length > 0
-      ? `/book?picks=${encodeURIComponent(buildSummary(items))}`
-      : "/book";
 
   return (
     <>
@@ -99,7 +83,7 @@ export default function ShopCartDrawer() {
               <div className="mt-6 space-y-3">
                 <PushButton
                   label="Book With These Picks"
-                  href={bookHref}
+                  href="/book"
                   onClick={() => setOpen(false)}
                   surface="#F4CC7B"
                   textColor="#000000"
