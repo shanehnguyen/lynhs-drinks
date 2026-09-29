@@ -58,7 +58,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "How is pricing handled for festivals?",
-        a: "We price festivals by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Reach out early, because festival weekends are the first dates to fill.",
+        a: "We price festivals by the gallon. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Reach out early, because festival weekends are the first dates to fill.",
       },
       {
         q: "Do you serve traditional Vietnamese drinks?",
@@ -80,7 +80,7 @@ export const EVENT_TYPES: EventType[] = [
     body: [
       {
         heading: "A Menu That Matches Your Wedding",
-        text: "Pick lychee or passion fruit tea for a garden wedding. Add classic milk teas for everyone, and Vietnamese coffee to honor family. We help you choose a short menu. Drinks come in 16 to 20 oz cups. Each guest picks their sweetness, ice, and toppings.",
+        text: "Pick lychee or passion fruit tea for a garden wedding. Add classic milk teas for everyone, and Vietnamese coffee to honor family. We help you choose a short menu. Drinks come in 16 oz cups. Each guest picks their sweetness, ice, and toppings.",
       },
       {
         heading: "One Crew Does It All",
@@ -97,7 +97,7 @@ export const EVENT_TYPES: EventType[] = [
     faqs: [
       {
         q: "How does a boba bar work at a wedding reception?",
-        a: "We set up a drink bar at your venue before guests arrive. Guests walk up and pick a drink from your menu. They choose sweetness and toppings, and we hand them a fresh 16 to 20 oz cup. The bar can run during cocktail hour, next to dessert, or all night.",
+        a: "We set up a drink bar at your venue before guests arrive. Guests walk up and pick a drink from your menu. They choose sweetness and toppings, and we hand them a fresh 16 oz cup. The bar can run during cocktail hour, next to dessert, or all night.",
       },
       {
         q: "How early should we book for a wedding?",
@@ -109,7 +109,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "What does a wedding drink bar cost?",
-        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
       },
     ],
   },
@@ -156,7 +156,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "How does booking and pricing work for companies?",
-        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
       },
     ],
   },
@@ -242,7 +242,7 @@ export const EVENT_TYPES: EventType[] = [
     faqs: [
       {
         q: "Is my party too small for catering?",
-        a: "Probably not. We price by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
+        a: "Probably not. We price by the gallon. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
       },
       {
         q: "Do you do quinceañeras and cultural celebrations?",

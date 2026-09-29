@@ -141,7 +141,7 @@ export default async function LocationPage({
                     key={faq.q}
                     className="group rounded-lg border-[3px] border-ink bg-cream p-5 shadow-[4px_4px_0_0_#FF008C]"
                   >
-                    <summary className="cursor-pointer list-none font-display text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
+                    <summary className="cursor-pointer list-none font-body text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
                       <span className="mr-2 inline-block text-black transition-transform group-open:rotate-90">
                         ▸
                       </span>

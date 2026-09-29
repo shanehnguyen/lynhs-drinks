@@ -109,7 +109,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 <p className="mt-3 text-base font-bold text-ink">
                   {priceLabel(drink)}
                   {gallonPrice(drink) !== null && (
-                    <span className="font-normal"> (128 oz), with 1 free topping</span>
+                    <span className="font-normal"> (128 oz, 8 drinks), with 1 free topping</span>
                   )}
                 </p>
 

@@ -57,7 +57,7 @@ export default async function ProductDetailPage({
             "@type": "Offer",
             price: price.toFixed(2),
             priceCurrency: "USD",
-            description: "Price per gallon (128 oz), with 1 free topping",
+            description: "Price per gallon (128 oz, 8 drinks of 16 oz), with 1 free topping",
             offeredBy: { "@id": BUSINESS_ID },
           },
         }

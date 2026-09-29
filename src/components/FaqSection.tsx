@@ -1,7 +1,7 @@
 const FAQS = [
   {
     q: "How much does drink catering cost?",
-    a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary. A gallon is 128 oz and comes with 1 free topping. Extra toppings vary in price.",
+    a: "Drinks are priced by the gallon. You can see each price on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price.",
   },
   {
     q: "How far in advance should I book?",
@@ -35,13 +35,13 @@ export default function FaqSection() {
               key={faq.q}
               className="group rounded-lg border-[3px] border-ink bg-cream p-5 shadow-[4px_4px_0_0_#FF008C]"
             >
-              <summary className="cursor-pointer list-none font-display text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
+              <summary className="cursor-pointer list-none font-body text-base font-bold text-ink md:text-lg [&::-webkit-details-marker]:hidden">
                 <span className="mr-2 inline-block text-black transition-transform group-open:rotate-90">
                   ▸
                 </span>
                 {faq.q}
               </summary>
-              <p className="mt-3 pl-6 text-base font-normal leading-relaxed text-ink">
+              <p className="mt-3 pl-6 text-sm font-medium leading-relaxed text-ink/75 md:text-base">
                 {faq.a}
               </p>
             </details>

@@ -26,12 +26,12 @@ export function GET() {
 > Mobile milk tea, fruit tea and Vietnamese coffee catering from San Jose, CA. We serve Santa Clara County and the South Bay. Lynh Ngo started the business. For 20+ years she has made her family's Vietnamese recipes by hand at church festivals, weddings, school events and work parties. She has poured 30,000+ drinks.
 
 Key facts:
-- Pricing is by the gallon (128 oz). Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary in price.
+- Pricing is by the gallon. A gallon is 128 oz, which is 8 drinks (16 oz each). Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary in price.
 - Each gallon comes with 1 free topping. Extra toppings vary in price.
 - A 10% deposit is due 1 week before your event.
 - Replies usually come within 24 hours.
 - Book at least 1 week ahead. Festival weekends and wedding season fill first.
-- Drinks are 16 to 20 oz. Tea is made fresh at the event with real leaves and real milk. Boba is cooked fresh.
+- Drinks are 16 oz. Tea is made fresh at the event with real leaves and real milk. Boba is cooked fresh.
 - Guests pick sweetness (0 to 100%), ice and toppings. Drinks with no caffeine are available.
 - One crew does the setup, makes and serves the drinks, and cleans up.
 - Service area: ${LOCATIONS.map((l) => `${l.city}, CA`).join("; ")}

@@ -23,7 +23,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How much does boba catering cost in San Jose?",
-        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Sugar and ice choices are included. Send your event details and you will usually hear back within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Sugar and ice choices are included. Send your event details and you will usually hear back within 24 hours.",
       },
       {
         q: "What parts of San Jose do you serve?",
@@ -81,7 +81,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "What does milk tea catering cost in Milpitas?",
-        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Extra toppings vary in price. The price you are quoted is the price you pay.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price. The price you are quoted is the price you pay.",
       },
       {
         q: "How much notice do you need for a Milpitas booking?",
@@ -100,7 +100,7 @@ export const LOCATIONS: ServiceLocation[] = [
     faqs: [
       {
         q: "Do you cater weddings in Sunnyvale?",
-        a: "Yes. Many couples pick a milk tea and fruit tea bar over a tub of soda. We match the menu to your wedding and serve 16 to 20 oz drinks. We stay from setup to the last cup.",
+        a: "Yes. Many couples pick a milk tea and fruit tea bar over a tub of soda. We match the menu to your wedding and serve 16 oz drinks. We stay from setup to the last cup.",
       },
       {
         q: "Can you set up a drink bar at a Sunnyvale office?",
@@ -108,7 +108,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How does pricing work for Sunnyvale events?",
-        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
       },
       {
         q: "Do you serve hot drinks for cooler Sunnyvale evenings?",
@@ -131,7 +131,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "What's the minimum for a Campbell event?",
-        a: "We price by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. We serve small backyard parties and big community events. Tell us what you are planning.",
+        a: "We price by the gallon. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). We serve small backyard parties and big community events. Tell us what you are planning.",
       },
       {
         q: "Can kids customize their drinks?",
@@ -166,7 +166,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How is pricing handled for Morgan Hill events?",
-        a: "It works the same everywhere. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Send your date, venue and guest count on the booking form. We will send your price back fast.",
+        a: "It works the same everywhere. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Send your date, venue and guest count on the booking form. We will send your price back fast.",
       },
     ],
   },
