@@ -28,6 +28,7 @@ export function GET() {
 Key facts:
 - Pricing is by the gallon (128 oz). Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary in price.
 - Each gallon comes with 1 free topping. Extra toppings vary in price.
+- A 10% deposit is due 1 week before your event.
 - Replies usually come within 24 hours.
 - Book at least 1 week ahead. Festival weekends and wedding season fill first.
 - Drinks are 16 to 20 oz. Tea is made fresh at the event with real leaves and real milk. Boba is cooked fresh.

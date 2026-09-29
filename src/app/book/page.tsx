@@ -38,7 +38,7 @@ export default function BookPage() {
               {[
                 { label: "Starting Price", value: "$20 / gallon" },
                 { label: "Book Ahead", value: "1 Week" },
-                { label: "Cup Size", value: "16–20 oz" },
+                { label: "Deposit", value: "10%" },
                 { label: "Years Serving", value: "20+" },
               ].map((detail) => (
                 <div
@@ -53,8 +53,8 @@ export default function BookPage() {
               ))}
             </div>
             <p className="mt-4 text-center text-xs font-medium text-ink/50">
-              Custom menus, fresh toppings, and sugar and ice levels are
-              included. I usually reply within 24 hours.
+              A 10% deposit is due 1 week before your event. Each gallon comes with 1 free
+              topping. I usually reply within 24 hours.
             </p>
             <p className="mt-2 text-center text-xs font-medium text-ink/50">
               Want to call or text?{" "}

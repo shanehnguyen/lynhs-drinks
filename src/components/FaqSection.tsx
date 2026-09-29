@@ -1,27 +1,23 @@
 const FAQS = [
   {
     q: "How much does drink catering cost?",
-    a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary in price. A gallon is 128 oz. Each gallon comes with 1 free topping. Extra toppings vary in price. Sugar and ice levels are included. Your quote is the full price. I usually reply to quote requests within 24 hours.",
-  },
-  {
-    q: "What areas do you serve?",
-    a: "We're based in San Jose. We serve Santa Clara County and the South Bay, including Santa Clara, Milpitas, Sunnyvale, Campbell, and Morgan Hill. If your event is nearby, ask anyway. We travel for some events.",
-  },
-  {
-    q: "What's included with the drink bar?",
-    a: "Everything. We bring the whole mobile bar and brew tea fresh at your event, with real tea leaves and real milk. We cook the boba fresh and serve 16 to 20 oz drinks. We clean up after. One crew stays from setup to the last cup.",
+    a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary. A gallon is 128 oz and comes with 1 free topping. Extra toppings vary in price.",
   },
   {
     q: "How far in advance should I book?",
-    a: "Book at least one week ahead for most events. Festival weekends, wedding season, and holidays fill up first. If your date is set, reach out early and we'll hold it for you.",
+    a: "Book at least one week ahead. A 10% deposit is due 1 week before your event. Festival weekends and wedding season fill up first. I usually reply within 24 hours.",
   },
   {
-    q: "Can guests customize their drinks?",
-    a: "Yes. Every guest picks their sweetness (0 to 100%), ice level, and toppings like boba, jelly, and cream foams. We always have drinks with no caffeine for kids, like strawberry milk, guava juice, and iced tamarind.",
+    q: "What's included with the drink bar?",
+    a: "We bring the whole mobile bar and brew tea fresh at your event. We cook the boba fresh and clean up after. Guests pick their sugar, ice, and toppings. We always have drinks with no caffeine for kids.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We're based in San Jose. We serve Santa Clara County and the South Bay, including Santa Clara, Milpitas, Sunnyvale, Campbell, and Morgan Hill. If your event is nearby, ask anyway.",
   },
   {
     q: "What kind of events do you cater?",
-    a: "Church festivals, weddings, school events, work parties, quinceañeras, birthdays, and community events. In twenty years, we've served 30,000+ drinks, from backyard parties to festival crowds in the thousands.",
+    a: "Church festivals, weddings, school events, work parties, quinceañeras, birthdays, and community events. In twenty years, we've served 30,000+ drinks.",
   },
 ];
 
@@ -45,7 +41,7 @@ export default function FaqSection() {
                 </span>
                 {faq.q}
               </summary>
-              <p className="mt-3 pl-6 text-sm font-medium leading-relaxed text-ink/75 md:text-base">
+              <p className="mt-3 pl-6 text-base font-normal leading-relaxed text-ink">
                 {faq.a}
               </p>
             </details>

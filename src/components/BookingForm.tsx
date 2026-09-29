@@ -123,7 +123,7 @@ export default function BookingForm() {
         <p className="mt-3 text-xs font-medium text-ink/50">
           {status === "error"
             ? "Something went wrong. Please try again."
-            : "I usually reply within 1 to 2 business days."}
+            : "A 10% deposit is due 1 week before your event. I usually reply within 1 to 2 business days."}
         </p>
       </div>
     </form>
