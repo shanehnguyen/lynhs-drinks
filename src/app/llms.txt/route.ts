@@ -23,25 +23,25 @@ export function GET() {
 
   const body = `# ${SITE_NAME}
 
-> Mobile milk tea, fruit tea, and Vietnamese coffee catering based in San Jose, CA, serving Santa Clara County and the South Bay. Founded by Lynh Ngo, who has hand-brewed her family's Vietnamese recipes at church festivals, weddings, school events, and corporate parties for 20+ years — 30,000+ drinks poured.
+> Mobile milk tea, fruit tea and Vietnamese coffee catering from San Jose, CA. We serve Santa Clara County and the South Bay. Lynh Ngo started the business. For 20+ years she has made her family's Vietnamese recipes by hand at church festivals, weddings, school events and work parties. She has poured 30,000+ drinks.
 
 Key facts:
-- Drinks start at $5 each; quotes are based on guest count and menu (respond time usually within 24 hours)
-- Book at least 1 week ahead; festival weekends and wedding season fill earliest
-- Drinks are 16–20 oz; tea is brewed fresh on site with real leaves and real milk, boba cooked fresh
-- Guests customize sweetness (0–100%), ice level, and toppings; caffeine-free options available
-- Full-service: setup, brewing, pouring, and cleanup by one crew
+- Drinks start at $5 each. The price depends on guest count and menu. Replies usually come within 24 hours.
+- Book at least 1 week ahead. Festival weekends and wedding season fill first.
+- Drinks are 16 to 20 oz. Tea is made fresh at the event with real leaves and real milk. Boba is cooked fresh.
+- Guests pick sweetness (0 to 100%), ice and toppings. Drinks with no caffeine are available.
+- One crew does the setup, makes and serves the drinks, and cleans up.
 - Service area: ${LOCATIONS.map((l) => `${l.city}, CA`).join("; ")}
 - Contact: ${BUSINESS_PHONE_DISPLAY} · ${BUSINESS_EMAIL}
 
 ## Pages
 
-- [Home](${SITE_URL}/): overview, story, and testimonials
-- [Build My Menu](${SITE_URL}/shop): full drink and topping menu — build a menu and request a quote
-- [Book Your Event](${SITE_URL}/book): quote request form, pricing basics, and contact info
-- [Areas We Serve](${SITE_URL}/locations): all service-area city pages
+- [Home](${SITE_URL}/): who we are, our story and reviews
+- [Build My Menu](${SITE_URL}/shop): every drink and topping. Build a menu and ask for a quote.
+- [Book Your Event](${SITE_URL}/book): quote form, prices and contact info
+- [Areas We Serve](${SITE_URL}/locations): a page for each city we serve
 ${LOCATIONS.map((l) => `- [${l.city} catering](${SITE_URL}/locations/${l.slug}): milk tea and fruit tea catering in ${l.city}, CA`).join("\n")}
-- [Events We Cater](${SITE_URL}/events): all event-type pages
+- [Events We Cater](${SITE_URL}/events): a page for each type of event
 ${EVENT_TYPES.map((e) => `- [${e.name}](${SITE_URL}/events/${e.slug}): ${e.metaDescription}`).join("\n")}
 
 ## Menu

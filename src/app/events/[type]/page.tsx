@@ -82,13 +82,13 @@ export default async function EventTypePage({
         <section className="relative overflow-hidden pt-[70px] pb-[var(--section-pad)]">
           <HeroBackground />
           <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-ink/60">
+            <p className="font-display text-sm uppercase tracking-widest text-black">
               {event.heroEyebrow}
             </p>
-            <h1 className="mt-3 text-[32px] leading-tight text-ink md:text-[56px]">
+            <h1 className="mt-3 text-[32px] leading-tight text-black md:text-[56px]">
               {event.heroTitle}
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-ink/80">
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-black">
               {event.intro}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -145,7 +145,7 @@ export default async function EventTypePage({
                       <div className="relative aspect-square w-full border-b-[3px] border-ink bg-white">
                         <Image
                           src={drink.img}
-                          alt={`${drink.name} — catered by Lynh's Drinks`}
+                          alt={`${drink.name}, catered by Lynh's Drinks`}
                           fill
                           sizes="(max-width: 768px) 50vw, 200px"
                           className="object-contain p-2"
@@ -159,9 +159,9 @@ export default async function EventTypePage({
                 ))}
               </div>
               <p className="mt-4 text-sm font-medium text-ink/60">
-                Every menu is custom —{" "}
+                Every menu is custom.{" "}
                 <Link href="/shop" className="font-bold text-accent underline">
-                  browse all drinks and toppings
+                  See all drinks and toppings
                 </Link>{" "}
                 and build your own.
               </p>
@@ -169,7 +169,7 @@ export default async function EventTypePage({
 
             <div className="mt-14">
               <h2 className="text-[24px] text-ink md:text-[32px]">
-                {event.navLabel} Questions, Answered
+                {event.navLabel} Questions
               </h2>
               <div className="mt-6 space-y-4">
                 {event.faqs.map((faq) => (
@@ -198,11 +198,11 @@ export default async function EventTypePage({
         {event.quote && (
           <section className="relative bg-accent">
             <div className="mx-auto max-w-[700px] px-6 py-[var(--section-pad)] text-center md:px-12">
-              <h2 className="text-[26px] leading-tight text-cream md:text-[36px]">
+              <h2 className="text-[26px] leading-tight text-black md:text-[36px]">
                 &ldquo;{event.quote.text}&rdquo;
               </h2>
-              <p className="mt-3 text-sm font-bold uppercase tracking-wider text-cream/70">
-                — {event.quote.author}
+              <p className="mt-3 text-sm font-bold uppercase tracking-wider text-black">
+                {event.quote.author}
               </p>
             </div>
             <WaveDivider fill="#2E1C12" position="bottom" />
@@ -212,11 +212,11 @@ export default async function EventTypePage({
         <section className="relative bg-ink">
           <div className="mx-auto max-w-[700px] px-6 py-[var(--section-pad)] text-center md:px-12">
             <h2 className="text-[28px] text-cream md:text-[40px]">
-              Let&apos;s Get Your Date on the Calendar.
+              Save Your Date.
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-cream/80">
-              Tell me your date and guest count, and I&apos;ll get you a quote
-              fast — usually within 24 hours.
+              Tell me your date and guest count. I&apos;ll send a quote,
+              usually within 24 hours.
             </p>
             <div className="mt-8">
               <PushButton

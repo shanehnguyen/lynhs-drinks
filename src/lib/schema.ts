@@ -5,7 +5,7 @@ export const BUSINESS_ID = `${SITE_URL}/#business`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const BUSINESS_DESCRIPTION =
-  "Fresh-brewed milk tea, fruit tea, and Vietnamese coffee catered for church festivals, weddings, school events, and parties across Santa Clara County. Twenty years, 30,000+ drinks.";
+  "Milk tea, fruit tea and Vietnamese coffee catering. We serve church festivals, weddings, school events and parties in Santa Clara County. 20 years, 30,000+ drinks.";
 
 /** Caterer is a schema.org subtype of FoodEstablishment — the most accurate type for a mobile drink bar. */
 export const businessNode = {

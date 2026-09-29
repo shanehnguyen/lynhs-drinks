@@ -24,16 +24,16 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:gap-12 md:px-12">
         <div>
-          <p className="text-sm font-bold uppercase tracking-wider text-ink/60">
-            Milk tea, fruit tea, and Vietnamese coffee, brewed at your event
+          <p className="text-sm font-bold uppercase tracking-wider text-black">
+            Mobile boba bar for San Jose and the Bay Area
           </p>
-          <h1 className="mt-3 text-[40px] leading-[1.05] text-ink sm:text-[56px] md:text-[72px] lg:text-[84px]">
-            Handcrafted Drinks Worth Remembering.
+          <h1 className="mt-3 text-[40px] leading-[1.05] text-black sm:text-[56px] md:text-[72px] lg:text-[84px]">
+            Fresh Boba and Milk Tea, Made at Your Event
           </h1>
-          <p className="mt-6 max-w-lg text-lg font-medium text-ink/80 md:text-xl">
-            Real milk tea, fruit tea, and Vietnamese coffee, brewed by hand
-            on site from recipes I grew up with in Vietnam. Serving
-            festivals, weddings, and parties across the Bay Area.
+          <p className="mt-6 max-w-lg text-lg font-medium text-black md:text-xl">
+            I brew milk tea, fruit tea, and Vietnamese coffee by hand at your
+            event. I use the recipes I grew up with in Vietnam. I serve
+            festivals, weddings, and parties.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -53,12 +53,12 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-8">
             <div>
-              <p className="font-display text-3xl text-ink md:text-4xl">30,000+</p>
-              <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-ink/60">
+              <p className="font-display text-3xl text-black md:text-4xl">30,000+</p>
+              <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-black">
                 Drinks Poured
               </p>
             </div>
-            <div className="h-10 w-px bg-ink/15" />
+            <div className="h-10 w-px bg-black/15" />
             <div>
               <div className="relative z-10 flex items-center gap-1 text-2xl text-black md:text-3xl">
                 {"★★★★★".split("").map((star, i) => (
@@ -67,8 +67,8 @@ export default function Hero() {
                   </span>
                 ))}
               </div>
-              <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-ink/60">
-                Guest Rated
+              <p className="mt-0.5 text-xs font-bold uppercase tracking-wider text-black">
+                Rated by Guests
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function Hero() {
                 &ldquo;Perfectly balanced, super refreshing!&rdquo;
               </p>
               <p className="mt-1 text-[10px] font-bold uppercase tracking-wider text-ink/50">
-                — Nikki P.Y.
+                Nikki P.Y.
               </p>
             </div>
           </div>
@@ -125,11 +125,11 @@ export default function Hero() {
         </div>
 
         <div className="mx-auto max-w-[1400px] px-6 text-center md:px-12">
-          <p className="font-display text-xl uppercase tracking-wider text-ink md:text-2xl">
-            Twenty years of parish festivals, and they keep asking me back:
+          <p className="font-display text-xl uppercase tracking-wider text-black md:text-2xl">
+            Church festivals that keep asking me back:
           </p>
-          <p className="mt-3 text-sm font-bold uppercase tracking-wider text-ink/70">
-            20+ years serving Santa Clara County &amp; the wider Bay Area
+          <p className="mt-3 text-sm font-bold uppercase tracking-wider text-black">
+            Serving Santa Clara County and the Bay Area for 20+ years
           </p>
 
           <div className="mt-8 overflow-hidden">

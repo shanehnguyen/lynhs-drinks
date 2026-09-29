@@ -17,7 +17,7 @@ export default function TestimonialRow() {
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-[var(--section-pad)] text-center md:px-12">
         <h2 className="text-center text-[28px] text-black md:text-[36px]">
-          What People Say After the Second Cup
+          What Our Guests Say
         </h2>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-3">

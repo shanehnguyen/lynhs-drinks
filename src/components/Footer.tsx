@@ -41,7 +41,7 @@ export default function Footer() {
     setStatus("sending");
     try {
       await submitToWeb3Forms({
-        subject: "New newsletter signup — Lynh's Drinks",
+        subject: "New newsletter signup, Lynh's Drinks",
         from_name: "Lynh's Drinks Website",
         email: form.get("email"),
       });
@@ -88,7 +88,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-display text-lg text-cream">
-              Let&apos;s Be Friends
+              Follow Us
             </h3>
             <ul className="mt-4 flex gap-3">
               {SOCIALS.map((s) => (
@@ -109,14 +109,14 @@ export default function Footer() {
 
           <div className="relative order-first sm:order-none">
             <h3 className="font-display text-lg text-cream">
-              Stay Sweet
+              Join Our Email List
             </h3>
             <p className="mt-4 text-sm font-medium text-cream/70">
               Seasonal flavors and open dates, about once a month.
             </p>
             {status === "sent" ? (
               <p className="mt-4 text-sm font-bold text-cream">
-                You&apos;re on the list! 🎉
+                You&apos;re on the list.
               </p>
             ) : (
               <form onSubmit={handleSubscribe} className="mt-4 flex flex-col gap-3">
@@ -132,12 +132,12 @@ export default function Footer() {
                   type="submit"
                   disabled={status === "sending"}
                   surface="#F2B441"
-                  textColor="#2E1C12"
+                  textColor="#000000"
                   className="self-start text-sm"
                 />
                 {status === "error" && (
                   <p className="text-xs font-bold text-pop">
-                    Something went wrong — please try again.
+                    Something went wrong. Please try again.
                   </p>
                 )}
               </form>

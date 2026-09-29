@@ -19,6 +19,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navBg, setNavBg] = useState<string | null>(null);
   const [isDark, setIsDark] = useState(false);
+  const [isBright, setIsBright] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -37,7 +38,11 @@ export default function Header() {
       const [r, g, b] = parts.map(Number);
       const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
-      setIsDark(luminance < 0.6);
+      // Dark brown takes cream text. Yellow and pink (any tinted ground) take black.
+      const saturation = (Math.max(r, g, b) - Math.min(r, g, b)) / 255;
+      const dark = luminance < 0.3;
+      setIsDark(dark);
+      setIsBright(!dark && saturation > 0.1);
       setNavBg(`rgba(${r}, ${g}, ${b}, 0.85)`);
     }
 
@@ -50,8 +55,8 @@ export default function Header() {
     };
   }, []);
 
-  const textColorClass = navBg ? (isDark ? "text-cream" : "text-ink") : "text-ink";
-  const hoverColorClass = isDark ? "hover:text-pop" : "hover:text-accent";
+  const textColorClass = navBg ? (isDark ? "text-cream" : isBright ? "text-black" : "text-ink") : "text-ink";
+  const hoverColorClass = isDark ? "hover:text-pop" : isBright ? "hover:opacity-60" : "hover:text-accent";
 
   return (
     <header
@@ -92,7 +97,9 @@ export default function Header() {
             colorClassName={
               isDark
                 ? "border-cream/50 text-cream hover:bg-cream hover:text-ink"
-                : "border-ink text-ink hover:bg-ink hover:text-cream"
+                : isBright
+                  ? "border-black text-black hover:bg-black hover:text-white"
+                  : "border-ink text-ink hover:bg-ink hover:text-cream"
             }
           />
           <ShopCartDrawer />

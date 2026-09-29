@@ -6,14 +6,14 @@ import { SITE_URL } from "@/lib/site";
 import { BUSINESS_ID, breadcrumbList } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Boba Catering Menu — Build My Menu",
+  title: "Build Your Boba Catering Menu",
   description:
-    "Build your own milk tea and fruit tea menu for your event. Browse every drink and topping Lynh's Drinks serves, then send your picks for a free quote.",
+    "Pick the milk teas, fruit teas and toppings for your event. Then send your picks to Lynh's Drinks for a free quote.",
   alternates: { canonical: `${SITE_URL}/shop` },
   openGraph: {
-    title: "Boba Catering Menu — Build My Menu",
+    title: "Build Your Boba Catering Menu",
     description:
-      "Browse every milk tea, fruit tea, and Vietnamese coffee Lynh's Drinks caters, then send your picks for a free quote.",
+      "See every milk tea, fruit tea and Vietnamese coffee Lynh's Drinks serves. Send your picks for a free quote.",
     url: `${SITE_URL}/shop`,
     images: ["/photos/lynh-booth.jpg"],
   },

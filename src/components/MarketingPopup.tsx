@@ -29,7 +29,7 @@ export default function MarketingPopup() {
     setStatus("sending");
     try {
       await submitToWeb3Forms({
-        subject: "New booking discount signup — Lynh's Drinks",
+        subject: "New booking discount signup, Lynh's Drinks",
         from_name: "Lynh's Drinks Website",
         email: form.get("email"),
       });
@@ -70,10 +70,9 @@ export default function MarketingPopup() {
 
         {status === "sent" ? (
           <div className="mt-4 text-center">
-            <h2 className="text-2xl text-ink">You&apos;re in! 🎉</h2>
+            <h2 className="text-2xl text-ink">You&apos;re in.</h2>
             <p className="mt-2 text-sm font-medium text-ink/70">
-              Keep an eye on your inbox — I&apos;ll follow up with your promo
-              code shortly.
+              Check your inbox. I&apos;ll send your discount code soon.
             </p>
           </div>
         ) : (
@@ -82,8 +81,8 @@ export default function MarketingPopup() {
               Get 10% Off Your First Event
             </h2>
             <p className="mx-auto mt-2 max-w-xs text-center text-sm font-medium text-ink/70">
-              Drop your email and I&apos;ll send you a discount code for your
-              first catered event with Lynh&apos;s Drinks.
+              Enter your email, and I&apos;ll send you a discount code for
+              your first event with us.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-3">
@@ -104,7 +103,7 @@ export default function MarketingPopup() {
               />
               {status === "error" && (
                 <p className="text-center text-xs font-bold text-pop">
-                  Something went wrong — please try again.
+                  Something went wrong. Please try again.
                 </p>
               )}
             </form>

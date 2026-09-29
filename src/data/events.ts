@@ -21,26 +21,26 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "Church Festivals",
     metaTitle: "Church Festival Drink Catering | San Jose & Bay Area",
     metaDescription:
-      "Festival-scale milk tea, fruit tea, and Vietnamese drink catering for parish festivals across San Jose and Santa Clara County. 20+ years, 30,000+ drinks poured.",
-    heroEyebrow: "Where It All Started",
-    heroTitle: "Drink Catering Built for Parish Festivals.",
+      "Milk tea, fruit tea, and Vietnamese drinks for church festivals in San Jose and Santa Clara County. 20+ years and 30,000+ drinks served.",
+    heroEyebrow: "Where We Started",
+    heroTitle: "Drink Catering for Church Festivals.",
     intro:
-      "Lynh's Drinks started at a church festival, and festival weekends are still the heart of our calendar. We've poured drinks at St. Maria Goretti, Our Lady of La Vang, Saint Elizabeth, Saint John Vianney, Vietnamese Martyrs, Holy Spirit, and Queen of Peace parish festivals — and the parishes keep asking us back.",
+      "Lynh's Drinks started at a church festival. We have served at St. Maria Goretti, Our Lady of La Vang, Saint Elizabeth, Saint John Vianney, Vietnamese Martyrs, Holy Spirit, and Queen of Peace. The churches keep asking us back.",
     body: [
       {
-        heading: "Big Batches, Long Lines, No Panic",
-        text: "A festival crowd isn't like any other event. Lines form fast, they're long, and they re-form all weekend. Twenty years of festival weekends taught us how to brew in volume without dropping quality — real tea leaves, real milk, boba cooked fresh through the day — and how to keep a line moving so nobody gives up and walks away.",
+        heading: "Big Crowds, Short Waits",
+        text: "Festival lines form fast and stay long all weekend. We have served them for twenty years. We make big batches with real tea leaves and real milk, and we cook boba fresh all day. We keep the line moving so no one gives up and leaves.",
       },
       {
-        heading: "Flavors the Community Actually Wants",
-        text: "Thai milk tea, iced tamarind, che thai, salted kumquat juice, pandan mung bean milk — alongside the fruit teas and milk teas every crowd loves. We build the menu with your festival committee so it fits your community, and every drink can be made less sweet or caffeine-free for kids and elders.",
+        heading: "Vietnamese Drinks and Milk Teas",
+        text: "We serve Thai milk tea, iced tamarind, che thai, salted kumquat juice, and pandan mung bean milk. We also serve milk teas and fruit teas. We plan the menu with your festival team. Any drink can be less sweet or caffeine-free for kids and elders.",
       },
     ],
     bullets: [
-      "Proven at 10+ large-scale festivals with thousands of drinks per weekend",
-      "Mobile drink bar bus — self-contained setup, no kitchen access needed",
-      "Traditional Vietnamese drinks plus crowd-favorite milk and fruit teas",
-      "One crew from Friday setup through Sunday teardown",
+      "Served at 10+ large festivals, with thousands of drinks each weekend",
+      "Our drink bus brings everything, so no kitchen is needed",
+      "Vietnamese drinks plus milk teas and fruit teas",
+      "One crew from Friday setup to Sunday cleanup",
     ],
     drinkSlugs: ["thai-milk-tea", "iced-tamarind", "che-thai", "salted-kumquat-juice"],
     quote: {
@@ -50,19 +50,19 @@ export const EVENT_TYPES: EventType[] = [
     faqs: [
       {
         q: "Can you handle a full festival weekend?",
-        a: "Yes — multi-day festival weekends are our specialty. We've poured 30,000+ drinks across 10+ large-scale events, and we plan batch brewing, restocks, and crew shifts around your festival schedule so the booth never goes dark.",
+        a: "Yes. Festival weekends are what we do most. We have served 30,000+ drinks at 10+ large events. We plan brewing, restocks, and crew shifts around your schedule, so the booth stays open.",
       },
       {
         q: "Do you need power or kitchen access at the festival grounds?",
-        a: "Our mobile drink bar runs self-contained, so festival grounds without kitchen access aren't a problem. Tell us about your site when you book and we'll sort out placement and logistics with your committee.",
+        a: "Our drink bus carries its own setup, so you do not need a kitchen. Tell us about your grounds when you book. We will plan where to set up with your festival team.",
       },
       {
         q: "How is pricing handled for festivals?",
-        a: "Festival pricing is quoted by expected volume, with drinks starting at $5 each. Talk to us early — festival season weekends are the first dates on our calendar to fill.",
+        a: "We price festivals by how many drinks you expect. Drinks start at $5 each. Reach out early, because festival weekends are the first dates to fill.",
       },
       {
         q: "Do you serve traditional Vietnamese drinks?",
-        a: "Yes — che thai, salted kumquat juice, pandan mung bean milk, herbal drinks, and Vietnamese coffee are all on the menu, alongside milk teas and fruit teas. These recipes are the ones Lynh grew up with in Vietnam.",
+        a: "Yes. We serve che thai, salted kumquat juice, pandan mung bean milk, herbal drinks, and Vietnamese coffee. We also serve milk teas and fruit teas. I grew up with these recipes in Vietnam.",
       },
     ],
   },
@@ -72,44 +72,44 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "Weddings",
     metaTitle: "Wedding Boba Bar & Milk Tea Catering | Bay Area",
     metaDescription:
-      "A handcrafted milk tea and fruit tea bar for Bay Area weddings. Custom menus matched to your theme, fresh-brewed on site, served from setup to last dance.",
-    heroEyebrow: "For Your Big Day",
-    heroTitle: "A Drink Bar Your Guests Will Talk About.",
+      "A milk tea and fruit tea bar for Bay Area weddings. We match the menu to your theme, brew fresh on site, and serve until the last dance.",
+    heroEyebrow: "Bay Area Weddings",
+    heroTitle: "A Boba and Milk Tea Bar for Your Wedding.",
     intro:
-      "A boba bar is the wedding station guests actually line up for — and remember. We build the menu around your colors, your flavors, and your timeline, then brew everything fresh on site so the drinks are as good at the last dance as they were at cocktail hour.",
+      "Guests line up for a boba bar at a wedding. We plan the menu around your colors, flavors, and timeline. We brew everything fresh on site, so the last drink tastes as good as the first.",
     body: [
       {
         heading: "A Menu That Matches Your Wedding",
-        text: "Elegant lychee and passion fruit teas for a garden ceremony, classic milk teas for the crowd-pleasers, Vietnamese coffee for a nod to family tradition — we help you pick a short menu that fits the day. Drinks are served in 16–20 oz cups, and every guest customizes their own sweetness, ice, and toppings.",
+        text: "Pick lychee or passion fruit tea for a garden wedding. Add classic milk teas for everyone, and Vietnamese coffee to honor family. We help you choose a short menu. Drinks come in 16 to 20 oz cups. Each guest picks their sweetness, ice, and toppings.",
       },
       {
-        heading: "Zero Stress on the Day",
-        text: "One crew handles everything: setup before guests arrive, service through the reception, and cleanup after. You won't manage us — you'll just see the line at the drink bar and the cups on the dance floor.",
+        heading: "One Crew Does It All",
+        text: "Our crew sets up before guests arrive, serves through the reception, and cleans up after. You do not have to manage us. You will just see the line at the drink bar.",
       },
     ],
     bullets: [
-      "Custom menu built around your theme and guest list",
-      "Fresh-brewed on site — real tea leaves, real milk, fresh boba",
-      "Guests customize sweetness, ice, and toppings at the bar",
-      "Setup, service, and cleanup handled by one crew",
+      "A menu planned around your theme and guest list",
+      "Brewed fresh on site with real tea leaves, real milk, and fresh boba",
+      "Guests pick their sweetness, ice, and toppings",
+      "One crew sets up, serves, and cleans up",
     ],
     drinkSlugs: ["lychee-tea", "passion-fruit-tea", "jasmine-milk-tea", "vietnamese-coffee"],
     faqs: [
       {
         q: "How does a boba bar work at a wedding reception?",
-        a: "We set up a full drink bar station at your venue before guests arrive. Guests walk up, pick a drink from your custom menu, choose their sweetness and toppings, and we hand them a fresh-poured 16–20 oz cup. It works as a cocktail-hour station, a dessert-table neighbor, or an all-night bar.",
+        a: "We set up a drink bar at your venue before guests arrive. Guests walk up and pick a drink from your menu. They choose sweetness and toppings, and we hand them a fresh 16 to 20 oz cup. The bar can run during cocktail hour, next to dessert, or all night.",
       },
       {
         q: "How early should we book for a wedding?",
-        a: "As early as your date is fixed. Wedding-season Saturdays are the most requested dates we have, and one week is the bare minimum for any event — for a wedding, give us as much runway as you can.",
+        a: "Book as soon as your date is set. Wedding season Saturdays are our most requested dates. We need at least one week for any event. For a wedding, book as early as you can.",
       },
       {
         q: "Can the menu match our wedding theme?",
-        a: "Yes — that's the fun part. Tell us your colors and the mood you want, and we'll suggest drinks that fit: vibrant dragon fruit and butterfly-pretty fruit teas for a bright palette, or creamy classics and Vietnamese coffee for something warmer and more traditional.",
+        a: "Yes. Tell us your colors and the mood you want, and we will suggest drinks to match. Dragon fruit and other fruit teas fit a bright, colorful wedding. Creamy milk teas and Vietnamese coffee feel warmer and more traditional.",
       },
       {
         q: "What does a wedding drink bar cost?",
-        a: "Drinks start at $5 each and we quote by guest count and menu. Send your date, venue, and headcount through the booking form and we'll come back with pricing and flavor recommendations, usually within 24 hours.",
+        a: "Drinks start at $5 each. We price by guest count and menu. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
       },
     ],
   },
@@ -119,44 +119,44 @@ export const EVENT_TYPES: EventType[] = [
     metaTitle: "Corporate Boba Catering | San Jose & Silicon Valley Offices",
     navLabel: "Corporate Events",
     metaDescription:
-      "Boba and milk tea catering for Silicon Valley offices — team celebrations, all-hands, and campus events across San Jose, Santa Clara, and Sunnyvale. Fast lines, custom menus.",
-    heroEyebrow: "For the Whole Team",
-    heroTitle: "The Office Perk Everyone Actually Shows Up For.",
+      "Boba and milk tea catering for Silicon Valley offices. Team parties, all-hands, and campus events in San Jose, Santa Clara, and Sunnyvale. Fast lines, custom menus.",
+    heroEyebrow: "Silicon Valley Offices",
+    heroTitle: "Boba Catering for Your Office Event.",
     intro:
-      "A boba bar turns a routine team event into the one people talk about in standup the next day. We cater offices across San Jose, Santa Clara, Sunnyvale, and the wider Silicon Valley — from a 30-person team celebration to a campus-wide event.",
+      "We bring a boba bar to offices in San Jose, Santa Clara, Sunnyvale, and across Silicon Valley. We serve teams of 30 and whole campuses.",
     body: [
       {
-        heading: "Built to Fit a Work Day",
-        text: "Twenty years of long festival lines taught us speed. We keep the line moving so a drink break fits inside a lunch break, and the bar sets up indoors or out — lobby, patio, cafeteria, or conference floor. Everything is self-contained, so facilities won't need to do a thing.",
+        heading: "Fast Enough for a Lunch Break",
+        text: "Twenty years of long festival lines taught us to serve fast. A drink break fits inside a lunch break. We set up inside or outside, in a lobby, patio, cafeteria, or meeting space. We bring everything, so your facilities team has nothing to do.",
       },
       {
-        heading: "A Menu the Whole Office Agrees On",
-        text: "Classic milk teas for the traditionalists, fruit teas for the light-drink crowd, Vietnamese coffee for the caffeine-dependent, and caffeine-free options for everyone else. Every drink is customizable, so nobody settles.",
+        heading: "A Drink for Every Person",
+        text: "We serve classic milk teas, light fruit teas, and Vietnamese coffee. We also have caffeine-free drinks. Each person can change their drink to fit their taste.",
       },
     ],
     bullets: [
-      "Fast service lines sized to your headcount",
-      "Indoor or outdoor setup — fully self-contained",
-      "Caffeinated, decaf, and caffeine-free options on every menu",
-      "Serving the South Bay tech corridor for 20+ years",
+      "Fast lines, staffed for your headcount",
+      "Indoor or outdoor setup, and we bring everything",
+      "Caffeine, decaf, and caffeine-free drinks on every menu",
+      "Serving the South Bay for 20+ years",
     ],
     drinkSlugs: ["brown-sugar-milk-tea", "viet-salted-coffee", "peach-green-tea", "tropical-fruit-tea"],
     faqs: [
       {
         q: "Can you set up inside our office?",
-        a: "Yes — the drink bar is fully self-contained and sets up in lobbies, cafeterias, patios, and event spaces. Tell us the location when you book and we'll handle the rest with your office or facilities contact.",
+        a: "Yes. The drink bar brings all it needs. It sets up in lobbies, cafeterias, patios, and event spaces. Tell us where when you book, and we will plan the rest with your office team.",
       },
       {
         q: "How many people can you serve at a corporate event?",
-        a: "From a 30-person team party to a campus-wide celebration. We've served festival crowds in the thousands, so we size the crew and brewing plan to your headcount and time window.",
+        a: "We serve teams of 30 up to whole campuses. We have served festival crowds in the thousands. We plan our crew and brewing around your headcount and time.",
       },
       {
         q: "How fast is the line?",
-        a: "Fast — it's the thing twenty years of festivals forced us to get right. Tell us your headcount and the window you have, and we'll staff so everyone gets a drink without burning the whole break.",
+        a: "Fast. Twenty years of festivals taught us speed. Tell us your headcount and how much time you have. We will bring enough crew so everyone gets a drink before the break ends.",
       },
       {
         q: "How does booking and pricing work for companies?",
-        a: "Drinks start at $5 each, quoted by headcount and menu. Send the date, office location, and approximate headcount through the booking form and you'll have numbers back quickly — usually within 24 hours.",
+        a: "Drinks start at $5 each. We price by headcount and menu. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
       },
     ],
   },
@@ -166,26 +166,26 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "School Events",
     metaTitle: "School Event Boba Catering | Fundraisers & Carnivals, San Jose",
     metaDescription:
-      "Milk tea and fruit tea catering for school carnivals, fundraisers, and celebrations across Santa Clara County. Kid-friendly caffeine-free menu, fast festival-tested lines.",
-    heroEyebrow: "For Campus Crowds",
-    heroTitle: "Flavors Kids Ask for by Name.",
+      "Milk tea and fruit tea catering for school carnivals, fundraisers, and parties in Santa Clara County. Caffeine-free drinks for kids and fast lines.",
+    heroEyebrow: "Santa Clara County Schools",
+    heroTitle: "Drinks for School Carnivals and Fundraisers.",
     intro:
-      "School carnivals, fundraisers, teacher appreciation days, and end-of-year parties — we build kid-friendly menus with plenty of caffeine-free options, and we keep lines moving fast enough for a recess-length break.",
+      "We serve school carnivals, fundraisers, teacher thank-you days, and end-of-year parties. Our kid menu has lots of caffeine-free drinks. Our lines move fast, even during a short break.",
     body: [
       {
-        heading: "A Menu Parents Don't Have to Worry About",
-        text: "Strawberry milk, guava juice, iced tamarind, and fruit teas headline the kid menu — all caffeine-free — with classic milk teas for the parents and teachers. Every drink's sweetness can be dialed down, and toppings like jelly and boba make it feel like a treat, not just a drink.",
+        heading: "A Kid Menu Parents Can Trust",
+        text: "Strawberry milk, guava juice, iced tamarind, and fruit teas top the kid menu. All of them are caffeine-free. Parents and teachers get classic milk teas. Any drink can be made less sweet. Toppings like jelly and boba make it a treat.",
       },
       {
-        heading: "Festival-Tested for School-Sized Crowds",
-        text: "A school carnival crowd moves like a festival crowd: everyone at once. Twenty years of parish festivals means we know how to serve a rush — so the line at the drink booth doesn't swallow the whole event.",
+        heading: "Fast Lines for Big School Crowds",
+        text: "At a school carnival, everyone comes at once, just like a festival. Twenty years of church festivals taught us how to serve a rush. The drink line will not take over your event.",
       },
     ],
     bullets: [
-      "Caffeine-free favorites: strawberry milk, guava juice, iced tamarind",
-      "Adjustable sweetness on every drink — down to 0%",
-      "Fast lines tested on twenty years of festival crowds",
-      "Works for carnivals, fundraisers, and staff appreciation events",
+      "Caffeine-free drinks: strawberry milk, guava juice, iced tamarind",
+      "Set the sweetness on every drink, down to 0%",
+      "Fast lines, tested at twenty years of festivals",
+      "For carnivals, fundraisers, and staff thank-you events",
     ],
     drinkSlugs: ["strawberry-milk", "guava-juice", "mango-green-tea", "strawberry-milk-tea"],
     quote: {
@@ -195,19 +195,19 @@ export const EVENT_TYPES: EventType[] = [
     faqs: [
       {
         q: "Do you have caffeine-free drinks for kids?",
-        a: "Plenty — strawberry milk, guava juice, iced tamarind, herbal drinks, and more are naturally caffeine-free, and they're the most popular picks at every school event we serve.",
+        a: "Yes, lots. Strawberry milk, guava juice, iced tamarind, herbal drinks, and more have no caffeine. They are the top picks at every school event we serve.",
       },
       {
         q: "Can drinks be made less sweet for younger kids?",
-        a: "Yes — sweetness is adjustable on every drink, from 100% down to 0%. Kids still get the fun of picking toppings; parents get a say in the sugar.",
+        a: "Yes. You can set the sweetness on every drink, from 100% down to 0%. Kids still pick their toppings, and parents choose the sugar.",
       },
       {
         q: "Do you work school fundraisers?",
-        a: "Yes — carnivals, walkathons, and fundraiser nights are regulars on our calendar. Talk to us about your event's format and headcount and we'll build a plan and quote that fits.",
+        a: "Yes. We often work carnivals, walkathons, and fundraiser nights. Tell us how your event works and how many people will come. We will send a plan and a price.",
       },
       {
         q: "How much notice does a school event need?",
-        a: "At least a week, and more for big carnival dates in spring — those weekends overlap with festival season and fill up first.",
+        a: "At least one week. Give us more time for big spring carnivals. Those weekends fall in festival season and fill up first.",
       },
     ],
   },
@@ -217,44 +217,44 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "Private Parties",
     metaTitle: "Private Party Boba Catering | Birthdays & Celebrations, San Jose",
     metaDescription:
-      "Boba and milk tea catering for birthdays, graduations, quinceañeras, and backyard parties across San Jose and the South Bay. Custom menus, fresh-brewed on site.",
-    heroEyebrow: "For Your People",
-    heroTitle: "The Backyard Party, Upgraded.",
+      "Boba and milk tea catering for birthdays, graduations, quinceañeras, and backyard parties in San Jose and the South Bay. Custom menus, brewed fresh on site.",
+    heroEyebrow: "San Jose and the South Bay",
+    heroTitle: "Boba Catering for Your Private Party.",
     intro:
-      "Birthdays, graduations, quinceañeras, tết celebrations, baby showers, reunions, and the backyard get-together that somehow grew to forty people — a drink bar makes any of them feel like an occasion.",
+      "We serve birthdays, graduations, quinceañeras, tết parties, baby showers, and family reunions. We also serve backyard parties that grew to forty people. A drink bar makes any party feel special.",
     body: [
       {
         heading: "Every Guest Builds Their Own Drink",
-        text: "The drink bar is entertainment as much as refreshment. Guests pick a base — milk tea, fruit tea, or a Vietnamese specialty — then customize sweetness, ice, and toppings. Kids stack jelly, grandparents get their coffee, and everyone walks away with exactly what they wanted.",
+        text: "Guests pick a milk tea, fruit tea, or Vietnamese drink. Then they choose sweetness, ice, and toppings. Kids pile on jelly, and grandparents get their coffee. Everyone gets the drink they want.",
       },
       {
-        heading: "Sized to Your Party, Not the Other Way Around",
-        text: "A backyard birthday doesn't need a festival rig, and a quinceañera shouldn't get a card table. We scale the setup, menu, and crew to your guest list, and the same person who takes your booking is at your party pouring drinks.",
+        heading: "Sized to Your Party",
+        text: "A backyard birthday needs a small setup. A quinceañera needs a bigger one. We size the setup, menu, and crew to your guest list. The person who takes your booking is at your party serving drinks.",
       },
     ],
     bullets: [
-      "Menus scaled from intimate parties to big family celebrations",
-      "Vietnamese specialties alongside milk and fruit teas",
-      "Caffeine-free and low-sugar options for all ages",
-      "Setup to cleanup handled — you stay with your guests",
+      "Menus for small parties and big family events",
+      "Vietnamese drinks plus milk teas and fruit teas",
+      "Caffeine-free and low-sugar drinks for all ages",
+      "We set up and clean up, so you can stay with your guests",
     ],
     drinkSlugs: ["taro-milk-tea", "mango-milk-tea", "dragon-fruit-tea", "pandan-mungbean-milk"],
     faqs: [
       {
         q: "Is my party too small for catering?",
-        a: "Probably not — drinks start at $5 each and we quote by guest count, so a backyard birthday works just as well as a hundred-person reunion. Tell us what you're planning and we'll make it fit.",
+        a: "Probably not. Drinks start at $5 each, and we price by guest count. A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
       },
       {
         q: "Do you do quinceañeras and cultural celebrations?",
-        a: "Yes — quinceañeras, tết, graduation parties, baby showers, and family reunions are all regulars. We'll build a menu that fits the celebration, from tropical fruit teas to traditional Vietnamese drinks.",
+        a: "Yes. We often serve quinceañeras, tết, graduation parties, baby showers, and family reunions. We will plan a menu for your party, from tropical fruit teas to Vietnamese drinks.",
       },
       {
         q: "What if my guests have never had boba?",
-        a: "That's the best part of the bar — first-timers get walked through it. We'll steer them to crowd-pleasers like mango milk tea or peach green tea, and the customizable sweetness means nobody ends up with something too sweet.",
+        a: "We walk first-timers through it. We point them to easy favorites like mango milk tea or peach green tea. Guests set their own sweetness, so no drink ends up too sweet.",
       },
       {
         q: "How far ahead should I book a party?",
-        a: "A week covers most parties, but spring and summer Saturdays go fast. If your date's locked, get it on our calendar early.",
+        a: "One week is enough for most parties. Spring and summer Saturdays fill fast. If your date is set, book early.",
       },
     ],
   },

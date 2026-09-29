@@ -19,7 +19,7 @@ export async function generateMetadata({
   const drink = getDrinkBySlug(slug);
   if (!drink) return {};
 
-  const title = `${drink.name} — Boba Catering Menu`;
+  const title = `${drink.name}: Boba Catering Menu`;
 
   return {
     title,

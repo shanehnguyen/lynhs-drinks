@@ -44,15 +44,15 @@ export default function LocationsIndexPage() {
         <section className="relative overflow-hidden pt-[70px] pb-[var(--section-pad)]">
           <HeroBackground />
           <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-ink/60">
+            <p className="font-display text-sm uppercase tracking-widest text-black">
               Areas We Serve
             </p>
-            <h1 className="mt-3 text-[36px] leading-tight text-ink md:text-[60px]">
+            <h1 className="mt-3 text-[36px] leading-tight text-black md:text-[60px]">
               Catering Across the South Bay.
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-ink/80">
-              Based in San Jose, catering fresh-brewed milk tea and fruit tea
-              bars throughout Santa Clara County.
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-black">
+              We are based in San Jose. We bring our milk tea and fruit tea bar
+              to events all over Santa Clara County.
             </p>
           </div>
 

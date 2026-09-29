@@ -46,10 +46,10 @@ export default function BookingForm() {
   if (status === "sent") {
     return (
       <div className="rounded-2xl border-[3px] border-ink bg-cream p-10 text-center shadow-[8px_8px_0_0_#FF008C]">
-        <h2 className="text-2xl text-ink">Thanks — got it!</h2>
+        <h2 className="text-2xl text-ink">Thanks, I got it.</h2>
         <p className="mt-3 text-sm font-medium text-ink/70">
-          I usually reply within 1 to 2 business days with pricing and
-          availability for your date.
+          I usually reply within 1 to 2 business days with a price and
+          whether your date is open.
         </p>
       </div>
     );
@@ -80,7 +80,7 @@ export default function BookingForm() {
         </select>
       </div>
       <Field label="Event Date" name="eventDate" type="date" />
-      <Field label="Estimated Guest Count" name="guestCount" type="number" />
+      <Field label="Number of Guests" name="guestCount" type="number" />
 
       <div className="sm:col-span-2">
         <label className="text-sm font-bold uppercase tracking-wider text-ink/70">
@@ -90,14 +90,14 @@ export default function BookingForm() {
           name="details"
           rows={picks ? 8 : 4}
           defaultValue={defaultDetails}
-          placeholder="Location, flavors you're excited about, anything else we should know..."
+          placeholder="Where is it? What flavors do you like? Anything else we should know?"
           className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
         />
       </div>
 
       <div className="sm:col-span-2">
         <PushButton
-          label={status === "sending" ? "Sending…" : "Send Inquiry"}
+          label={status === "sending" ? "Sending…" : "Send My Request"}
           type="submit"
           disabled={status === "sending"}
           surface="#F4CC7B"
@@ -105,7 +105,7 @@ export default function BookingForm() {
         />
         <p className="mt-3 text-xs font-medium text-ink/50">
           {status === "error"
-            ? "Something went wrong sending your inquiry — please try again."
+            ? "Something went wrong. Please try again."
             : "I usually reply within 1 to 2 business days."}
         </p>
       </div>

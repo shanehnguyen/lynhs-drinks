@@ -12,12 +12,12 @@ import { breadcrumbList } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Events We Cater",
   description:
-    "Church festivals, weddings, corporate events, school fundraisers, and private parties — Lynh's Drinks caters fresh-brewed milk tea and fruit tea bars across the South Bay.",
+    "Lynh's Drinks brings a milk tea and fruit tea bar to church festivals, weddings, corporate events, school fundraisers, and parties in the South Bay.",
   alternates: { canonical: `${SITE_URL}/events` },
   openGraph: {
     title: "Events We Cater | Lynh's Drinks",
     description:
-      "Church festivals, weddings, corporate events, school fundraisers, and private parties across the South Bay.",
+      "Church festivals, weddings, corporate events, school fundraisers, and private parties in the South Bay.",
     url: `${SITE_URL}/events`,
     images: ["/photos/lynh-booth.jpg"],
   },
@@ -51,15 +51,15 @@ export default function EventsIndexPage() {
         <section className="relative overflow-hidden pt-[70px] pb-[var(--section-pad)]">
           <HeroBackground />
           <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-ink/60">
+            <p className="font-display text-sm uppercase tracking-widest text-black">
               Events We Cater
             </p>
-            <h1 className="mt-3 text-[36px] leading-tight text-ink md:text-[60px]">
-              Whatever You&apos;re Celebrating, We Pour for It.
+            <h1 className="mt-3 text-[36px] leading-tight text-black md:text-[60px]">
+              Boba Catering for Every Kind of Event.
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-ink/80">
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-black">
               Twenty years of church festivals, weddings, school events,
-              corporate parties, and backyard celebrations across the South Bay.
+              office parties, and backyard parties in the South Bay.
             </p>
           </div>
 

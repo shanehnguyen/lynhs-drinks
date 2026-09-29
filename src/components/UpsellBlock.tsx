@@ -26,13 +26,13 @@ export default function UpsellBlock() {
                 className="h-28 w-auto rotate-6"
               />
             </div>
-            <h2 className="text-[30px] leading-tight text-cream md:text-[44px]">
+            <h2 className="text-[30px] leading-tight text-black md:text-[44px]">
               Build Your Own Drink Bar
             </h2>
-            <p className="mt-4 text-lg font-medium text-cream/85">
-              Boba, salted cream, egg cream, cheese foam, coconut cream, matcha
-              foam, jelly. Guests mix and match right at the table, so
-              everybody walks away with the drink they were picturing.
+            <p className="mt-4 text-lg font-medium text-black">
+              Pick from boba, salted cream, egg cream, cheese foam, coconut
+              cream, matcha foam, and jelly. Guests mix and match at the
+              table. Everyone gets the drink they want.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <PushButton

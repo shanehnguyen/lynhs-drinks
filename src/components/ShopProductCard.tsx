@@ -12,15 +12,8 @@ const CATEGORY_COLOR: Record<string, string> = {
   Specialty: "#FF008C",
 };
 
-const CATEGORY_TEXT: Record<string, string> = {
-  "Milk Tea": "#F5EFE3",
-  "Fruit Tea": "#2E1C12",
-  Specialty: "#F5EFE3",
-};
-
 export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
   const tone = CATEGORY_COLOR[drink.category] ?? "#F4CC7B";
-  const toneText = CATEGORY_TEXT[drink.category] ?? "#F5EFE3";
   const { addItem } = useShopCart();
   const [justAdded, setJustAdded] = useState(false);
 
@@ -64,8 +57,8 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         )}
 
         <span
-          className="absolute left-3 top-3 rounded-full border-2 border-ink px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider"
-          style={{ backgroundColor: tone, color: toneText }}
+          className="absolute left-3 top-3 rounded-full border-2 border-ink px-3 py-0.5 text-sm font-bold uppercase tracking-wider"
+          style={{ backgroundColor: tone, color: "#000000" }}
         >
           {drink.category}
         </span>
@@ -73,8 +66,8 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         <button
           onClick={handleQuickAdd}
           aria-label={`Quick add ${drink.name} to my picks`}
-          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-lg font-bold shadow-[3px_3px_0_0_#FF008C] transition-all duration-150 hover:scale-110 active:scale-95 ${
-            justAdded ? "bg-accent text-cream" : "bg-cream text-ink"
+          className={`absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink text-base font-bold shadow-[3px_3px_0_0_#FF008C] transition-all duration-150 hover:scale-110 active:scale-95 ${
+            justAdded ? "bg-accent text-black" : "bg-cream text-ink"
           }`}
         >
           {justAdded ? "✓" : "+"}
@@ -83,7 +76,7 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
 
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-body text-base font-bold leading-snug tracking-wider text-ink">{drink.name}</h3>
-        <p className="mt-2 text-xs font-bold uppercase tracking-wider text-ink/45">
+        <p className="mt-2 text-sm font-bold uppercase tracking-wider text-ink">
           {drink.tastesLike.slice(0, 2).join(" · ")}
         </p>
       </div>

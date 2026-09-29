@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!location) return {};
 
   const title = `Milk Tea & Fruit Tea Catering in ${location.city}, CA`;
-  const description = `Handcrafted milk tea, fruit tea, and Vietnamese coffee catering in ${location.city}, CA. Fresh-brewed drink bars for weddings, festivals, and events. 20+ years serving the South Bay.`;
+  const description = `Milk tea, fruit tea and Vietnamese coffee catering in ${location.city}, CA. We make every drink fresh at weddings, festivals and parties. 20+ years in the South Bay.`;
 
   return {
     title,
@@ -79,13 +79,13 @@ export default async function LocationPage({
         <section className="relative overflow-hidden pt-[70px] pb-[var(--section-pad)]">
           <HeroBackground />
           <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-ink/60">
+            <p className="font-display text-sm uppercase tracking-widest text-black">
               Catering in {location.city}, CA
             </p>
-            <h1 className="mt-3 text-[32px] leading-tight text-ink md:text-[56px]">
+            <h1 className="mt-3 text-[32px] leading-tight text-black md:text-[56px]">
               Milk Tea &amp; Fruit Tea Catering in {location.city}, CA
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-ink/80">
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-medium text-black">
               {location.intro}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -102,7 +102,7 @@ export default async function LocationPage({
                 textColor="#2E1C12"
               />
             </div>
-            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-ink/60">
+            <p className="mt-4 text-xs font-bold uppercase tracking-wider text-black">
               {location.distance}
             </p>
           </div>
@@ -117,10 +117,10 @@ export default async function LocationPage({
 
             <ul className="mt-8 space-y-3">
               {[
-                "Brewed fresh on-site, never from a powdered mix",
-                "Real tapioca boba and fully customizable toppings",
-                "20,000+ drinks served across 10+ large-scale events",
-                "One team, from setup to last cup poured",
+                "Tea made fresh at your event from real leaves",
+                "Real tapioca boba, and you pick the toppings",
+                "20,000+ drinks served at 10+ big events",
+                "One crew, from setup to the last cup",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-bold text-cream">
@@ -161,10 +161,10 @@ export default async function LocationPage({
 
         <section className="relative bg-accent">
           <div className="mx-auto max-w-[700px] px-6 py-[var(--section-pad)] text-center md:px-12">
-            <h2 className="text-[26px] leading-tight text-cream md:text-[36px]">
+            <h2 className="text-[26px] leading-tight text-black md:text-[36px]">
               &ldquo;Perfectly balanced, super refreshing!&rdquo;
             </h2>
-            <p className="mt-3 text-sm font-bold uppercase tracking-wider text-cream/70">
+            <p className="mt-3 text-sm font-bold uppercase tracking-wider text-black">
               — Nikki P.Y.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default async function LocationPage({
               Ready to Book {location.city}?
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-lg font-medium text-cream/80">
-              Tell me your date and guest count, and I&apos;ll get you a quote
+              Tell me your date and guest count. I will send you a price
               fast.
             </p>
             <div className="mt-8">

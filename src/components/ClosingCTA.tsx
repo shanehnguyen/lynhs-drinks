@@ -20,13 +20,12 @@ export default function ClosingCTA() {
 
           <div className="flex-1">
             <h2 className="text-[32px] leading-tight text-black md:text-[52px]">
-              Let&apos;s Get Your Drink Table Handled
+              Let&apos;s Plan the Drinks for Your Event
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-ink/70">
-              Send me your guest count, your date, and the flavors
-              you&apos;re dreaming about. I&apos;ll get a quote back to you
-              fast, usually within a day, and I need about a week&apos;s
-              notice to make it happen.
+              Send me your date, your guest count, and the flavors you want.
+              I&apos;ll send you a quote, usually within a day. I need about
+              one week&apos;s notice.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <PushButton
@@ -36,7 +35,7 @@ export default function ClosingCTA() {
                 textColor="#000000"
               />
               <PushButton
-                label="Get an Instant Quote"
+                label="Get a Quote"
                 href="/book"
                 surface="#F5EFE3"
                 textColor="#2E1C12"

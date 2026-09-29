@@ -18,10 +18,7 @@ export default function PrivacyPage() {
       <main>
         <section className="relative overflow-hidden bg-ink pt-[70px] pb-16 text-cream">
           <div className="mx-auto max-w-[900px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-cream/60">
-              Legal
-            </p>
-            <h1 className="mt-3 text-[32px] leading-tight md:text-[48px]">
+            <h1 className="text-[32px] leading-tight md:text-[48px]">
               Privacy Policy
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-base font-medium text-cream/80">
@@ -39,35 +36,34 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl text-ink">Information We Collect</h2>
                 <p className="mt-3">
                   When you fill out the booking form, we collect your name,
-                  email, phone number, event date, guest count, and any
-                  details you share about your event. If you sign up for
-                  email updates or a discount code, we collect your email
-                  address.
+                  email, and phone number. We also collect your event date,
+                  guest count, and any event details you share. If you sign
+                  up for email updates or a discount code, we collect your
+                  email address.
                 </p>
                 <p className="mt-3">
                   When you build a menu on our Shop page, your drink and
-                  topping picks are stored in your browser&apos;s local
-                  storage so they&apos;re there when you come back. That
-                  information stays on your device and is only sent to us
-                  when you submit it through the booking form.
+                  topping picks are saved in your browser&apos;s local
+                  storage. That way they are still there when you come back.
+                  This information stays on your device. We only get it when
+                  you send it through the booking form.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">How We Use It</h2>
                 <p className="mt-3">
-                  We use your information to respond to your inquiry, put
-                  together a quote, and coordinate your event. If you sign up
-                  for email updates, we may occasionally send you seasonal
-                  flavors or booking openings. We never sell your personal
-                  information.
+                  We use your information to answer your request, give you a
+                  quote, and plan your event. If you sign up for email
+                  updates, we may sometimes send you seasonal flavors or open
+                  booking dates. We never sell your personal information.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">Third-Party Services</h2>
                 <p className="mt-3">
-                  Our booking and newsletter forms are processed by{" "}
+                  Our booking and newsletter forms are run by{" "}
                   <a
                     href="https://web3forms.com/privacy"
                     target="_blank"
@@ -76,10 +72,10 @@ export default function PrivacyPage() {
                   >
                     Web3Forms
                   </a>
-                  , which delivers your submission to us by email. Our
-                  optional Vietnamese translation is powered by Google
-                  Translate; if you use it, Google sets a cookie to remember
-                  your language preference, subject to{" "}
+                  . It sends your form to us by email. You can also choose
+                  to read our site in Vietnamese with Google Translate. If
+                  you use it, Google sets a cookie to remember your language.
+                  That cookie follows{" "}
                   <a
                     href="https://policies.google.com/privacy"
                     target="_blank"
@@ -96,46 +92,46 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl text-ink">Cookies &amp; Local Storage</h2>
                 <p className="mt-3">
                   We use your browser&apos;s local storage to remember your
-                  menu picks, and a cookie to remember your language
-                  preference if you use the translate button. We don&apos;t
-                  use advertising or tracking cookies.
+                  menu picks. If you use the translate button, a cookie
+                  remembers your language. We don&apos;t use cookies for ads
+                  or tracking.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">Your Rights</h2>
                 <p className="mt-3">
-                  You can ask us to access, correct, or delete any personal
-                  information we have about you at any time by contacting us
-                  below.
+                  You can ask us to see, correct, or delete any personal
+                  information we have about you. Contact us below at any
+                  time.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">Children&apos;s Privacy</h2>
                 <p className="mt-3">
-                  Our site is intended for adults planning events and is not
-                  directed at children under 13.
+                  Our site is for adults planning events. It is not meant
+                  for children under 13.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">Changes to This Policy</h2>
                 <p className="mt-3">
-                  We may update this policy from time to time. Changes will
-                  be posted on this page.
+                  We may update this policy from time to time. We will post
+                  any changes on this page.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl text-ink">Contact Us</h2>
                 <p className="mt-3">
-                  Questions about this policy or your information? Reach us
-                  at{" "}
+                  Have questions about this policy or your information? Email
+                  us at{" "}
                   <a href={`mailto:${BUSINESS_EMAIL}`} className="font-bold underline hover:text-accent">
                     {BUSINESS_EMAIL}
                   </a>{" "}
-                  or{" "}
+                  or call{" "}
                   <a href="tel:+14082064855" className="font-bold underline hover:text-accent">
                     {BUSINESS_PHONE_DISPLAY}
                   </a>

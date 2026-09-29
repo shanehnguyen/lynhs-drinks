@@ -8,7 +8,7 @@ import { SITE_URL, BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_TEL } from "@/lib/site
 
 export const metadata: Metadata = {
   title: "Book Your Event",
-  description: "Request a quote for milk tea, fruit tea, and coffee catering at your next event.",
+  description: "Get a quote for boba, milk tea, fruit tea, and Vietnamese coffee at your Bay Area event.",
   alternates: { canonical: `${SITE_URL}/book` },
 };
 
@@ -18,17 +18,14 @@ export default function BookPage() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-field pt-[70px] pb-16 text-cream md:pb-20">
+        <section className="relative overflow-hidden bg-field pt-[70px] pb-16 text-black md:pb-20">
           <div className="mx-auto max-w-[1400px] px-6 text-center md:px-12">
-            <p className="font-display text-sm uppercase tracking-widest text-cream/70">
-              Let&apos;s Get Your Date Booked
-            </p>
-            <h1 className="mt-3 text-[36px] leading-tight md:text-[60px]">
+            <h1 className="text-[36px] leading-tight md:text-[60px]">
               Tell Us About Your Event
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-cream/85">
-              Fill out the form below and I&apos;ll follow up with pricing,
-              flavor recommendations, and availability for your date.
+            <p className="mx-auto mt-4 max-w-xl text-lg font-medium text-black">
+              Fill out the form. I&apos;ll send you a price, flavor ideas, and
+              whether your date is open.
             </p>
           </div>
 
@@ -40,7 +37,7 @@ export default function BookPage() {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
                 { label: "Starting Price", value: "$5 / drink" },
-                { label: "Advance Notice", value: "1 Week" },
+                { label: "Book Ahead", value: "1 Week" },
                 { label: "Cup Size", value: "16–20 oz" },
                 { label: "Years Serving", value: "20+" },
               ].map((detail) => (
@@ -56,11 +53,11 @@ export default function BookPage() {
               ))}
             </div>
             <p className="mt-4 text-center text-xs font-medium text-ink/50">
-              Custom menus, fresh toppings, and sugar/ice levels included. I
-              usually respond within 24 hours.
+              Custom menus, fresh toppings, and sugar and ice levels are
+              included. I usually reply within 24 hours.
             </p>
             <p className="mt-2 text-center text-xs font-medium text-ink/50">
-              Prefer to call or text?{" "}
+              Want to call or text?{" "}
               <a href={`tel:${BUSINESS_PHONE_TEL}`} className="font-bold text-ink underline hover:text-accent">
                 {BUSINESS_PHONE_DISPLAY}
               </a>

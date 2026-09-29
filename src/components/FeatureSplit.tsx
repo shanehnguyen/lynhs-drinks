@@ -30,13 +30,16 @@ type FeatureSplitProps = {
 
 const SECTION_ACCENTS: Record<string, { headline: string; shadow: string }> = {
   "#F5EFE3": { headline: "#000000", shadow: "#FF008C" },
-  "#FF008C": { headline: "#F5EFE3", shadow: "#F4CC7B" },
-  "#F4CC7B": { headline: "#F5EFE3", shadow: "#2E1C12" },
+  "#FF008C": { headline: "#000000", shadow: "#F4CC7B" },
+  "#F4CC7B": { headline: "#000000", shadow: "#2E1C12" },
   "#2E1C12": { headline: "#F5EFE3", shadow: "#F2B441" },
   "#FFDBFD": { headline: "#000000", shadow: "#000000" },
   "#A4F6F8": { headline: "#000000", shadow: "#000000" },
   "#FFFFFF": { headline: "#000000", shadow: "#FF008C" },
 };
+
+// Yellow and pink grounds always take solid black text.
+const BLACK_TEXT_GROUNDS = ["#FF008C", "#F4CC7B", "#F2B441", "#FFDBFD", "#EA699E"];
 
 // The hero's bounded pale-ribbon swirl shape, reused as a single
 // decorative accent behind a FeatureSplit section when swirlColor is set.
@@ -53,7 +56,7 @@ const SWIRL_PATH =
 export default function FeatureSplit({
   id,
   bg,
-  textColor = "#2E1C12",
+  textColor: textColorProp = "#2E1C12",
   reverse = false,
   eyebrow,
   heading,
@@ -75,6 +78,8 @@ export default function FeatureSplit({
   extraItems,
 }: FeatureSplitProps) {
   const accents = SECTION_ACCENTS[bg.toUpperCase()] ?? SECTION_ACCENTS["#F5EFE3"];
+  const onBright = BLACK_TEXT_GROUNDS.includes(bg.toUpperCase());
+  const textColor = onBright ? "#000000" : textColorProp;
 
   const isCream = bg.toUpperCase() === "#F5EFE3";
 
@@ -149,7 +154,7 @@ export default function FeatureSplit({
             {eyebrow && (
               <p
                 className="mb-3 text-sm font-bold uppercase tracking-wider"
-                style={{ color: textColor, opacity: 0.6 }}
+                style={{ color: textColor, opacity: onBright ? 1 : 0.6 }}
               >
                 {eyebrow}
               </p>
@@ -161,7 +166,7 @@ export default function FeatureSplit({
               <p
                 key={i}
                 className={`text-lg font-medium ${i === 0 ? "mt-4" : "mt-3"}`}
-                style={{ color: textColor, opacity: 0.8 }}
+                style={{ color: textColor, opacity: onBright ? 1 : 0.8 }}
               >
                 {paragraph}
               </p>
@@ -177,7 +182,7 @@ export default function FeatureSplit({
                     >
                       ✓
                     </span>
-                    <span className="font-medium" style={{ color: textColor, opacity: 0.85 }}>
+                    <span className="font-medium" style={{ color: textColor, opacity: onBright ? 1 : 0.85 }}>
                       {b}
                     </span>
                   </li>
