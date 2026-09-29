@@ -33,6 +33,16 @@ body {
 #google_translate_element {
   display: none !important;
 }
+/* Google's hover tooltip and highlight over translated text */
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
 
 /* Prevent hairline antialiasing seams where adjacent sections meet */
 main > section + section {

@@ -1,17 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-function getGoogTransCookie() {
-  const match = document.cookie.match(/(?:^|; )googtrans=([^;]*)/);
-  return match ? decodeURIComponent(match[1]) : undefined;
-}
-
-function setGoogTransCookie(value: string) {
-  const hostname = window.location.hostname;
-  document.cookie = `googtrans=${value}; path=/`;
-  document.cookie = `googtrans=${value}; path=/; domain=${hostname}`;
-}
+import { isVietnamese as readIsVietnamese, setVietnamese, clearLanguage } from "@/lib/translate";
 
 type LanguageToggleProps = {
   className?: string;
@@ -25,11 +15,14 @@ export default function LanguageToggle({
   const [isVietnamese, setIsVietnamese] = useState(false);
 
   useEffect(() => {
-    setIsVietnamese(getGoogTransCookie() === "/en/vi");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads a cookie after hydration so SSR markup matches
+    setIsVietnamese(readIsVietnamese());
   }, []);
 
   function toggle() {
-    setGoogTransCookie(isVietnamese ? "/en/en" : "/en/vi");
+    // Back to English clears every copy of the cookie, including Google's own.
+    if (isVietnamese) clearLanguage();
+    else setVietnamese();
     window.location.reload();
   }
 

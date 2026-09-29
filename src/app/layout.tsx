@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import TranslateLoader from "@/components/TranslateLoader";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { ShopCartProvider } from "@/context/ShopCartContext";
@@ -75,16 +75,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-cream text-ink font-body">
         <JsonLd data={jsonLd} />
-        <div id="google_translate_element" className="hidden" />
-        <Script id="google-translate-init" strategy="lazyOnload">
-          {`function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'vi', autoDisplay: false }, 'google_translate_element');
-          }`}
-        </Script>
-        <Script
-          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="lazyOnload"
-        />
+        <TranslateLoader />
         <ShopCartProvider>{children}</ShopCartProvider>
         <MarketingPopup />
       </body>
