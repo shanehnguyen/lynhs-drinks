@@ -1,7 +1,7 @@
 const FAQS = [
   {
     q: "How much does drink catering cost?",
-    a: "Drinks start at $5 each. Your price depends on your guest count and the menu you pick. Custom menus, fresh toppings, and sugar and ice levels are included. Your quote is the full price. I usually reply to quote requests within 24 hours.",
+    a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Vietnamese coffee is $40 a gallon. Other specialty drinks vary in price. A gallon is 128 oz. Each gallon comes with 1 free topping. Extra toppings vary in price. Sugar and ice levels are included. Your quote is the full price. I usually reply to quote requests within 24 hours.",
   },
   {
     q: "What areas do you serve?",

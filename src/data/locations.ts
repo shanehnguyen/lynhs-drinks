@@ -23,7 +23,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How much does boba catering cost in San Jose?",
-        a: "Drinks start at $5 each. Your price depends on your guest count and the drinks you pick. Your own menu, fresh toppings, and sugar and ice choices are all included. Send your event details and you will usually hear back within 24 hours.",
+        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Sugar and ice choices are included. Send your event details and you will usually hear back within 24 hours.",
       },
       {
         q: "What parts of San Jose do you serve?",
@@ -81,7 +81,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "What does milk tea catering cost in Milpitas?",
-        a: "Drinks start at $5 each. Your price depends on guest count and the menu. Toppings like fresh boba, jelly and cream foam are part of the menu you pick. The price you are quoted is the price you pay.",
+        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Extra toppings vary in price. The price you are quoted is the price you pay.",
       },
       {
         q: "How much notice do you need for a Milpitas booking?",
@@ -108,7 +108,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How does pricing work for Sunnyvale events?",
-        a: "Drinks start at $5 each. Your price depends on guest count and the menu you pick. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
+        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
       },
       {
         q: "Do you serve hot drinks for cooler Sunnyvale evenings?",
@@ -131,7 +131,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "What's the minimum for a Campbell event?",
-        a: "Drinks start at $5 each, and we price your event by guest count. We serve small backyard parties and big community events. Tell us what you are planning.",
+        a: "We price by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. We serve small backyard parties and big community events. Tell us what you are planning.",
       },
       {
         q: "Can kids customize their drinks?",
@@ -166,7 +166,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How is pricing handled for Morgan Hill events?",
-        a: "It works the same everywhere. Drinks start at $5 each, and your price depends on guest count and menu. Send your date, venue and guest count on the booking form. We will send your price back fast.",
+        a: "It works the same everywhere. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Send your date, venue and guest count on the booking form. We will send your price back fast.",
       },
     ],
   },

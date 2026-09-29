@@ -12,6 +12,22 @@ export type ShopDrink = {
   servingStyle: "Iced" | "Hot or Iced";
 };
 
+// Pricing is by the gallon (128 oz). Other specialty drinks are priced per event.
+export const GALLON_OZ = 128;
+
+export function gallonPrice(drink: ShopDrink): number | null {
+  if (drink.name === "Vietnamese Coffee") return 40;
+  if (drink.category === "Specialty") return null;
+  if (drink.category === "Fruit Tea") return 25;
+  if (/thai/i.test(drink.name)) return 25;
+  return 20;
+}
+
+export function priceLabel(drink: ShopDrink): string {
+  const price = gallonPrice(drink);
+  return price === null ? "Price varies" : `$${price} / gallon`;
+}
+
 export type ShopTopping = {
   slug: string;
   name: string;

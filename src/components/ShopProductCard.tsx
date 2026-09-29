@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import type { ShopDrink } from "@/data/shop";
+import { priceLabel, type ShopDrink } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const CATEGORY_COLOR: Record<string, string> = {
@@ -79,6 +79,7 @@ export default function ShopProductCard({ drink }: { drink: ShopDrink }) {
         <p className="mt-2 text-sm font-bold uppercase tracking-wider text-ink">
           {drink.tastesLike.slice(0, 2).join(" · ")}
         </p>
+        <p className="mt-auto pt-3 text-base font-bold text-ink">{priceLabel(drink)}</p>
       </div>
     </Link>
   );

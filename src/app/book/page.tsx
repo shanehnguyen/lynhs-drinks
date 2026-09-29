@@ -36,7 +36,7 @@ export default function BookPage() {
           <div className="mx-auto max-w-[900px] px-6 py-10 md:px-12">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { label: "Starting Price", value: "$5 / drink" },
+                { label: "Starting Price", value: "$20 / gallon" },
                 { label: "Book Ahead", value: "1 Week" },
                 { label: "Cup Size", value: "16–20 oz" },
                 { label: "Years Serving", value: "20+" },

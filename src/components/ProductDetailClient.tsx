@@ -9,7 +9,7 @@ import PushButton from "@/components/ui/PushButton";
 import WaveDivider from "@/components/ui/WaveDivider";
 import ShopProductCard from "@/components/ShopProductCard";
 import IconDoodle from "@/components/ui/IconDoodle";
-import { getDrinkBySlug, getRelatedDrinks } from "@/data/shop";
+import { getDrinkBySlug, getRelatedDrinks, priceLabel, gallonPrice } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const SWEETNESS_LEVELS = ["100%", "75%", "50%", "25%", "0%"];
@@ -106,6 +106,13 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   {drink.name}
                 </h1>
 
+                <p className="mt-3 text-base font-bold text-ink">
+                  {priceLabel(drink)}
+                  {gallonPrice(drink) !== null && (
+                    <span className="font-normal"> (128 oz), with 1 free topping</span>
+                  )}
+                </p>
+
                 <div className="mt-3 flex flex-wrap gap-2">
                   {drink.tastesLike.map((tag) => (
                     <span
@@ -176,8 +183,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     picks. Send me your picks, and I will send you a quote.
                   </p>
                   <p className="mt-2 text-sm text-ink">
-                    Want boba, cream or foam on top? Toppings are picked on
-                    their own.{" "}
+                    Each gallon comes with 1 free topping. Extra toppings vary
+                    in price.{" "}
                     <Link href="/shop#toppings" className="font-bold text-ink underline hover:no-underline">
                       Pick your toppings here
                     </Link>

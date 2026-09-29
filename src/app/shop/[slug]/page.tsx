@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/ProductDetailClient";
 import JsonLd from "@/components/JsonLd";
-import { DRINKS, getDrinkBySlug } from "@/data/shop";
+import { DRINKS, getDrinkBySlug, gallonPrice } from "@/data/shop";
 import { SITE_URL } from "@/lib/site";
 import { BUSINESS_ID, breadcrumbList } from "@/lib/schema";
 
@@ -43,6 +43,7 @@ export default async function ProductDetailPage({
   const drink = getDrinkBySlug(slug);
   if (!drink) notFound();
 
+  const price = gallonPrice(drink);
   const menuItemJsonLd = {
     "@context": "https://schema.org",
     "@type": "MenuItem",
@@ -50,13 +51,17 @@ export default async function ProductDetailPage({
     description: drink.description,
     url: `${SITE_URL}/shop/${drink.slug}`,
     ...(drink.img ? { image: `${SITE_URL}${drink.img}` } : {}),
-    offers: {
-      "@type": "Offer",
-      price: "5.00",
-      priceCurrency: "USD",
-      description: "Starting price per drink for catered events",
-      offeredBy: { "@id": BUSINESS_ID },
-    },
+    ...(price !== null
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: price.toFixed(2),
+            priceCurrency: "USD",
+            description: "Price per gallon (128 oz), with 1 free topping",
+            offeredBy: { "@id": BUSINESS_ID },
+          },
+        }
+      : {}),
   };
 
   return (

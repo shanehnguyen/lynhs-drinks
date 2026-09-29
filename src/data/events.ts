@@ -58,7 +58,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "How is pricing handled for festivals?",
-        a: "We price festivals by how many drinks you expect. Drinks start at $5 each. Reach out early, because festival weekends are the first dates to fill.",
+        a: "We price festivals by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Reach out early, because festival weekends are the first dates to fill.",
       },
       {
         q: "Do you serve traditional Vietnamese drinks?",
@@ -109,7 +109,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "What does a wedding drink bar cost?",
-        a: "Drinks start at $5 each. We price by guest count and menu. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
+        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
       },
     ],
   },
@@ -156,7 +156,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "How does booking and pricing work for companies?",
-        a: "Drinks start at $5 each. We price by headcount and menu. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
+        a: "Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. Each gallon comes with 1 free topping. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
       },
     ],
   },
@@ -242,7 +242,7 @@ export const EVENT_TYPES: EventType[] = [
     faqs: [
       {
         q: "Is my party too small for catering?",
-        a: "Probably not. Drinks start at $5 each, and we price by guest count. A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
+        a: "Probably not. We price by the gallon. Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a gallon. A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
       },
       {
         q: "Do you do quinceañeras and cultural celebrations?",

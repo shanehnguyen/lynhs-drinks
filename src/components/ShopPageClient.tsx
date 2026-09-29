@@ -41,7 +41,8 @@ export default function ShopPageClient() {
             <p className="mx-auto mt-4 max-w-xl text-base text-white">
               Here is every drink I serve. Tap + to add a drink to your picks.
               Open a drink to choose its sugar and ice. Toppings are below.
-              Prices come with your quote.
+              Milk tea is $20 a gallon. Thai tea and fruit tea are $25 a
+              gallon. Vietnamese coffee is $40 a gallon. A gallon is 128 oz.
             </p>
           </div>
 
@@ -86,8 +87,8 @@ export default function ShopPageClient() {
                 Toppings
               </h2>
               <p className="mt-3 text-base text-black">
-                Toppings are picked on their own. Tap + to add one to your
-                picks. Mix them any way you like.
+                Each gallon comes with 1 free topping. Extra toppings vary
+                in price. Tap + to add one to your picks.
               </p>
             </div>
 
