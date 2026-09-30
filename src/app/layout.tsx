@@ -3,7 +3,6 @@ import TranslateLoader from "@/components/TranslateLoader";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { ShopCartProvider } from "@/context/ShopCartContext";
-import MarketingPopup from "@/components/MarketingPopup";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { businessNode, websiteNode, BUSINESS_DESCRIPTION } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -77,7 +76,6 @@ export default function RootLayout({
         <JsonLd data={jsonLd} />
         <TranslateLoader />
         <ShopCartProvider>{children}</ShopCartProvider>
-        <MarketingPopup />
       </body>
     </html>
   );

@@ -38,7 +38,7 @@ export default function PrivacyPage() {
                   When you fill out the booking form, we collect your name,
                   email, and phone number. We also collect your event date,
                   guest count, and any event details you share. If you sign
-                  up for email updates or a discount code, we collect your
+                  up for email updates, we collect your
                   email address.
                 </p>
                 <p className="mt-3">
