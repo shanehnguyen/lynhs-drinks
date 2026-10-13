@@ -1,7 +1,9 @@
+import { SETUP_FEE_SHORT } from "@/data/shop";
+
 const FAQS = [
   {
     q: "How much does drink catering cost?",
-    a: "Drinks are priced by the gallon. You can see each price on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price.",
+    a: `Drinks are priced by the gallon. You can see each price on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price. ${SETUP_FEE_SHORT}`,
   },
   {
     q: "How far in advance should I book?",
@@ -9,7 +11,7 @@ const FAQS = [
   },
   {
     q: "What's included with the drink bar?",
-    a: "We bring the whole mobile bar and brew tea fresh at your event. We cook the boba fresh and clean up after. Guests pick their sugar, ice, and toppings. We always have drinks with no caffeine for kids.",
+    a: "We bring the drinks, cups, lids, straws, ice and a topping station. We set it all up before your guests arrive, and guests serve themselves. You pick the sugar level for each drink when you build your menu. We always have drinks with no caffeine for kids.",
   },
   {
     q: "What areas do you serve?",

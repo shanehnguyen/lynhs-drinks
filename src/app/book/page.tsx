@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
 import WaveDivider from "@/components/ui/WaveDivider";
 import { SITE_URL, BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_TEL } from "@/lib/site";
+import { SETUP_FEE_TEXT } from "@/data/shop";
 
 export const metadata: Metadata = {
   title: "Book Your Event",
@@ -39,7 +40,7 @@ export default function BookPage() {
                 { label: "Starting Price", value: "$20 / gallon" },
                 { label: "Book Ahead", value: "1 Week" },
                 { label: "Deposit", value: "10%" },
-                { label: "Years Serving", value: "20+" },
+                { label: "Self-Serve Setup", value: "$75" },
               ].map((detail) => (
                 <div
                   key={detail.label}
@@ -53,8 +54,8 @@ export default function BookPage() {
               ))}
             </div>
             <p className="mt-4 text-center text-xs font-medium text-ink/50">
-              A 10% deposit is due 1 week before your event. Each gallon comes with 1 free
-              topping. I usually reply within 24 hours.
+              {SETUP_FEE_TEXT} A 10% deposit is due 1 week before your event. Each gallon
+              comes with 1 free topping. I usually reply within 24 hours.
             </p>
             <p className="mt-2 text-center text-xs font-medium text-ink/50">
               Want to call or text?{" "}

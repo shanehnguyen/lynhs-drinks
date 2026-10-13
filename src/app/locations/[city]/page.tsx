@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!location) return {};
 
   const title = `Milk Tea & Fruit Tea Catering in ${location.city}, CA`;
-  const description = `Milk tea, fruit tea and Vietnamese coffee catering in ${location.city}, CA. We make every drink fresh at weddings, festivals and parties. 20+ years in the South Bay.`;
+  const description = `Milk tea, fruit tea and Vietnamese coffee catering in ${location.city}, CA. Fresh drinks for weddings, festivals and parties, with self-serve setup. 20+ years in the South Bay.`;
 
   return {
     title,
@@ -117,10 +117,10 @@ export default async function LocationPage({
 
             <ul className="mt-8 space-y-3">
               {[
-                "Tea made fresh at your event from real leaves",
+                "Tea brewed fresh from real tea leaves",
                 "Real tapioca boba, and you pick the toppings",
                 "20,000+ drinks served at 10+ big events",
-                "One crew, from setup to the last cup",
+                "A self-serve station, set up before guests arrive",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-bold text-cream">

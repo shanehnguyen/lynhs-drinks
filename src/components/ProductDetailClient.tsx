@@ -9,7 +9,7 @@ import PushButton from "@/components/ui/PushButton";
 import WaveDivider from "@/components/ui/WaveDivider";
 import ShopProductCard from "@/components/ShopProductCard";
 import IconDoodle from "@/components/ui/IconDoodle";
-import { getDrinkBySlug, getRelatedDrinks, priceLabel, gallonPrice } from "@/data/shop";
+import { getDrinkBySlug, getRelatedDrinks, priceLabel, gallonPrice, SETUP_FEE_SHORT } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const SWEETNESS_LEVELS = ["100%", "75%", "50%", "25%", "0%"];
@@ -183,8 +183,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     picks. Send me your picks, and I will send you a quote.
                   </p>
                   <p className="mt-2 text-sm text-ink">
-                    Each gallon comes with 1 free topping. Extra toppings vary
-                    in price.{" "}
+                    {SETUP_FEE_SHORT} Each gallon comes with 1 free topping.
+                    Extra toppings vary in price.{" "}
                     <Link href="/shop#toppings" className="font-bold text-ink underline hover:no-underline">
                       Pick your toppings here
                     </Link>

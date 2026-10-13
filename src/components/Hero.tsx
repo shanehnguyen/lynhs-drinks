@@ -31,8 +31,7 @@ export default function Hero() {
             Fresh Boba and Milk Tea, Made at Your Event
           </h1>
           <p className="mt-6 max-w-lg text-lg font-medium text-black md:text-xl">
-            I brew milk tea, fruit tea, and Vietnamese coffee by hand at your
-            event. I use the recipes I grew up with in Vietnam. I serve
+            I brew milk tea, fruit tea, and Vietnamese coffee by hand. I use the recipes I grew up with in Vietnam. I serve
             festivals, weddings, and parties.
           </p>
 

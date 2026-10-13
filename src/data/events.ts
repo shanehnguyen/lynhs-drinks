@@ -72,32 +72,32 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "Weddings",
     metaTitle: "Wedding Boba Bar & Milk Tea Catering | Bay Area",
     metaDescription:
-      "A milk tea and fruit tea bar for Bay Area weddings. We match the menu to your theme, brew fresh on site, and serve until the last dance.",
+      "A milk tea and fruit tea bar for Bay Area weddings. We match the menu to your theme and set up a self-serve station before guests arrive.",
     heroEyebrow: "Bay Area Weddings",
     heroTitle: "A Boba and Milk Tea Bar for Your Wedding.",
     intro:
-      "Guests line up for a boba bar at a wedding. We plan the menu around your colors, flavors, and timeline. We brew everything fresh on site, so the last drink tastes as good as the first.",
+      "Guests line up for a boba bar at a wedding. We plan the menu around your colors, flavors, and timeline. We brew everything fresh and set it up before your guests arrive.",
     body: [
       {
         heading: "A Menu That Matches Your Wedding",
-        text: "Pick lychee or passion fruit tea for a garden wedding. Add classic milk teas for everyone, and Vietnamese coffee to honor family. We help you choose a short menu. Drinks come in 16 oz cups. Each guest picks their sweetness, ice, and toppings.",
+        text: "Pick lychee or passion fruit tea for a garden wedding. Add classic milk teas for everyone, and Vietnamese coffee to honor family. We help you choose a short menu. Drinks come in 16 oz cups. Each guest adds their own ice and toppings.",
       },
       {
-        heading: "One Crew Does It All",
-        text: "Our crew sets up before guests arrive, serves through the reception, and cleans up after. You do not have to manage us. You will just see the line at the drink bar.",
+        heading: "Set Up Before Guests Arrive",
+        text: "We bring the drinks, cups, lids, straws, ice and a topping station. We set it all up before guests arrive. Guests serve themselves, so there is no one for you to manage.",
       },
     ],
     bullets: [
       "A menu planned around your theme and guest list",
-      "Brewed fresh on site with real tea leaves, real milk, and fresh boba",
-      "Guests pick their sweetness, ice, and toppings",
-      "One crew sets up, serves, and cleans up",
+      "Brewed fresh with real tea leaves, real milk, and fresh boba",
+      "Guests add their own ice and toppings",
+      "A self-serve station, set up before guests arrive",
     ],
     drinkSlugs: ["lychee-tea", "passion-fruit-tea", "jasmine-milk-tea", "vietnamese-coffee"],
     faqs: [
       {
         q: "How does a boba bar work at a wedding reception?",
-        a: "We set up a drink bar at your venue before guests arrive. Guests walk up and pick a drink from your menu. They choose sweetness and toppings, and we hand them a fresh 16 oz cup. The bar can run during cocktail hour, next to dessert, or all night.",
+        a: "We set up a self-serve drink station at your venue before guests arrive. Guests pick a drink from your menu, pour a 16 oz cup and add toppings. The station can run during cocktail hour, next to dessert, or all night.",
       },
       {
         q: "How early should we book for a wedding?",
@@ -109,7 +109,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "What does a wedding drink bar cost?",
-        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Self-serve setup is $75, with a 3 gallon minimum. Send your date, venue, and guest count through the booking form. We will send prices and drink ideas, usually within 24 hours.",
       },
     ],
   },
@@ -119,7 +119,7 @@ export const EVENT_TYPES: EventType[] = [
     metaTitle: "Corporate Boba Catering | San Jose & Silicon Valley Offices",
     navLabel: "Corporate Events",
     metaDescription:
-      "Boba and milk tea catering for Silicon Valley offices. Team parties, all-hands, and campus events in San Jose, Santa Clara, and Sunnyvale. Fast lines, custom menus.",
+      "Boba and milk tea catering for Silicon Valley offices. Team parties, all-hands, and campus events in San Jose, Santa Clara, and Sunnyvale. Self-serve stations, custom menus.",
     heroEyebrow: "Silicon Valley Offices",
     heroTitle: "Boba Catering for Your Office Event.",
     intro:
@@ -127,7 +127,7 @@ export const EVENT_TYPES: EventType[] = [
     body: [
       {
         heading: "Fast Enough for a Lunch Break",
-        text: "Twenty years of long festival lines taught us to serve fast. A drink break fits inside a lunch break. We set up inside or outside, in a lobby, patio, cafeteria, or meeting space. We bring everything, so your facilities team has nothing to do.",
+        text: "Guests pour their own drinks, so the line moves fast. A drink break fits inside a lunch break. We set up inside or outside, in a lobby, patio, cafeteria, or meeting space. We bring everything, so your facilities team has nothing to do.",
       },
       {
         heading: "A Drink for Every Person",
@@ -135,7 +135,7 @@ export const EVENT_TYPES: EventType[] = [
       },
     ],
     bullets: [
-      "Fast lines, staffed for your headcount",
+      "A self-serve station sized for your headcount",
       "Indoor or outdoor setup, and we bring everything",
       "Caffeine, decaf, and caffeine-free drinks on every menu",
       "Serving the South Bay for 20+ years",
@@ -148,15 +148,15 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "How many people can you serve at a corporate event?",
-        a: "We serve teams of 30 up to whole campuses. We have served festival crowds in the thousands. We plan our crew and brewing around your headcount and time.",
+        a: "We serve teams of 30 up to whole campuses. We have served festival crowds in the thousands. We plan the brewing and the station around your headcount.",
       },
       {
         q: "How fast is the line?",
-        a: "Fast. Twenty years of festivals taught us speed. Tell us your headcount and how much time you have. We will bring enough crew so everyone gets a drink before the break ends.",
+        a: "Fast. Guests pour their own drinks, so the line keeps moving. Tell us your headcount and how much time you have. We will plan the setup so everyone gets a drink before the break ends.",
       },
       {
         q: "How does booking and pricing work for companies?",
-        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Self-serve setup is $75, with a 3 gallon minimum. Send the date, office address, and about how many people through the booking form. You will get prices back, usually within 24 hours.",
       },
     ],
   },
@@ -178,7 +178,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         heading: "Fast Lines for Big School Crowds",
-        text: "At a school carnival, everyone comes at once, just like a festival. Twenty years of church festivals taught us how to serve a rush. The drink line will not take over your event.",
+        text: "At a school carnival, everyone comes at once, just like a festival. Twenty years of church festivals taught us how to plan for a rush. We size the station to your crowd, so the drink line will not take over your event.",
       },
     ],
     bullets: [
@@ -217,7 +217,7 @@ export const EVENT_TYPES: EventType[] = [
     navLabel: "Private Parties",
     metaTitle: "Private Party Boba Catering | Birthdays & Celebrations, San Jose",
     metaDescription:
-      "Boba and milk tea catering for birthdays, graduations, quinceañeras, and backyard parties in San Jose and the South Bay. Custom menus, brewed fresh on site.",
+      "Boba and milk tea catering for birthdays, graduations, quinceañeras, and backyard parties in San Jose and the South Bay. Custom menus with self-serve setup.",
     heroEyebrow: "San Jose and the South Bay",
     heroTitle: "Boba Catering for Your Private Party.",
     intro:
@@ -225,24 +225,24 @@ export const EVENT_TYPES: EventType[] = [
     body: [
       {
         heading: "Every Guest Builds Their Own Drink",
-        text: "Guests pick a milk tea, fruit tea, or Vietnamese drink. Then they choose sweetness, ice, and toppings. Kids pile on jelly, and grandparents get their coffee. Everyone gets the drink they want.",
+        text: "Guests pick a milk tea, fruit tea, or Vietnamese drink. Then they add ice and toppings. Kids pile on jelly, and grandparents get their coffee. Everyone gets the drink they want.",
       },
       {
         heading: "Sized to Your Party",
-        text: "A backyard birthday needs a small setup. A quinceañera needs a bigger one. We size the setup, menu, and crew to your guest list. The person who takes your booking is at your party serving drinks.",
+        text: "A backyard birthday needs a small setup. A quinceañera needs a bigger one. We size the setup and menu to your guest list. We set it all up before your guests arrive.",
       },
     ],
     bullets: [
       "Menus for small parties and big family events",
       "Vietnamese drinks plus milk teas and fruit teas",
       "Caffeine-free and low-sugar drinks for all ages",
-      "We set up and clean up, so you can stay with your guests",
+      "We set up before guests arrive, so you can stay with them",
     ],
     drinkSlugs: ["taro-milk-tea", "mango-milk-tea", "dragon-fruit-tea", "pandan-mungbean-milk"],
     faqs: [
       {
         q: "Is my party too small for catering?",
-        a: "Probably not. We price by the gallon. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
+        a: "Probably not. The minimum is 3 gallons, which is 24 drinks. Self-serve setup is $75. Drink prices are on the Build My Menu page. A backyard birthday works as well as a reunion of a hundred people. Tell us your plans and we will make it fit.",
       },
       {
         q: "Do you do quinceañeras and cultural celebrations?",
@@ -250,7 +250,7 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         q: "What if my guests have never had boba?",
-        a: "We walk first-timers through it. We point them to easy favorites like mango milk tea or peach green tea. Guests set their own sweetness, so no drink ends up too sweet.",
+        a: "Put easy favorites on your menu, like mango milk tea or peach green tea. You set the sugar level for each drink when you build your menu, so no drink ends up too sweet.",
       },
       {
         q: "How far ahead should I book a party?",

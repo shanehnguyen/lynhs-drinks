@@ -6,6 +6,7 @@ import PushButton from "./ui/PushButton";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 import { useShopCart, summarizePicks } from "@/context/ShopCartContext";
 import { LOCATIONS } from "@/data/locations";
+import { SETUP_FEE_SHORT } from "@/data/shop";
 
 const EVENT_TYPES = [
   "Wedding",
@@ -138,7 +139,7 @@ export default function BookingForm() {
         <p className="mt-3 text-xs font-medium text-ink/50">
           {status === "error"
             ? "Something went wrong. Please try again."
-            : "A 10% deposit is due 1 week before your event. I usually reply within 1 to 2 business days."}
+            : `${SETUP_FEE_SHORT} A 10% deposit is due 1 week before your event. I usually reply within 1 to 2 business days.`}
         </p>
       </div>
     </form>

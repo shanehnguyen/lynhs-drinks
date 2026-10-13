@@ -54,10 +54,10 @@ Lynh Ngo, Founder`}
           heading="Why Guests Come Back for a Second Cup"
           body="I have served events for twenty years. I know what can go wrong, so I plan for it before the bus leaves."
           bullets={[
-            "Tea brewed fresh at your event, with real tea leaves and real milk",
+            "Tea brewed fresh, with real tea leaves and real milk",
             "Toppings for everyone, from plain boba fans to kids who want extra jelly",
             "30,000+ drinks served at 10+ large events",
-            "One crew from setup to the last cup, and I'm there the whole time",
+            "A self-serve station, set up before your guests arrive",
           ]}
           photoLabel="Our mobile drink bar bus at a parish festival"
           photoSrc="/photos/bus-sign.png"

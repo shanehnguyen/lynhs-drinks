@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import PushButton from "@/components/ui/PushButton";
 import WaveDivider from "@/components/ui/WaveDivider";
 import ShopProductCard from "@/components/ShopProductCard";
-import { DRINKS, TOPPINGS, Category } from "@/data/shop";
+import { DRINKS, TOPPINGS, Category, SETUP_FEE_TEXT } from "@/data/shop";
 import { useShopCart } from "@/context/ShopCartContext";
 
 const CATEGORIES: (Category | "All")[] = ["All", "Milk Tea", "Fruit Tea", "Specialty"];
@@ -42,6 +42,9 @@ export default function ShopPageClient() {
               Here is every drink I serve. Tap + to add a drink to your picks.
               Open a drink to choose its sugar and ice. Toppings are below.
               A gallon is 128 oz, which is 8 drinks (16 oz each).
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-white">
+              {SETUP_FEE_TEXT}
             </p>
           </div>
 

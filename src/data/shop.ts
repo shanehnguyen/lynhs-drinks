@@ -23,6 +23,11 @@ export function gallonPrice(drink: ShopDrink): number | null {
   return 20;
 }
 
+// Private events are self-serve. Church festivals are served at our booth and have no setup fee.
+export const SETUP_FEE_TEXT =
+  "Self-serve setup: $75. We bring the drinks, cups, lids, straws, ice and a topping station. We set it all up before your guests arrive. Delivery in San Jose, Santa Clara, Milpitas, Sunnyvale, Campbell and Morgan Hill is included. 3 gallon minimum.";
+export const SETUP_FEE_SHORT = "Self-serve setup is $75, with a 3 gallon minimum.";
+
 export function priceLabel(drink: ShopDrink): string {
   const price = gallonPrice(drink);
   return price === null ? "Price varies" : `$${price} / gallon`;

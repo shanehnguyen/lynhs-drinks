@@ -23,7 +23,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How much does boba catering cost in San Jose?",
-        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Sugar and ice choices are included. Send your event details and you will usually hear back within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Self-serve setup is $75, with a 3 gallon minimum. Send your event details and you will usually hear back within 24 hours.",
       },
       {
         q: "What parts of San Jose do you serve?",
@@ -46,11 +46,11 @@ export const LOCATIONS: ServiceLocation[] = [
     faqs: [
       {
         q: "Do you cater office and tech company events in Santa Clara?",
-        a: "Yes. Work parties are one of our most common Santa Clara events. We bring the whole drink bar to your office and make the tea there. We keep the line moving so a drink break stays short.",
+        a: "Yes. Work parties are one of our most common Santa Clara events. We set up a self-serve drink station at your office before people arrive. Guests pour their own, so a drink break stays short.",
       },
       {
         q: "Is there a travel charge for Santa Clara events?",
-        a: "Santa Clara is only minutes from our San Jose home base, so it is in our main service area. Your quote covers the full setup. Tell us the date, place and guest count.",
+        a: "No. Delivery to Santa Clara is included in the $75 self-serve setup. Tell us the date, place and guest count.",
       },
       {
         q: "Can you serve events near Santa Clara University?",
@@ -77,11 +77,11 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "Can you handle a large community event in Milpitas?",
-        a: "Yes. We have poured 30,000+ drinks at big events over 20 years. For a bigger crowd, we bring more crew and make more tea.",
+        a: "Yes. We have poured 30,000+ drinks at big events over 20 years. For a bigger crowd, we bring more tea and a bigger station.",
       },
       {
         q: "What does milk tea catering cost in Milpitas?",
-        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price. The price you are quoted is the price you pay.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Extra toppings vary in price. Self-serve setup is $75, with a 3 gallon minimum. The price you are quoted is the price you pay.",
       },
       {
         q: "How much notice do you need for a Milpitas booking?",
@@ -100,15 +100,15 @@ export const LOCATIONS: ServiceLocation[] = [
     faqs: [
       {
         q: "Do you cater weddings in Sunnyvale?",
-        a: "Yes. Many couples pick a milk tea and fruit tea bar over a tub of soda. We match the menu to your wedding and serve 16 oz drinks. We stay from setup to the last cup.",
+        a: "Yes. Many couples pick a milk tea and fruit tea bar over a tub of soda. We match the menu to your wedding. We set up a self-serve station with 16 oz cups before guests arrive.",
       },
       {
         q: "Can you set up a drink bar at a Sunnyvale office?",
-        a: "Yes, we do this often at Sunnyvale tech offices. The bar fits inside or outside, and we make every drink there. Guests pick their sugar, ice and toppings. It works for a team of 30 or a whole campus.",
+        a: "Yes, we do this often at Sunnyvale tech offices. The station fits inside or outside. Guests pour their own drinks and add ice and toppings. It works for a team of 30 or a whole campus.",
       },
       {
         q: "How does pricing work for Sunnyvale events?",
-        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
+        a: "Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Each gallon comes with 1 free topping. Self-serve setup is $75, with a 3 gallon minimum. Choose your drinks and toppings on the Build My Menu page and send them to us. You will usually hear back within 24 hours.",
       },
       {
         q: "Do you serve hot drinks for cooler Sunnyvale evenings?",
@@ -127,11 +127,11 @@ export const LOCATIONS: ServiceLocation[] = [
     faqs: [
       {
         q: "Do you cater birthday parties in Campbell?",
-        a: "Yes, often. We serve many backyard birthdays near downtown Campbell and the Pruneyard. Guests pick their sugar, ice and toppings, so each cup is made the way they like it.",
+        a: "Yes, often. We serve many backyard birthdays near downtown Campbell and the Pruneyard. Guests pour their own and add the toppings they like.",
       },
       {
         q: "What's the minimum for a Campbell event?",
-        a: "We price by the gallon. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). We serve small backyard parties and big community events. Tell us what you are planning.",
+        a: "The minimum is 3 gallons, which is 24 drinks. Self-serve setup is $75. Drink prices are on the Build My Menu page. We serve small backyard parties and big community events. Tell us what you are planning.",
       },
       {
         q: "Can kids customize their drinks?",
@@ -158,7 +158,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "Can you cater a winery or outdoor wedding in Morgan Hill?",
-        a: "Yes. Our drink bar has everything it needs, so the venue does not need a kitchen. We bring it all, make the drinks there and clean up after.",
+        a: "Yes. Our self-serve station has everything it needs, so the venue does not need a kitchen. We bring it all and set it up before guests arrive.",
       },
       {
         q: "Do you do quinceañeras and cultural celebrations?",
@@ -166,7 +166,7 @@ export const LOCATIONS: ServiceLocation[] = [
       },
       {
         q: "How is pricing handled for Morgan Hill events?",
-        a: "It works the same everywhere. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Send your date, venue and guest count on the booking form. We will send your price back fast.",
+        a: "It works the same everywhere. Prices are on the Build My Menu page. A gallon is 128 oz, which is 8 drinks (16 oz each). Self-serve setup is $75, with a 3 gallon minimum. Send your date, venue and guest count on the booking form. We will send your price back fast.",
       },
     ],
   },
