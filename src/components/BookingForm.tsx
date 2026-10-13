@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import PushButton from "./ui/PushButton";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 import { useShopCart, summarizePicks } from "@/context/ShopCartContext";
+import { LOCATIONS } from "@/data/locations";
 
 const EVENT_TYPES = [
   "Wedding",
@@ -39,12 +40,13 @@ export default function BookingForm() {
 
     try {
       await submitToWeb3Forms({
-        subject: `Event inquiry from ${form.get("name")}`,
+        subject: `Event inquiry from ${form.get("name")} in ${form.get("eventCity")}`,
         from_name: form.get("name"),
         name: form.get("name"),
         email: form.get("email"),
         phone: form.get("phone"),
         event_type: form.get("eventType"),
+        event_city: form.get("eventCity"),
         event_date: form.get("eventDate"),
         guest_count: form.get("guestCount"),
         message: form.get("details"),
@@ -94,6 +96,19 @@ export default function BookingForm() {
       </div>
       <Field label="Event Date" name="eventDate" type="date" />
       <Field label="Number of Guests" name="guestCount" type="number" />
+      <Field
+        label="Event City"
+        name="eventCity"
+        required
+        list="event-cities"
+        placeholder="San Jose, Santa Clara, Milpitas"
+        className="sm:col-span-2"
+      />
+      <datalist id="event-cities">
+        {LOCATIONS.map((l) => (
+          <option key={l.slug} value={l.city} />
+        ))}
+      </datalist>
 
       <div className="sm:col-span-2">
         <label className="text-sm font-bold uppercase tracking-wider text-ink/70">
@@ -107,7 +122,7 @@ export default function BookingForm() {
             setDetails(e.target.value);
             setEdited(true);
           }}
-          placeholder="Where is it? What flavors do you like? Anything else we should know?"
+          placeholder="What is the venue? What flavors do you like? Anything else we should know?"
           className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
         />
       </div>
@@ -135,14 +150,20 @@ function Field({
   name,
   type = "text",
   required = false,
+  list,
+  placeholder,
+  className,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  list?: string;
+  placeholder?: string;
+  className?: string;
 }) {
   return (
-    <div>
+    <div className={className}>
       <label className="text-sm font-bold uppercase tracking-wider text-ink/70">
         {label}
         {required && <span className="text-[#FF008C]"> *</span>}
@@ -151,7 +172,9 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink focus:border-ink focus:outline-none"
+        list={list}
+        placeholder={placeholder}
+        className="mt-2 w-full rounded-xl border-2 border-ink/30 bg-cream px-4 py-2.5 font-medium text-ink placeholder:text-ink/40 focus:border-ink focus:outline-none"
       />
     </div>
   );
